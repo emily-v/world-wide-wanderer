@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import {TestHome} from "./views/TestHome.jsx";
-import {TestView} from "./views/TestView.jsx";
+import {MainHome} from "./views/MainHome.jsx";
 
 export default class Layout extends React.Component {
     
@@ -12,8 +11,7 @@ export default class Layout extends React.Component {
             <React.Fragment>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={TestHome} />
-                        <Route exact path="/test" component={TestView} />
+                        <Route exact path="/" component={MainHome} />
                     </Switch>
                 </BrowserRouter>
             </React.Fragment>
