@@ -12,12 +12,12 @@ function NavBar(props){
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarToggleContainer">
-                    <a className="navbar-brand d-none d-sm-inline-block" href="#">
+                    <Link to={"/"} className="navbar-brand d-none d-sm-inline-block">
                         <img src="http://via.placeholder.com/55x55" alt="logo" className="rounded-circle"/>
-                    </a>
+                    </Link>
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Blog</a>
+                            <Link to={"/blog-home"} className="nav-link">Blog</Link>
                         </li>
                         <li className="nav-item active">
                             <a className="nav-link" href="#">Store</a>
@@ -32,7 +32,7 @@ function NavBar(props){
                     <button className="btn btn-outline-light">Account</button>
                 </div>
             </nav>
-            <header className="bg-light p-3">
+            <header className="bg-light p-3 text-center">
                 <img src="http://via.placeholder.com/80x80" alt="logo" className="rounded-circle mr-2"/>
                 <img src="http://via.placeholder.com/200x80" alt="website name" className="ml-2" />
             </header>

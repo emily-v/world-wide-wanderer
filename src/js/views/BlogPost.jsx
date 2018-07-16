@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NavBar from '../component/NavBar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 
-export class MainHome extends React.Component{
+export class BlogPost extends React.Component{
     
     render(){
         return (
@@ -14,7 +14,7 @@ export class MainHome extends React.Component{
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9">
-                            <h1 className="text-center">Main Content</h1>
+                            <h1 className="text-center">This is the Title of an Individual Blog Post</h1>
                         </div>
                         <div className="col">
                             <BlogSidebar />
