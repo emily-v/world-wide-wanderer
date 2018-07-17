@@ -20,8 +20,8 @@ export class ConfirmationPage extends React.Component{
                         <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
-                                    <h3 className="card-title">Thank you for your order!</h3>
-                                    <p className="card-text">Your order number is: XXXX-XXXX</p>
+                                    <h3 className="card-title text-center">Thank you for your order!</h3>
+                                    <p className="card-text text-center">Your order number is: XXXX-XXXX</p>
                                 </div>
                             </div>
                         </div>

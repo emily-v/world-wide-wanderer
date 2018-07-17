@@ -16,6 +16,8 @@ export class StoreHome extends React.Component{
             <div>
                 <Navbar />
                 <div className="container">
+                    <h3>Products</h3>
+                    <hr></hr>
                     <div className="row">
                         <ProductCard />
                         <ProductCard />
