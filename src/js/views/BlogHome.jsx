@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
+import FeaturedPost from '../component/FeaturedPost.jsx';
 
 export class BlogHome extends React.Component{
     
@@ -11,11 +12,12 @@ export class BlogHome extends React.Component{
         return (
             <div>
                 <Navbar />
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-9">
-                            <h1 className="text-center">This is the Blog Home Page</h1>
-                            <h2><Link to={"/blog-post"}>Click to view individual blog post view</Link></h2>
+                        <div className="col-12 col-md-9 border-right p-md-5 blogHomeContentContainer">
+                            <FeaturedPost />
+                            <FeaturedPost />
+                            <FeaturedPost />
                         </div>
                         <div className="col">
                             <BlogSidebar />
