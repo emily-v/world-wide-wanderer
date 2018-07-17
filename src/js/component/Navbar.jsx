@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 //import {Consumer} from "../stores/AppContext.jsx";//
 
-function NavBar(props){
+function Navbar(props){
     return (
         <div>
             <nav className="navbar navbar-expand-sm navbar-dark bg-secondary navbar-toggleable-md">
@@ -74,4 +74,4 @@ function NavBar(props){
         meetupID: PropTypes.number
     };*/
 
-export default NavBar;
+export default Navbar;

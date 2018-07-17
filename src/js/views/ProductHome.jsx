@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavBar from '../component/NavBar.jsx';
+import Navbar from '../component/Navbar.jsx';
 import ProductCard from '../component/ProductCard.jsx';
 
 
@@ -14,7 +14,7 @@ export class ProductHome extends React.Component{
     render(){
         return (
             <div>
-                <NavBar />
+                <Navbar />
                 <div className="container">
                     <div className="row">
                         <ProductCard />
