@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavBar from '../component/NavBar.jsx';
+import Navbar from '../component/Navbar.jsx';
 
 
 
@@ -14,7 +14,7 @@ export class SingleProduct extends React.Component{
     render(){
         return (
             <div>
-                <NavBar />
+                <Navbar />
                 <div className="container-fluid pt-10">
                     <div className="d-flex flex-row">
                         <div className="col-md-7">
