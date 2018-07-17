@@ -9,7 +9,7 @@ import ProductCard from '../component/ProductCard.jsx';
 
 
 //create your first component
-export class ProductHome extends React.Component{
+export class StoreHome extends React.Component{
     
     render(){
         return (
@@ -30,6 +30,6 @@ export class ProductHome extends React.Component{
     }
 }
 
-ProductHome.propTypes = {
+StoreHome.propTypes = {
         
     };

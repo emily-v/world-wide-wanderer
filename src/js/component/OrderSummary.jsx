@@ -15,12 +15,12 @@ function OrderSummary(props){
                 <p className="card-text">Qty: 1X $10.00</p>
             </div>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">Item Total:</li>
-                <li className="list-group-item">Shipping:</li>
-                <li className="list-group-item">Taxes:</li>
+                <li className="list-group-item">Subtotal: $10.00 </li>
+                <li className="list-group-item">Shipping: Free </li>
+                <li className="list-group-item">Sales Tax: $0.73 </li>
             </ul>
             <div className="card-body">
-                <h3 className="card-title">Order Total:</h3>
+                <h3 className="card-title">Order Total: $10.73 </h3>
             </div>
             <div className="card-body">
                 <button type="button" className="btn btn-success">Continue Shopping</button>
