@@ -11,7 +11,7 @@ export class BlogPost extends React.Component{
         return (
             <div>
                 <Navbar />
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
                             <h1 className="my-3 postTitle">This is the Title of an Individual Blog Post</h1>
@@ -42,7 +42,7 @@ export class BlogPost extends React.Component{
                                 <Link className="text-dark" to={"/blog-home"}>Return to Featured Posts</Link>
                             </p>
                         </div>
-                        <div className="col">
+                        <div className="col-md-3">
                             <BlogSidebar />
                         </div>
                     </div>

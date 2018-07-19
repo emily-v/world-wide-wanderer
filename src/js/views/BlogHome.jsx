@@ -12,14 +12,14 @@ export class BlogHome extends React.Component{
         return (
             <div>
                 <Navbar />
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 blogHomeContentContainer">
                             <FeaturedPost />
                             <FeaturedPost />
                             <FeaturedPost />
                         </div>
-                        <div className="col">
+                        <div className="col-md-3">
                             <BlogSidebar />
                         </div>
                     </div>

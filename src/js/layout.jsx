@@ -8,6 +8,7 @@ import {StoreHome} from "./views/StoreHome.jsx";
 import {ConfirmationPage} from "./views/ConfirmationPage.jsx";
 import {SingleProduct} from "./views/SingleProduct.jsx";
 import {CheckOut} from "./views/CheckOut.jsx";
+import {SignUpLogin} from "./views/SignUpLogin.jsx";
 
 
 export default class Layout extends React.Component {
@@ -25,6 +26,7 @@ export default class Layout extends React.Component {
                         <Route exact path="/confirmationpage/" component={ConfirmationPage} />
                         <Route exact path="/singleproduct/" component={SingleProduct} />
                         <Route exact path="/checkout/" component={CheckOut} />
+                        <Route exact path="/signup-login" component={SignUpLogin} />
                         
                     </Switch>
                 </BrowserRouter>

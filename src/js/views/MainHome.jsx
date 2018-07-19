@@ -99,7 +99,7 @@ export class MainHome extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-md-3">
                             <BlogSidebar />
                         </div>
                     </div>
