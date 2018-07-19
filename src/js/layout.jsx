@@ -7,6 +7,7 @@ import {BlogPost} from "./views/BlogPost.jsx";
 import {StoreHome} from "./views/StoreHome.jsx";
 import {ConfirmationPage} from "./views/ConfirmationPage.jsx";
 import {SingleProduct} from "./views/SingleProduct.jsx";
+import {CheckOut} from "./views/CheckOut.jsx";
 
 
 export default class Layout extends React.Component {
@@ -23,6 +24,8 @@ export default class Layout extends React.Component {
                         <Route exact path="/storehome/" component={StoreHome} />
                         <Route exact path="/confirmationpage/" component={ConfirmationPage} />
                         <Route exact path="/singleproduct/" component={SingleProduct} />
+                        <Route exact path="/checkout/" component={CheckOut} />
+                        
                     </Switch>
                 </BrowserRouter>
             </React.Fragment>
