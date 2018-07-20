@@ -14,15 +14,79 @@ export class MainHome extends React.Component{
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 mainContentContainer">
-                            <div className="heroContentContainer">
-                                <div className="text-center postImageContainer">
-                                    <img src="http://via.placeholder.com/800x500" alt="post featured image" className="img-fluid pb-3"/>
+                            {/*-----BEGIN HERO CONTENT-----*/}
+                            <div className="carousel slide" id="carouselControls" data-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <div className="card heroContentContainer">
+                                            <img src="http://via.placeholder.com/800x500" alt="post featured image" className="card-img-top"/>
+                                            <div className="card-body">
+                                                <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post"}>Title of Current Featured Blog Post in Carousel</Link></h3>
+                                                <p className="card-text text-secondary datePublished">May 15, 2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <div className="card heroContentContainer">
+                                            <img src="http://via.placeholder.com/800x500" alt="post featured image" className="card-img-top"/>
+                                            <div className="card-body">
+                                                <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post"}>2nd Title of Current Featured Blog Post in Carousel</Link></h3>
+                                                <p className="card-text text-secondary datePublished">May 15, 2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h2 className="my-3 postTitle"><Link className="text-dark" to={"/blog-post"}>Title of Current Featured Blog Post in Carousel</Link></h2>
-                                <p className="text-secondary datePublished">May 15, 2018</p>
+                                <a className="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Previous</span>
+                                </a>
+                                <a className="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Next</span>
+                                </a>
                             </div>
+                            
+                            {/*<div className="carousel slide" id="carouselControls" data-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src="http://via.placeholder.com/800x500" alt="post featured image" className="img-fluid d-block w-100"/>
+                                        <div className="carousel-caption d-block pb-0 text-left">
+                                            <h3 className="postTitle"><Link className="text-dark" to={"/blog-post"}>Title of Current Featured Blog Post in Carousel</Link></h3>
+                                            <p className="mb-0 datePublished">May 15, 2018</p>
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src="http://via.placeholder.com/800x500" alt="post featured image" className="img-fluid d-block w-100"/>
+                                        <div className="carousel-caption d-block pb-0 text-left">
+                                            <h3 className="postTitle"><Link className="text-dark" to={"/blog-post"}>2nd Title of Current Featured Blog Post in Carousel</Link></h3>
+                                            <p className="mb-0 datePublished">May 15, 2018</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a className="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Previous</span>
+                                </a>
+                                <a className="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Next</span>
+                                </a>
+                            </div>*/}
+                            
+                            {/* ---HERO CARD FORMAT ALTERNATIVE---
+                            <div className="card heroContentContainer">
+                                <img src="http://via.placeholder.com/800x500" alt="post featured image" className="card-img-top"/>
+                                <div className="card-body">
+                                    <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post"}>Title of Current Featured Blog Post in Carousel</Link></h3>
+                                    <p className="card-text text-secondary datePublished">May 15, 2018</p>
+                                </div>
+                            </div>*/}
+                            
+                            {/*-----WELCOME MESSAGE-----*/}
                             <p className="border-top border-bottom py-3 lead welcomeMessage"><strong>Welcome! </strong>Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom.</p>
+                            {/*-----BEGIN FEATURED CONTENT SECTION-----*/}
                             <div className="row featuredContentContainer">
+                                {/*-----BEGIN FEATURED POSTS CARD-----*/}
                                 <div className="col-md-6 mainFeaturedContainer">
                                     <div className="card">
                                         <div className="card-header d-flex justify-content-between">
@@ -60,6 +124,7 @@ export class MainHome extends React.Component{
                                         </div>
                                     </div>
                                 </div>
+                                {/*-----BEGIN FEATURED PRODUCTS CARD-----*/}
                                 <div className="col-md-6 mainFeaturedContainer">
                                     <div className="card">
                                         <div className="card-header d-flex justify-content-between">
@@ -97,6 +162,7 @@ export class MainHome extends React.Component{
                                         </div>
                                     </div>
                                 </div>
+                                {/*---end featured products card section---*/}
                             </div>
                         </div>
                         <div className="col-md-3">
