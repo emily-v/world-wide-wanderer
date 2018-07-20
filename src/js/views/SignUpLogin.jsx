@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import Navbar from '../component/Navbar.jsx';
-import BlogSidebar from '../component/BlogSidebar.jsx';
-import FeaturedPost from '../component/FeaturedPost.jsx';
 
 export class SignUpLogin extends React.Component{
     

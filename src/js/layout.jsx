@@ -9,6 +9,8 @@ import {ConfirmationPage} from "./views/ConfirmationPage.jsx";
 import {SingleProduct} from "./views/SingleProduct.jsx";
 import {CheckOut} from "./views/CheckOut.jsx";
 import {SignUpLogin} from "./views/SignUpLogin.jsx";
+import {Profile} from "./views/Profile.jsx";
+import {EditProfile} from "./views/EditProfile.jsx";
 
 
 export default class Layout extends React.Component {
@@ -27,7 +29,8 @@ export default class Layout extends React.Component {
                         <Route exact path="/singleproduct/" component={SingleProduct} />
                         <Route exact path="/checkout/" component={CheckOut} />
                         <Route exact path="/signup-login" component={SignUpLogin} />
-                        
+                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/edit-profile" component={EditProfile} />
                     </Switch>
                 </BrowserRouter>
             </React.Fragment>
