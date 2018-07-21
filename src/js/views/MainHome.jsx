@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 
+import {Consumer} from "../stores/AppContext.jsx";
+
 export class MainHome extends React.Component{
     
     render(){
@@ -15,6 +17,7 @@ export class MainHome extends React.Component{
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 mainContentContainer">
                             {/*-----BEGIN HERO CONTENT-----*/}
+                            {/*--Card Carousel Format--*/}
                             <div className="carousel slide" id="carouselControls" data-ride="carousel">
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
@@ -46,7 +49,8 @@ export class MainHome extends React.Component{
                                 </a>
                             </div>
                             
-                            {/*<div className="carousel slide" id="carouselControls" data-ride="carousel">
+                            {/*--Image with Overlaid Caption Carousel Format--
+                            <div className="carousel slide" id="carouselControls" data-ride="carousel">
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
                                         <img src="http://via.placeholder.com/800x500" alt="post featured image" className="img-fluid d-block w-100"/>
@@ -71,15 +75,6 @@ export class MainHome extends React.Component{
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="sr-only">Next</span>
                                 </a>
-                            </div>*/}
-                            
-                            {/* ---HERO CARD FORMAT ALTERNATIVE---
-                            <div className="card heroContentContainer">
-                                <img src="http://via.placeholder.com/800x500" alt="post featured image" className="card-img-top"/>
-                                <div className="card-body">
-                                    <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post"}>Title of Current Featured Blog Post in Carousel</Link></h3>
-                                    <p className="card-text text-secondary datePublished">May 15, 2018</p>
-                                </div>
                             </div>*/}
                             
                             {/*-----WELCOME MESSAGE-----*/}
