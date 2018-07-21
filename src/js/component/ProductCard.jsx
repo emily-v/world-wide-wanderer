@@ -13,7 +13,7 @@ function ProductCard(props){
                 <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
                 <div className="card-body">
                     <h4 className="card-title">
-                        <a href="#">Item One</a>
+                        <Link className="text-primary" to= {"/singleproduct"}>Item One</Link>
                     </h4>
                     <h5>$20.00</h5>
                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>

@@ -16,6 +16,7 @@ function YourCart(props){
                 <li className="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 className="my-0">Product name</h6>
+                        <img src="https://via.placeholder.com/150x100"></img>
                         <small className="text-muted">Brief description</small>
                     </div>
                     <span className="text-muted">$12</span>
@@ -23,6 +24,7 @@ function YourCart(props){
                 <li className="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 className="my-0">Second product</h6>
+                        <img src="https://via.placeholder.com/150x100"></img>
                         <small className="text-muted">Brief description</small>
                     </div>
                     <span className="text-muted">$8</span>
@@ -30,6 +32,7 @@ function YourCart(props){
                 <li className="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 className="my-0">Third item</h6>
+                        <img src="https://via.placeholder.com/150x100"></img>
                         <small className="text-muted">Brief description</small>
                     </div>
                     <span className="text-muted">$5</span>
@@ -40,6 +43,18 @@ function YourCart(props){
                         <small>EXAMPLECODE</small>
                     </div>
                     <span className="text-success">-$5</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 className="my-0">Sales Tax</h6>
+                    </div>
+                    <span className="text-muted">$0.73</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 className="my-0">Shipping</h6>
+                    </div>
+                    <span className="text-muted">$3.99</span>
                 </li>
                 <li className="list-group-item d-flex justify-content-between">
                     <span>Total (USD)</span>

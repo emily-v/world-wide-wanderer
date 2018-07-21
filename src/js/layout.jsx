@@ -11,6 +11,8 @@ import {CheckOut} from "./views/CheckOut.jsx";
 import {SignUpLogin} from "./views/SignUpLogin.jsx";
 import {Profile} from "./views/Profile.jsx";
 import {EditProfile} from "./views/EditProfile.jsx";
+import {ShoppingCart} from "./views/ShoppingCart.jsx";
+
 
 
 export default class Layout extends React.Component {
@@ -31,6 +33,7 @@ export default class Layout extends React.Component {
                         <Route exact path="/signup-login" component={SignUpLogin} />
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/edit-profile" component={EditProfile} />
+                        <Route exact path="/shoppingcart/" component={ShoppingCart} />
                     </Switch>
                 </BrowserRouter>
             </React.Fragment>
