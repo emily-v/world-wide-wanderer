@@ -134,7 +134,7 @@ export default class Layout extends React.Component {
                         <Provider value={{state:this.state, actions:this.actions}}>
                             <Route exact path="/" component={MainHome} />
                             <Route exact path="/blog-home" component={BlogHome} />
-                            <Route exact path="/blog-post" component={BlogPost} />
+                            <Route exact path="/blog-post/:theid" component={BlogPost} />
                             <Route exact path="/storehome/" component={StoreHome} />
                             <Route exact path="/confirmationpage/" component={ConfirmationPage} />
                             <Route exact path="/singleproduct/" component={SingleProduct} />
