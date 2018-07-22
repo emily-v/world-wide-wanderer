@@ -74,8 +74,47 @@ export default class Layout extends React.Component {
                 }
             ],
             "products":[
-                { 
-                    
+                {
+                    productID: 1,
+                    productName: "Classic Backpack",
+                    productPrice: 35,
+                    productImage: "https://images.unsplash.com/photo-1462043103994-3eb31d19a057?ixlib=rb-0.3.5&s=217f61db82f4dbe3314f268ba1648cb5&auto=format&fit=crop&w=750&q=80",
+                    productDescription: "The World Wide Wonder Classic™ backpack stays true to its timeless design, offering a clean and simple silhouette that is perfectly tailored to fit your style."
+                },
+                {
+                    productID: 2,
+                    productName: "Travel Blanket",
+                    productPrice: 20,
+                    productImage: "https://images.unsplash.com/photo-1457545195570-67f207084966?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a87ee980e1c3c754f0cb0e929d9c3081&auto=format&fit=crop&w=769&q=80",
+                    productDescription: "The perfect blanket for a world wide traveler. Fits easily into your backpack, carryon, or checked luggage. Ideal for napping on a plane or in the car on a long road trip."
+                },
+                {
+                    productID: 3,
+                    productName: "The perfect Beach Towel",
+                    productPrice: 15,
+                    productImage: "https://images.unsplash.com/photo-1471500466955-85aecf33f71f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca4e057c8b627e79025435ab9c215961&auto=format&fit=crop&w=500&q=60",
+                    productDescription: "Compliment the look of your bathing suit with this super cute beach towel."
+                },
+                {
+                    productID: 4,
+                    productName: "Polariod Camera",
+                    productPrice: 85,
+                    productImage: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df4d2256d54f07d2d40ce7cda76c7ebf&auto=format&fit=crop&w=1500&q=80",
+                    productDescription: "Everyone now a days has a DSLR that they bring along with them on vacation. Why not make vacationing more nostalogic with a polariod camera. The benefit you get to see the amazing pictures your snapping instantly."
+                },
+                {
+                    productID: 5,
+                    productName: "Sunnies",
+                    productPrice: 20,
+                    productImage: "https://images.unsplash.com/photo-1476052492661-714447484e01?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8274b22609a79419168bddf8c0d971e9&auto=format&fit=crop&w=1500&q=80",
+                    productDescription: "While your venturing around town on these bright and sunnies days, don't forget the perfect travel accessory. These amazing sunglasses compliment any outfit."
+                },
+                {
+                    productID: 6,
+                    productName: "Headphones",
+                    productPrice: 40,
+                    productImage: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f0fdc18a215ec725f8ca61dc6fcbdf&auto=format&fit=crop&w=500&q=60",
+                    productDescription: "When you are stuck at the airport due to a delay or have a long flight oversea's. These headphones will help pass the time by cancelling out all noise.  "
                 }
             ],
             "cart":[

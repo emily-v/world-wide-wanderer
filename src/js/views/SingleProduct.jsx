@@ -7,7 +7,6 @@ import Navbar from '../component/Navbar.jsx';
 
 
 
-
 //create your first component
 export class SingleProduct extends React.Component{
     
@@ -57,5 +56,6 @@ export class SingleProduct extends React.Component{
 }
 
 SingleProduct.propTypes = {
+    
         
     };

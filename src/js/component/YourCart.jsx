@@ -78,7 +78,11 @@ function YourCart(props){
     
 
 YourCart.propTypes = {
-    
+        productID: PropTypes.number,
+        productName: PropTypes.string,
+        productPrice: PropTypes.number,
+        productImage: PropTypes.string,
+        productDescription: PropTypes.string 
     };
     
 export default YourCart;
