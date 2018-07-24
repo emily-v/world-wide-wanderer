@@ -133,6 +133,19 @@ export default class Layout extends React.Component {
         };
     
         this.actions = {
+            
+            "loadSession": (receivedUsername, receivedPassword) => {
+                this.setState(
+                    {
+                        session: {
+                            id:1000,
+                            username:receivedUsername,
+                            password:receivedPassword,
+                            token:"assdflhlkjcugjsd1234"
+                        }
+                    });
+            },
+            
             addProductToCart: (productID) => {
                 let tempCart = this.state.cart;
                 

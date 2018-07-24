@@ -2,11 +2,24 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
+import {Consumer} from "../stores/AppContext.jsx";
+
 import Navbar from '../component/Navbar.jsx';
 
 export class SignUpLogin extends React.Component{
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            username: "",
+            password: ""
+        };
+    }
     
     render(){
+        
+        const {session, actions} = this.props;
+        
         return (
             <div>
                 <Navbar />
@@ -35,9 +48,12 @@ export class SignUpLogin extends React.Component{
                                     <h4>Log In</h4>
                                 </div>
                                 <div className="card-body">
-                                    <form>
-                                        <input type="email" className="form-control mb-2" placeholder="Email address"/>
-                                        <input type="password" className="form-control mb-2" placeholder="Password"/>
+                                    <form role="form" onSubmit={(e) => {
+                                                                        e.preventDefault();
+                                                                        actions.loadSession(this.state.username, this.state.password);
+                                    }}>
+                                        <input type="email" className="form-control mb-2" value={this.state.user} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
+                                        <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
                                         <button type="submit" className="btn btn-primary btn-block mb-2">Log In</button>
                                         <button type="button" className="btn btn-outline-secondary btn-block btn-sm">Lost your password?</button>
                                     </form>
@@ -55,3 +71,8 @@ export class SignUpLogin extends React.Component{
         );
     }
 }
+
+SignUpLogin.propTypes = {
+    session: PropTypes.object,
+    actions: PropTypes.object
+};
