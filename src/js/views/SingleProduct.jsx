@@ -30,9 +30,15 @@ export class SingleProduct extends React.Component{
                                     <React.Fragment>
                                         <div className="col-md-7">
                                             <h2><strong>{products.productName}</strong></h2>
+                                            {
+                                                products.productGallery.map( (item, index) => {
+                                                    return <img className="pr-4 img-fluid" src={item} key={index}></img>;
+                                                    
+                                                })
+                                            }
+                                            {/*<img className="pr-4" src={products.productGallery}></img>
                                             <img className="pr-4" src={products.productGallery}></img>
-                                            <img className="pr-4" src={products.productGallery}></img>
-                                            <img src={products.productGallery}></img>
+                                            <img src={products.productGallery}></img>*/}
                                             <img className="pl-10 pt-3 pb-3 img-fluid" src={products.productImage}></img>
                                         </div>
                                         <div className="col-md-5">
@@ -74,5 +80,6 @@ export class SingleProduct extends React.Component{
 
 
 SingleProduct.propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
+    productGallery: PropTypes.array
     };
