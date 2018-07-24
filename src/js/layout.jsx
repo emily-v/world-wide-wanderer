@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {MainHome} from "./views/MainHome.jsx";
 import {BlogHome} from "./views/BlogHome.jsx";
 import {BlogPost} from "./views/BlogPost.jsx";
+import {BlogFilteredDate} from "./views/BlogFilteredDate.jsx";
 import {StoreHome} from "./views/StoreHome.jsx";
 import {ConfirmationPage} from "./views/ConfirmationPage.jsx";
 import {SingleProduct} from "./views/SingleProduct.jsx";
@@ -135,6 +136,7 @@ export default class Layout extends React.Component {
                             <Route exact path="/" component={MainHome} />
                             <Route exact path="/blog-home" component={BlogHome} />
                             <Route exact path="/blog-post/:theid" component={BlogPost} />
+                            <Route exact path="/blog-filtered-2018" component={BlogFilteredDate} /> {/*make dynamic??*/}
                             <Route exact path="/storehome/" component={StoreHome} />
                             <Route exact path="/confirmationpage/" component={ConfirmationPage} />
                             <Route exact path="/singleproduct/" component={SingleProduct} />

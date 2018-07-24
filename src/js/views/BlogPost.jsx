@@ -21,7 +21,7 @@ export class BlogPost extends React.Component{
                                     var selected = state.posts.filter(item=>item.postID === parseInt(this.props.match.params.theid));
                                     var post = selected[0];
                                     if (selected.length <= 0){
-                                        return <h3>Loading...</h3>;
+                                        return <h3>Loading....</h3>;
                                     }
                                         return(
                                             <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
