@@ -54,7 +54,12 @@ export class SingleProduct extends React.Component{
                                                 <a className="dropdown-item" href="#">3</a>
                                                 <a className="dropdown-item" href="#">4</a>
                                             </div>
-                                            <button type="button pl-6" className="btn btn-success">Add</button>
+                                            {/*{
+                                                        ({actions}) =>{
+                                                        return    <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (props.productID)}>Add to cart</button>;
+                                                        }
+                                                    }*/}
+                                            <button type="button pl-6" className="btn btn-success">Add to Cart</button>
                                             <hr></hr>
                                             <dl>
                                                 <dt>Description</dt>
@@ -81,5 +86,7 @@ export class SingleProduct extends React.Component{
 
 SingleProduct.propTypes = {
     match: PropTypes.object,
-    productGallery: PropTypes.array
+    productGallery: PropTypes.array,
+    productID: PropTypes.number
+    
     };

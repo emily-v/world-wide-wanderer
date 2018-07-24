@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 import Navbar from '../component/Navbar.jsx';
 
@@ -26,9 +27,8 @@ export class ShoppingCart extends React.Component{
                                                 <h3>Shopping Cart</h3>
                                             </div>
                                             <div className ="col-xs-6">
-                                                <button type="button" className ="btn btn-primary">
-                                                  Continue shopping
-                                                </button>
+                                                <button type="button" className ="btn btn-sm" ><Link to={"/storehome"} className="text-dark">Continue Shopping</Link></button>
+                                                {/*<button type="button" className ="btn btn-primary">Continue shopping</button>*/}
                                             </div>
                                         </div>
                                     </div>
@@ -90,9 +90,7 @@ export class ShoppingCart extends React.Component{
                                             <h4 className ="text-right">Total <strong>$50.00</strong></h4>
                                         </div>
                                         <div className ="col-sm-3">
-                                            <button type="button" className="btn btn-success btn-block">
-                                            Checkout
-                                            </button>
+                                            <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>
                                         </div>
                                     </div>
                                 </div>
