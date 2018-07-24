@@ -18,7 +18,7 @@ function BlogSidebar(props){
                 <div className="mt-5 mb-3 archives">
                     <h4 className="mb-3">Archives</h4>
                     <ul className="list-unstyled text-left">
-                        <li><Link to="#" className="text-dark">2018</Link></li>
+                        <li><Link to="/blog-filtered-2018" className="text-dark">2018</Link></li>
                         <li><Link to="#" className="text-dark">2017</Link></li>
                         <li><Link to="#" className="text-dark">2016</Link></li>
                     </ul>

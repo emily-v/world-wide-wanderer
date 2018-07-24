@@ -50,7 +50,7 @@ export class BlogPost extends React.Component{
                                                 <br />
                                                 <br />
                                                 <p className="text-center">
-                                                    <Link className="text-dark" to={"/blog-home"}>Return to Featured Posts</Link>
+                                                    <Link className="text-dark" to={"/blog-home"}>Return to All Posts</Link>
                                                 </p>
                                             </div>
                                         );

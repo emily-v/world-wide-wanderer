@@ -12,7 +12,7 @@ function FeaturedPost(props){
                 </div>
                 <p className="text-secondary datePublished">{props.datePublished}</p>
                 <p className="featuredPostTextBlock">{props.postContent}
-                    <Link className="text-dark" to={"/blog-post"}>...read more</Link>
+                    <Link className="text-dark" to={"/blog-post/"+props.postID}>...read more</Link>
                 </p>
             </div>
         </div>
