@@ -32,7 +32,7 @@ export class SingleProduct extends React.Component{
                                             <h2><strong>{products.productName}</strong></h2>
                                             {
                                                 products.productGallery.map( (item, index) => {
-                                                    return <img className="pr-4 img-fluid" src={item} key={index}></img>;
+                                                    return <img className="pb-4 img-fluid card-img-top" src={item} key={index}></img>;
                                                     
                                                 })
                                             }

@@ -89,7 +89,7 @@ export default class Layout extends React.Component {
                     productPrice: 20,
                     productImage: "https://target.scene7.com/is/image/Target/53641249?wid=1400",
                     productDescription: "The perfect blanket for a world wide traveler. Fits easily into your backpack, carryon, or checked luggage. Ideal for napping on a plane or in the car on a long road trip.",
-                    productGallery: ["https://target.scene7.com/is/image/Target/53641249_Alt01?wid=1400","https://target.scene7.com/is/image/Target/53641249?wid=1400","https://target.scene7.com/is/image/Target/53641249_Alt01?wid=1400"]
+                    productGallery: ["https://target.scene7.com/is/image/Target/53641249_Alt01?wid=1400","https://target.scene7.com/is/image/Target/53641249_Alt01?wid=1400"]
                 },
                 {
                     productID: 3,
@@ -103,25 +103,25 @@ export default class Layout extends React.Component {
                     productID: 4,
                     productName: "Polariod Camera",
                     productPrice: 85,
-                    productImage: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df4d2256d54f07d2d40ce7cda76c7ebf&auto=format&fit=crop&w=1500&q=80",
+                    productImage: "https://target.scene7.com/is/image/Target/51430285_Alt02?wid=1400",
                     productDescription: "Everyone now a days has a DSLR that they bring along with them on vacation. Why not make vacationing more nostalogic with a polariod camera. The benefit you get to see the amazing pictures your snapping instantly.",
-                    productGallery: ["https://target.scene7.com/is/image/Target/47910815_Alt01?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt02?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt03?wid=1400"]
+                    productGallery: ["https://target.scene7.com/is/image/Target/51430285?wid=1400","https://target.scene7.com/is/image/Target/51430285_Alt01?wid=1400"]
                 },
                 {
                     productID: 5,
                     productName: "Sunnies",
                     productPrice: 20,
-                    productImage: "https://images.unsplash.com/photo-1476052492661-714447484e01?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8274b22609a79419168bddf8c0d971e9&auto=format&fit=crop&w=1500&q=80",
+                    productImage: "https://target.scene7.com/is/image/Target/16699768?wid=1400",
                     productDescription: "While your venturing around town on these bright and sunnies days, don't forget the perfect travel accessory. These amazing sunglasses compliment any outfit.",
-                    productGallery: ["https://target.scene7.com/is/image/Target/47910815_Alt01?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt02?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt03?wid=1400"]
+                    productGallery: ["https://target.scene7.com/is/image/Target/16699768_Alt01?wid=1400","https://target.scene7.com/is/image/Target/16699768_Alt02?wid=1400"]
                 },
                 {
                     productID: 6,
                     productName: "Headphones",
                     productPrice: 40,
-                    productImage: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f0fdc18a215ec725f8ca61dc6fcbdf&auto=format&fit=crop&w=500&q=60",
+                    productImage: "https://target.scene7.com/is/image/Target/53246709?wid=1400",
                     productDescription: "When you are stuck at the airport due to a delay or have a long flight oversea's. These headphones will help pass the time by cancelling out all noise.  ",
-                    productGallery: ["https://target.scene7.com/is/image/Target/47910815_Alt01?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt02?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt03?wid=1400"]
+                    productGallery: ["https://target.scene7.com/is/image/Target/53246709_Alt01?wid=1400","https://target.scene7.com/is/image/Target/53246709_Alt02?wid=1400"]
                 }
             ],
             "cart":[
