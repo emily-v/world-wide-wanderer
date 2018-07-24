@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-
+import {Consumer} from "../stores/AppContext.jsx";
 
 
 function ProductCard(props){
@@ -13,11 +13,17 @@ function ProductCard(props){
                 <a href="#"><img className="card-img-top img-fluid" src={props.productImage} alt=""></img></a>
                 <div className="card-body">
                     <h4 className="card-title">
-                        <Link className="text-primary" to= {"/singleproduct"}>{props.productName}</Link>
+                        <Link className="text-primary" to= {"/singleproduct/"+props.productID}>{props.productName}</Link>
                     </h4>
                     <h5>${props.productPrice}</h5>
                     <p className="card-text">{props.productDescription}</p>
-                    <a className="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                    <Consumer>
+                        {
+                                    ({actions}) =>{
+                                    return    <button className="btn btn-success" onClick={()=>actions.addProductToCart (props.productID)}>Add to cart</button>;
+                                    }
+                                }
+                    </Consumer> 
                 </div>
                 <div className="card-footer">
                     <small className="text-muted">★ ★ ★ ★ ☆</small>

@@ -5,10 +5,11 @@ import Navbar from '../component/Navbar.jsx';
 import YourCart from '../component/YourCart.jsx';
 import BillingInfo from '../component/BillingInfo.jsx';
 
-
+import {Consumer} from "../stores/AppContext.jsx";
 
 //create your first component
 export class CheckOut extends React.Component{
+
     
     render(){
         return (
