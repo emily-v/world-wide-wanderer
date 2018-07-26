@@ -19,7 +19,7 @@ class Navbar extends React.Component{
     
     render(){
         
-        //const {session, actions} = this.props;
+        //const session = this.props;
         
         return (
             <div>
@@ -47,18 +47,18 @@ class Navbar extends React.Component{
                         </ul>
                         <Consumer>
                             {({ state, actions }) => 
-                                {
-                                    
-                                            {
-                                                this.props.session !== 'undefined' ?
-                                                
-                                                    <h4>Logged In</h4>
-                                                :
-                                                    <button className="btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Account</Link></button>;
-                                            }
-
-                                }
-                            }           
+                                (
+                                  
+                                    typeof state.session.username !== 'undefined' ?
+                                        <div>    
+                                            <button className="btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
+                                            <button className="btn btn-outline-light" ><Link to="#" className="text-white">Log Out</Link></button>
+                                        </div>
+                                    :
+                                        <button className="btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>
+                                  
+                                )
+                            }
                         </Consumer>
                     </div>
                 </nav>
@@ -88,6 +88,7 @@ export default Navbar;
                 </div>*/
         
 Navbar.propTypes = {
-    session: PropTypes.object
+    session: PropTypes.object,
+    username: PropTypes.string
 };
 

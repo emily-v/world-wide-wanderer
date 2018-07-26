@@ -8,7 +8,7 @@ import FeaturedPost from '../component/FeaturedPost.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
-export class BlogFilteredDate extends React.Component{
+export class BlogArchive extends React.Component{
     
     render(){
         return (
@@ -17,16 +17,16 @@ export class BlogFilteredDate extends React.Component{
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 blogHomeContentContainer">
-                            
+                            <h3 className="text-secondary">{this.props.match.params.year}</h3>
                             <Consumer>
                                 {({ state, actions }) => 
                                     (
                                         state.posts.map((item,index)=>{
                                         //USE FILTER OR IF
-                                            if (item.datePublished.includes(2018)) {
+                                            if (item.datePublished.includes(this.props.match.params.year)) {
                                                 return (
                                                     <div>
-                                                        <h3 className="text-secondary">2018</h3>
+                                                        
                                                         <FeaturedPost 
                                                             key={index}
                                                             postID={item.postID}
@@ -55,3 +55,7 @@ export class BlogFilteredDate extends React.Component{
         );
     }
 }
+
+BlogArchive.propTypes = {
+    match: PropTypes.object
+};

@@ -55,7 +55,7 @@ export class SignUpLogin extends React.Component{
                                                                                         e.preventDefault();
                                                                                         actions.loadSession(this.state.username, this.state.password);
                                                     }}>
-                                                        <input type="email" className="form-control mb-2" value={this.state.user} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
+                                                        <input type="email" className="form-control mb-2" value={this.state.username} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
                                                         <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
                                                         <button type="submit" className="btn btn-primary btn-block mb-2">Log In</button>
                                                         <button type="button" className="btn btn-outline-secondary btn-block btn-sm">Lost your password?</button>

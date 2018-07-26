@@ -10,7 +10,13 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function BlogSidebar(props){
+    
+    
+    
     return (
+        
+        
+        
         <div>
             <div className="py-3 px-md-1 px-lg-3 text-center sidebarContentContainer">
                 <img src="http://via.placeholder.com/150x200" alt="about-photo" className="img-fluid rounded-circle mt-5 mb-3"/>
@@ -19,9 +25,9 @@ function BlogSidebar(props){
                 <div className="mt-5 mb-3 archives">
                     <h4 className="mb-3">Archives</h4>
                     <ul className="list-unstyled text-left">
-                        <li><Link to="/blog-filtered-2018"className="text-dark">2018</Link></li>
-                        <li><Link to="#" className="text-dark">2017</Link></li>
-                        <li><Link to="#" className="text-dark">2016</Link></li>
+                        <li><Link to={"/blog-archive/"+2018} className="text-dark">2018</Link></li>
+                        <li><Link to={"/blog-archive/"+2017} className="text-dark">2017</Link></li>
+                        <li><Link to={"/blog-archive/"+2016} className="text-dark">2016</Link></li>
                     </ul>
                 </div>
                 
@@ -29,11 +35,12 @@ function BlogSidebar(props){
                 <div className="mt-5 mb-3 destinations">
                     <h4 className="mb-3">Destinations</h4>
                     <ul className="list-unstyled text-left">
-                        <li>North America</li>
-                        <li>South America</li>
-                        <li>Europe</li>
-                        <li>Africa</li>
-                        <li>Asia</li>
+                        <li><Link to={"/blog-destinations/"+"northamerica"} className="text-dark">North America</Link></li>
+                        <li><Link to={"/blog-destinations/"+"unitedstates"} className="text-dark">United States</Link></li>
+                        <li><Link to={"/blog-destinations/"+"southamerica"} className="text-dark">South America</Link></li>
+                        <li><Link to={"/blog-destinations/"+"europe"} className="text-dark">Europe</Link></li>
+                        <li><Link to={"/blog-destinations/"+"africa"} className="text-dark">Africa</Link></li>
+                        <li><Link to={"/blog-destinations/"+"asia"} className="text-dark">Asia</Link></li>
                     </ul>
                 </div>
                 <div className="mt-5 mb-3 socials">
