@@ -28,13 +28,13 @@ render(){
                 <ul className="list-group mb-3">
                 
                     <Consumer>
-                        {({ state }) => (state.cart.map((item, index) => {
+                        {({ state, actions }) => (state.cart.map((item, index) => {
                             return (
                 
                                 <li key={item.id} className="list-group-item d-flex justify-content-between lh-condensed">
                                     <div>
                                         <h6 className="my-0">{item.name}</h6>
-                                        <img src="https://via.placeholder.com/150x100"></img>
+                                        <img src={item.productImage}></img>
                                         <small className="text-muted">{item.description}</small>
                                     </div>
                                     <span className="text-muted">{item.price.toFixed(2)}</span>

@@ -32,7 +32,7 @@ export class SingleProduct extends React.Component{
                                             <h2><strong>{products.productName}</strong></h2>
                                             {
                                                 products.productGallery.map( (item, index) => {
-                                                    return <img className="pb-4 img-fluid card-img-top" src={item} key={index}></img>;
+                                                    return <img className="pb-4 pr-5 img-responsive card-img-top" style={{width:150}} src={item} key={index}></img>;
                                                     
                                                 })
                                             }
@@ -54,12 +54,9 @@ export class SingleProduct extends React.Component{
                                                 <a className="dropdown-item" href="#">3</a>
                                                 <a className="dropdown-item" href="#">4</a>
                                             </div>
-                                            {/*{
-                                                        ({actions}) =>{
-                                                        return    <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (props.productID)}>Add to cart</button>;
-                                                        }
-                                                    }*/}
-                                            <button type="button pl-6" className="btn btn-success">Add to Cart</button>
+                                          
+                                            <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (products.ID)}>Add to cart</button>
+                                         
                                             <hr></hr>
                                             <dl>
                                                 <dt>Description</dt>

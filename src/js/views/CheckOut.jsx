@@ -17,7 +17,22 @@ export class CheckOut extends React.Component{
                 <Navbar />
                 <div className="container pt-4 pb-4">
                     <div className="row">
-                        <YourCart />
+                        <Consumer>
+                            {({ state, actions }) => 
+                                (
+                                    state.products.map((item,index)=>{
+                                        return <YourCart
+                                        key={index}
+                                        productID={item.productID}
+                                        productName={item.productName}
+                                        productPrice={item.productPrice}
+                                        productImage={item.productImage}
+                                        productDescription= {item.productDescription}
+                                        />;
+                                    })
+                                )
+                            }
+                        </Consumer>
                         <BillingInfo />   
                         
                     </div>

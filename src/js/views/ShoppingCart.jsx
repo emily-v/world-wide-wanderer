@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import Navbar from '../component/Navbar.jsx';
+import ShoppingCartProduct from '../component/ShoppingCartProduct.jsx';
 
-
+import {Consumer} from "../stores/AppContext.jsx";
 
 
 
@@ -34,75 +35,67 @@ export class ShoppingCart extends React.Component{
                                     </div>
                                 </div>
                                 <hr></hr>
-                                <div className ="panel-body">
-                                    <div className ="row">
-                                        <div className ="col-md-4"><img className="img-responsive" src="http://placehold.it/150x100"></img>
-                                        </div>
-                                        <div className ="col-md-4">
-                                            <h4 className ="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                                        </div>
-                                        <div className ="col-md-2">
-                                            <div className ="col-sm-6 text-right">
-                                                <h6><strong>25.00 <span className="text-muted">x</span></strong></h6>
-                                            </div>
-                                            <div className ="col-sm-4">
-                                                <input type="text" className="form-control input-sm" defaultValue="1" ></input>
-                                            </div>
-                                            <button type="button" className="btn btn-default btn-lg" aria-label="Right Align">
-                                                <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                            </button>
-                                        </div>
+                                <Consumer>
+                                    {({ state, actions }) => 
+                                        (
+                                            state.products.map((item,index)=>{
+                                                return <ShoppingCartProduct
+                                                key={index}
+                                                productID={item.productID}
+                                                productName={item.productName}
+                                                productPrice={item.productPrice}
+                                                productImage={item.productImage}
+                                                productDescription= {item.productDescription}
+                                                />;
+                                            })
+                                        )
+                                    }
+                                </Consumer>
+                                <hr></hr>
+                                {/*<div className ="row">
+                                    <div className ="col-md-4"><img className ="img-responsive" src="http://placehold.it/150x100"></img>
                                     </div>
-                                    <hr></hr>
-                                    <div className ="row">
-                                        <div className ="col-md-4"><img className ="img-responsive" src="http://placehold.it/150x100"></img>
-                                        </div>
-                                        <div className ="col-md-4 text-left">
-                                            <h4 className ="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                                        </div>
-                                        <div className ="col-md-2">
-                                            <div className ="col-sm-6 text-right">
-                                                <h6><strong>25.00 <span className="text-muted">x</span></strong></h6>
-                                            </div>
-                                            <div className ="col-sm-4">
-                                                <input type="text" className="form-control input-sm" defaultValue="1" ></input>
-                                            </div>
-                                            <button type="button" className="btn btn-default btn-lg" aria-label="Right Align">
-                                                <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                            </button>
-                                        </div>
+                                    <div className ="col-md-4 text-left">
+                                        <h4 className ="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
                                     </div>
-                                    <hr></hr>
-                                </div>
-                                <div className="text-center">
-                                    <div className="col-xs-9">
-                                        <h6 className="text-right">Added items?</h6>
-                                    </div>
-                                    <div className="col-xs-12">
-                                        <button type="button" className="btn btn-default btn-sm">
-                                        Update cart
+                                    <div className ="col-md-2">
+                                        <div className ="col-sm-6 text-right">
+                                            <h6><strong>25.00 <span className="text-muted">x</span></strong></h6>
+                                        </div>
+                                        <div className ="col-sm-4">
+                                            <input type="text" className="form-control input-sm" defaultValue="1" ></input>
+                                        </div>
+                                        <button type="button" className="btn btn-default btn-lg" aria-label="Right Align">
+                                            <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         </button>
                                     </div>
-                                </div>
-                                <div className ="panel-footer">
-                                    <div className ="row text-center">
-                                        <div className ="col-sm-9">
-                                            <h4 className ="text-right">Total <strong>$50.00</strong></h4>
-                                        </div>
-                                        <div className ="col-sm-3">
-                                            <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>*/}
                                 <hr></hr>
                             </div>
+                            <div className="text-center">
+                                <div className="col-xs-9">
+                                    <h6 className="text-right">Added items?</h6>
+                                </div>
+                                <div className="col-xs-12">
+                                    <button type="button" className="btn btn-default btn-sm">
+                                    Update cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div className ="panel-footer">
+                                <div className ="row text-center">
+                                    <div className ="col-sm-9">
+                                        <h4 className ="text-right">Total <strong>$50.00</strong></h4>
+                                    </div>
+                                    <div className ="col-sm-3">
+                                        <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr></hr>
                         </div>
                     </div>
                 </div>
-
-
-
-                {/* carousel of blog posts */}
                 <div className="container">
                     <div className ="row pt-4 pb-4">
                         <div className ="col-md-12">
