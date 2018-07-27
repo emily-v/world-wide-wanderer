@@ -11,18 +11,33 @@ import {Consumer} from "../stores/AppContext.jsx";
 export class BlogDestinations extends React.Component{
     
     render(){
+        
+        var tagFormatted = "";
+        if (this.props.match.params.tag == "northamerica"){
+            tagFormatted = "North America";
+        } else if (this.props.match.params.tag == "unitedstates"){
+            tagFormatted = "United States";
+        } else if (this.props.match.params.tag == "southamerica"){
+            tagFormatted = "South America";
+        } else if (this.props.match.params.tag == "europe"){
+            tagFormatted = "Europe";
+        } else if (this.props.match.params.tag == "africa"){
+            tagFormatted = "Africa";
+        } else if (this.props.match.params.tag == "asia"){
+            tagFormatted = "Asia";
+        }
+        
         return (
             <div>
                 <Navbar />
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 blogHomeContentContainer">
-                            <h3 className="text-secondary">{this.props.match.params.tag}</h3>
+                            <h3 className="text-secondary">{tagFormatted}</h3>
                             <Consumer>
                                 {({ state, actions }) => 
                                     (
                                         state.posts.map((item,index)=>{
-                                        //USE FILTER OR IF
                                             if (item.postTags.includes(this.props.match.params.tag)) {
                                                 return (
                                                     <div>
