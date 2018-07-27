@@ -178,7 +178,7 @@ export default class Layout extends React.Component {
                 let tempCart = this.state.cart;
                 
                 let arrayWithTheProduct = this.state.products.filter( (product) => {
-                    return product.ID === productID;  
+                    return product.productID === productID;  
                 });
                 
                 tempCart.push(arrayWithTheProduct[0]);
