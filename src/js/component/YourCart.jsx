@@ -31,13 +31,13 @@ render(){
                         {({ state, actions }) => (state.cart.map((item, index) => {
                             return (
                 
-                                <li key={item.id} className="list-group-item d-flex justify-content-between lh-condensed">
+                                <li key={index} className="list-group-item d-flex justify-content-between lh-condensed">
                                     <div>
                                         <h6 className="my-0">{item.name}</h6>
-                                        <img src={item.productImage}></img>
+                                        <img style={{width:150}} src={item.productImage}></img>
                                         <small className="text-muted">{item.description}</small>
                                     </div>
-                                    <span className="text-muted">{item.price.toFixed(2)}</span>
+                                    <span className="text-muted">{item.price}</span>
                                 </li>
                     );
                         }))}

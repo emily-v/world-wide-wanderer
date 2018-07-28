@@ -55,7 +55,7 @@ export class SingleProduct extends React.Component{
                                                 <a className="dropdown-item" href="#">4</a>
                                             </div>
                                           
-                                            <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (products.ID)}>Add to cart</button>
+                                            <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (products.productID)}>Add to cart</button>
                                          
                                             <hr></hr>
                                             <dl>

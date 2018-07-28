@@ -13,7 +13,7 @@ function ShoppingCartProduct(props){
                 return (
                     <div className ="panel-body" key={index}>
                         <div className ="row">
-                            <div className ="col-md-4"><img className="img-responsive" src={item.productImage}></img>
+                            <div className ="col-md-4"><img className="img-responsive" style={{width:150}} src={item.productImage}></img>
                             </div>
                             <div className ="col-md-4">
                                 <h4 className ="product-name"><strong>{item.name}</strong></h4><h4><small>{item.description}</small></h4>
