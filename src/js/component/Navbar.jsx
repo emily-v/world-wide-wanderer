@@ -52,7 +52,7 @@ class Navbar extends React.Component{
                                   
                                     typeof state.session.username !== 'undefined' ?
                                         <div>    
-                                            <button className="btn btn-outline-light" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingCart}/> 0</Link></button>
+                                            <button className="btn btn-outline-light" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingCart}/> {state.cart.length}</Link></button>
                                             <button className="btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
                                             <button className="btn btn-outline-light" ><Link to="#" className="text-white">Log Out</Link></button>
                                         </div>
