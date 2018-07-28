@@ -174,6 +174,15 @@ export default class Layout extends React.Component {
                   };
             },
             
+            "logout":() => {
+                this.setState(
+                    {
+                        session: {
+                            
+                        }
+                    });
+            },
+            
             addProductToCart: (productID) => {
                 let tempCart = this.state.cart;
                 
