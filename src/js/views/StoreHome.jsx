@@ -19,22 +19,28 @@ export class StoreHome extends React.Component{
                     <h3>Products</h3>
                     <hr></hr>
                     <div className="row">
+                        
                         <Consumer>
                             {({ state, actions }) => 
                                 (
                                     state.products.map((item,index)=>{
-                                        return <ProductCard
-                                        key={index}
-                                        productID={item.productID}
-                                        productName={item.productName}
-                                        productPrice={item.productPrice}
-                                        productImage={item.productImage}
-                                        productDescription= {item.productDescription}
-                                        />;
+                                        return (
+                                            <div className="col-lg-4 col-md-6 mb-4 pt-4" key={index}>
+                                                <ProductCard
+                                                        //key={index}
+                                                        productID={item.productID}
+                                                        productName={item.productName}
+                                                        productPrice={item.productPrice}
+                                                        productImage={item.productImage}
+                                                        productDescription= {item.productDescription}
+                                                />
+                                            </div>
+                                        );
                                     })
                                 )
                             }
                         </Consumer>
+                        
                     </div>
                 </div>
             </div>    

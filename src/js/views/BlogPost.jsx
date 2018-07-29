@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import Navbar from '../component/Navbar.jsx';
+import ProductCard from '../component/ProductCard.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
@@ -43,7 +44,24 @@ export class BlogPost extends React.Component{
                                                         <img src="http://via.placeholder.com/500x350" alt="post content image" className="img-fluid pb-3"/>
                                                     </div>
                                                     <div className="col-md-6">
-                                                        <img src="http://via.placeholder.com/500x350" alt="post content image" className="img-fluid pb-3"/>
+                                                        <Consumer>
+                                                            {({ state, actions }) => 
+                                                                (
+                                                                    state.products.map((item,index)=>{
+                                                                        if (item.productID==1){
+                                                                            return <ProductCard
+                                                                            key={index}
+                                                                            productID={item.productID}
+                                                                            productName={item.productName}
+                                                                            productPrice={item.productPrice}
+                                                                            productImage={item.productImage}
+                                                                            productDescription= {item.productDescription}
+                                                                            />;
+                                                                        }    
+                                                                    })
+                                                                )
+                                                            }
+                                                        </Consumer>
                                                     </div>
                                                 </div>
                                                 <p className="postTextBlock">Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.</p>
