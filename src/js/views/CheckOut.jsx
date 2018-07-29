@@ -20,7 +20,7 @@ export class CheckOut extends React.Component{
                         <Consumer>
                             {({ state, actions }) => 
                                 (
-                                    state.products.map((item,index)=>{
+                                    state.cart.map((item,index)=>{
                                         return <YourCart
                                         key={index}
                                         productID={item.productID}

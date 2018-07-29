@@ -16,11 +16,11 @@ function ShoppingCartProduct(props){
                             <div className ="col-md-4"><img className="img-responsive" style={{width:150}} src={item.productImage}></img>
                             </div>
                             <div className ="col-md-4">
-                                <h4 className ="product-name"><strong>{item.name}</strong></h4><h4><small>{item.description}</small></h4>
+                                <h4 className ="product-name"><strong>{item.productName}</strong></h4><h4><small>{item.productDescription}</small></h4>
                             </div>
                             <div className ="col-md-2">
                                 <div className ="col-sm-6 text-right">
-                                    <h6><strong>25.00 <span className="text-muted">x</span></strong></h6>
+                                    <h6><strong>${item.productPrice} <span className="text-muted">x</span></strong></h6>
                                 </div>
                                 <div className ="col-sm-4">
                                     <input type="text" className="form-control input-sm" defaultValue="1" ></input>
@@ -30,6 +30,7 @@ function ShoppingCartProduct(props){
                                 </button>
                             </div>
                         </div>
+                        <hr></hr>
                     </div>
                         
                      );

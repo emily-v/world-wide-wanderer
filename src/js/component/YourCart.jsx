@@ -23,7 +23,7 @@ render(){
             <div className="col-md-4 order-md-2 mb-4">
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
                     <span className="text-muted">Your cart</span>
-                    <span className="badge badge-secondary badge-pill">{this.state.totalItems}</span>
+                    {/*<span className="badge badge-secondary badge-pill">{this.state.totalItems}</span>*/}
                 </h4>
                 <ul className="list-group mb-3">
                 
@@ -32,12 +32,12 @@ render(){
                             return (
                 
                                 <li key={index} className="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div>
-                                        <h6 className="my-0">{item.name}</h6>
-                                        <img style={{width:150}} src={item.productImage}></img>
-                                        <small className="text-muted">{item.description}</small>
+                                    <div> 
+                                        <h6 className="my-0">{item.productName}</h6>
+                                        <img style={{width:210}} src={item.productImage}></img>
+                                        <small className="text-muted">{item.productDescription}</small>
                                     </div>
-                                    <span className="text-muted">{item.price}</span>
+                                    <span className="text-muted">${item.productPrice}</span>
                                 </li>
                     );
                         }))}

@@ -38,7 +38,7 @@ export class ShoppingCart extends React.Component{
                                 <Consumer>
                                     {({ state, actions }) => 
                                         (
-                                            state.products.map((item,index)=>{
+                                            state.cart.map((item,index)=>{
                                                 return <ShoppingCartProduct
                                                 key={index}
                                                 productID={item.productID}
@@ -51,7 +51,6 @@ export class ShoppingCart extends React.Component{
                                         )
                                     }
                                 </Consumer>
-                                <hr></hr>
                                 {/*<div className ="row">
                                     <div className ="col-md-4"><img className ="img-responsive" src="http://placehold.it/150x100"></img>
                                     </div>
@@ -70,7 +69,6 @@ export class ShoppingCart extends React.Component{
                                         </button>
                                     </div>
                                 </div>*/}
-                                <hr></hr>
                             </div>
                             <div className="text-center">
                                 <div className="col-xs-9">
@@ -96,47 +94,87 @@ export class ShoppingCart extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className="container">
-                    <div className ="row pt-4 pb-4">
-                        <div className ="col-md-12">
-                            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                                <ol className="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
+                <div className="container-fluid">
+                    <div className="row justify-content-md-center">
+                        <div className="col-12 col-md-9 p-md-5">
+                            {/*-----BEGIN HERO CONTENT-----*/}
+                            {/*--Card Carousel Format--*/}
+                            <div className="carousel slide" id="carouselControls" data-ride="carousel">
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img className="w-100" src="https://via.placeholder.com/500x400" alt="First slide"></img>
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h5>First blogpost!</h5>
-                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                        </div>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img className="w-100" src="https://via.placeholder.com/500x400" alt="Second slide"></img>
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h5>Second blogpost!</h5>
-                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                        </div>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img className="w-100" src="https://via.placeholder.com/500x400" alt="Third slide"></img>
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h5>Third blogpost!</h5>
-                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                        </div>
-                                    </div>
+                                    <Consumer>
+                                        {({ state, actions }) => 
+                                            (
+                                                state.posts.map((item,index)=>{
+                                                    return <BlogCarousel 
+                                                            key={index}
+                                                            postIndex={index}
+                                                            postID={item.postID}
+                                                            postTitle={item.postTitle}
+                                                            datePublished={item.datePublished}
+                                                            featuredImage={item.featuredImage}
+                                                            postContent={item.postContent}
+                                                            postCategory={item.postCategory}
+                                                            postTags={item.postTags}
+                                                            author={item.author}
+                                                            />;
+                                                })
+                                            )
+                                        }
+                                    </Consumer>
                                 </div>
-                                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a className="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
                                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span className="sr-only">Previous</span>
                                 </a>
-                                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a className="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="sr-only">Next</span>
                                 </a>
                             </div>
+                            {/*<div className="container">
+                                <div className ="row pt-4 pb-4">
+                                    <div className ="col-md-12">
+                                        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                                            <ol className="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                            </ol>
+                                            <div className="carousel-inner">
+                                                <div className="carousel-item active">
+                                                    <img className="w-100" src="https://via.placeholder.com/500x400" alt="First slide"></img>
+                                                    <div className="carousel-caption d-none d-md-block">
+                                                        <h5>First blogpost!</h5>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                                    </div>
+                                                </div>
+                                                <div className="carousel-item">
+                                                    <img className="w-100" src="https://via.placeholder.com/500x400" alt="Second slide"></img>
+                                                    <div className="carousel-caption d-none d-md-block">
+                                                        <h5>Second blogpost!</h5>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                                    </div>
+                                                </div>
+                                                <div className="carousel-item">
+                                                    <img className="w-100" src="https://via.placeholder.com/500x400" alt="Third slide"></img>
+                                                    <div className="carousel-caption d-none d-md-block">
+                                                        <h5>Third blogpost!</h5>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span className="sr-only">Previous</span>
+                                            </a>
+                                            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span className="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*/}
                         </div>
                     </div>
                 </div>
@@ -144,6 +182,31 @@ export class ShoppingCart extends React.Component{
         );
     }
 }
+
+
+function BlogCarousel(props){
+    return(
+        <div className={"carousel-item " + (props.postIndex === 0 ? "active" : "")}>
+            <div className="card heroContentContainer">
+                <img src={props.featuredImage} alt="post featured image" className="card-img-top"/>
+                <div className="card-body">
+                    <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post/"+props.postID}>{props.postTitle}</Link></h3>
+                    <p className="card-text text-secondary datePublished">{props.datePublished}</p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+BlogCarousel.propTypes = {
+        postIndex: PropTypes.number,
+        postID: PropTypes.number,
+        postTitle: PropTypes.string,
+        featuredImage: PropTypes.string,
+        datePublished: PropTypes.string,
+        postContent: PropTypes.string
+    };
+
 
 ShoppingCart.propTypes = {
         

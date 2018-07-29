@@ -186,8 +186,8 @@ export default class Layout extends React.Component {
             addProductToCart: (productID) => {
                 let tempCart = this.state.cart;
                 
-                let arrayWithTheProduct = this.state.products.filter( (product) => {
-                    return product.productID === productID;  
+                let arrayWithTheProduct = this.state.products.filter( (products) => {
+                    return products.productID === productID;  
                 });
                 
                 tempCart.push(arrayWithTheProduct[0]);
