@@ -39,9 +39,11 @@ render(){
                                     </div>
                                     <span className="text-muted">${item.productPrice}</span>
                                 </li>
-                    );
+                     );
                         }))}
                     </Consumer>
+                </ul>
+                <ul className="list-group mb-3">
                     <li className="list-group-item d-flex justify-content-between bg-light">
                         <div className="text-success">
                             <h6 className="my-0">Promo code</h6>
