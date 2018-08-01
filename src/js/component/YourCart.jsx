@@ -35,7 +35,7 @@ render(){
                                     <div> 
                                         <h6 className="my-0">{item.productName}</h6>
                                         <img style={{width:210}} src={item.productImage}></img>
-                                        <small className="text-muted">{item.productDescription}</small>
+                                        {/*<small className="text-muted">{item.productDescription}</small>*/}
                                     </div>
                                     <span className="text-muted">${item.productPrice}</span>
                                 </li>

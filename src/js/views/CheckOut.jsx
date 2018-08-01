@@ -17,12 +17,8 @@ export class CheckOut extends React.Component{
                 <Navbar />
                 <div className="container pt-4 pb-4">
                     <div className="row">
-                        <YourCart
-                                      
-                                        />
-
+                        <YourCart />
                         <BillingInfo />   
-                        
                     </div>
                 </div>
             </div>    

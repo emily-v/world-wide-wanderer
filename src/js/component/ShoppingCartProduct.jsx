@@ -20,13 +20,8 @@ function ShoppingCartProduct(props){
                     <h4 className ="product-name"><strong>{props.productName}</strong></h4><h4><small>{props.productDescription}</small></h4>
                 </div>
                 <div className ="col-md-4">
-                    {/*<div className ="col-sm-6 text-right">*/}
-                    <h6><strong>${props.productPrice} <span className="text-muted">x</span></strong></h6>
-                    {/*</div>*/}
-                    <div className ="col-sm-4">
-                        <input type="text" className="form-control input-sm" defaultValue="1" ></input>
-                    </div>
-                    {/*<button type="button" className="btn btn-default btn-lg" aria-label="Right Align"><FontAwesomeIcon icon="fastrash" /></button>*/}
+                    <h6><strong>${props.productPrice}</strong></h6><p className="text-muted">x</p>
+                    <select className="cart-item-qty-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
                     <button type="button" className="btn btn-outline-secondary">Remove</button>
                 </div>
             </div>

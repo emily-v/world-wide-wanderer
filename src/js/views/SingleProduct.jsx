@@ -48,7 +48,7 @@ export class SingleProduct extends React.Component{
                                             <hr />
                                             <h5>Qty: 1</h5>
                                             <hr></hr>
-                                            <button type="button" className="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</button>
+                                            <button type="button" className="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">1</button>
                                             <div className="dropdown-menu">
                                                 <a className="dropdown-item" href="#">2</a>
                                                 <a className="dropdown-item" href="#">3</a>
