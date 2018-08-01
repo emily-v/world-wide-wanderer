@@ -54,3 +54,148 @@ constructor(){
                     author: "Emily"
                 }
             ],
+            "photos":[
+                { 
+                    photoID: 61,
+                    photoURL:"https://images.unsplash.com/photo-1474904200416-6b2b7926f26f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78fae80d812b8bde75bc221a74d865d7&auto=format&fit=crop&w=1350&q=80",
+                    location:"Cusco, Peru",
+                    dateTaken: "June 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["South America"]
+                },
+                { 
+                    photoID: 62,
+                    photoURL:"https://images.unsplash.com/photo-1465513670158-c3ac6c8d1a87?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eabec66457377b77f3bb4c5e14fff63b&auto=format&fit=crop&w=1350&q=80",
+                    location:"Montana Machu Picchu, Peru",
+                    dateTaken: "June 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["South America"]
+                },
+                { 
+                    photoID: 63,
+                    photoURL:"https://images.unsplash.com/photo-1474904055312-27a02ee89ccd?ixlib=rb-0.3.5&s=faac8bc415b38976f7af9107ef251147&auto=format&fit=crop&w=1350&q=80",
+                    location:"Urubamba, Sacred Valley, Peru",
+                    dateTaken: "June 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["South America"]
+                },
+                { 
+                    photoID: 51,
+                    photoURL:"https://images.unsplash.com/photo-1495562569060-2eec283d3391?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4898cb4199e621e4cc25c9505b416f45&auto=format&fit=crop&w=1350&q=80",
+                    location:"Barcelona, Spain",
+                    dateTaken: "April 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["Europe"]
+                },
+                { 
+                    photoID: 52,
+                    photoURL:"https://images.unsplash.com/photo-1522519126280-9d4ac07c1fd8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=31f6d29a3d819da247aa51a1c869dcdd&auto=format&fit=crop&w=1400&q=80",
+                    location:"Barcelona, Spain",
+                    dateTaken: "April 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["Europe"]
+                },
+                { 
+                    photoID: 53,
+                    photoURL:"https://images.unsplash.com/photo-1468183654773-77e2f0bb6bf9?ixlib=rb-0.3.5&s=807e20940aa8364eb7b6ac7d0a65f228&auto=format&fit=crop&w=1350&q=80",
+                    location:"Marrakesh, Morocco",
+                    dateTaken: "April 2018",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["Africa"]
+                },
+                { 
+                    photoID: 41,
+                    photoURL:"https://images.unsplash.com/photo-1508869386031-88681cf0778a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fa27c4f62f7ce76e4b9f79c8cdb81cc0&auto=format&fit=crop&w=1350&q=80",
+                    location:"Las Vegas, Nevada",
+                    dateTaken: "September 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 42,
+                    photoURL:"https://images.unsplash.com/photo-1495469118433-d4dbeb29963a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67cfd4bd392966269cd8304ef4b80ef5&auto=format&fit=crop&w=2093&q=80",
+                    location:"Las Vegas, Nevada",
+                    dateTaken: "September 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 43,
+                    photoURL:"https://image.ibb.co/dbU5KJ/09_09_2017_Wedding_0232.jpg",
+                    location:"Las Vegas, Nevada",
+                    dateTaken: "September 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 31,
+                    photoURL:"https://images.unsplash.com/photo-1423450822265-fcd97e52ecb5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3e6ed302845f2b613db01aba27abe01d&auto=format&fit=crop&w=820&q=80",
+                    location:"Denver, Colorado",
+                    dateTaken: "March 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 32,
+                    photoURL:"https://images.unsplash.com/photo-1490643015579-4a1f6a8f864b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf46c7cb684ea2911ceb707f105a9345&auto=format&fit=crop&w=1350&q=80",
+                    location:"Rocky Mountain National Park, Colorado",
+                    dateTaken: "March 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 33,
+                    photoURL:"https://images.unsplash.com/photo-1418985227304-f32df7d84e39?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c15bea21e38c7a41ec3afacf3218ab7&auto=format&fit=crop&w=1350&q=80",
+                    location:"Denver, Colorado",
+                    dateTaken: "March 2017",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 21,
+                    photoURL:"https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=877ba0de50c6e36b53ea5f566fa1a48d&auto=format&fit=crop&w=1350&q=80",
+                    location:"Times Square, New York",
+                    dateTaken: "July 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 22,
+                    photoURL:"https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91f3915b616844ffa79aa98261fd53a2&auto=format&fit=crop&w=1460&q=80",
+                    location:"Brooklyn Bridge, New York",
+                    dateTaken: "July 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 23,
+                    photoURL:"https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&s=1b5668d4c520143df81c47a53465762f&auto=format&fit=crop&w=1486&q=80",
+                    location:"Times Square, New York",
+                    dateTaken: "July 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America", "United States"]
+                },
+                { 
+                    photoID: 11,
+                    photoURL:"https://images.unsplash.com/photo-1517035811173-b7659b8d0ddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4fbde60a1d55a456b560f63ef8a1340c&auto=format&fit=crop&w=1350&q=80",
+                    location:"Tulum, Mexico",
+                    dateTaken: "January 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America"]
+                },
+                { 
+                    photoID: 12,
+                    photoURL:"https://images.unsplash.com/photo-1530455235907-0a59ea1e04ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=091668737ddd1b20f0e372367cfd00be&auto=format&fit=crop&w=1352&q=80",
+                    location:"Yucatan, Mexico",
+                    dateTaken: "January 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America"]
+                },
+                { 
+                    photoID: 13,
+                    photoURL:"https://images.unsplash.com/photo-1518640027989-a30d5d7e498e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=503d3a51fb90074716c0be0f64bfda5c&auto=format&fit=crop&w=1350&q=80",
+                    location:"Chichen Itza, Mexico",
+                    dateTaken: "January 2016",
+                    caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
+                    photoTags: ["North America"]
+                }
