@@ -10,6 +10,9 @@ import {Consumer} from "../stores/AppContext.jsx";
 
 export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP CODE; ADD GALLERY TO NAVBAR--
     render(){
+        
+        
+        
         return (
             <div>
                 <Navbar />
@@ -18,6 +21,7 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                         (
                             <React.Fragment>
                                 <div className="container-fluid">
+                                    {/*-----START IMAGE GALLERY-----*/}
                                     <div className="row no-gutters">
                                         {
                                             state.photos.map((item,index)=>{
@@ -50,18 +54,40 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                             <li className="list-inline-item">{item.dateTaken}</li>
                                                                         </ul>
                                                                         <p>{item.caption}</p>
-                                                                        <ul className="list-inline mb-0 text-center text-secondary">
-                                                                            <li className="list-inline-item px-sm-3">tag1</li>
-                                                                            <li className="list-inline-item px-sm-3">tag2</li>
-                                                                            <li className="list-inline-item px-sm-3">tag3</li>
+                                                                        <ul className="list-inline mb-0">
+                                                                            <li className="list-inline-item pr-sm-3 mr-0">Related destination blog posts:</li>
+                                                                            {
+                                                                                item.photoTags.map((tag,index)=>{
+                                                                                    
+                                                                                    /*Format photoTags for nicer display*/
+                                                                                    var tagFormatted = "";
+                                                                                    if (tag == "northamerica"){
+                                                                                        tagFormatted = "North America";
+                                                                                    } else if (tag == "unitedstates"){
+                                                                                        tagFormatted = "United States";
+                                                                                    } else if (tag == "southamerica"){
+                                                                                        tagFormatted = "South America";
+                                                                                    } else if (tag == "europe"){
+                                                                                        tagFormatted = "Europe";
+                                                                                    } else if (tag == "africa"){
+                                                                                        tagFormatted = "Africa";
+                                                                                    } else if (tag == "asia"){
+                                                                                        tagFormatted = "Asia";
+                                                                                    }
+                                                                                    
+                                                                                    /*List all corresponding photoTags*/
+                                                                                    return (
+                                                                                        <li className="list-inline-item px-sm-3 mr-0"  key={index}>
+                                                                                            <Link to={"/blog-destinations/"+tag} className="text-secondary">{tagFormatted}</Link>{/*need to fix so modal closes AND link works (only one will work now)*/}
+                                                                                        </li>
+                                                                                    );
+                                                                                })
+                                                                            }
                                                                         </ul>
                                                                     </div>
                                                                 </div>
-                                                                
                                                                 <a href="#" className="text-center mb-3" data-dismiss="modal"><small>close</small></a>
-                                                                
                                                             </div>
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -78,85 +104,6 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
     }
 }
 
-/*Gallery.propTypes = {
-        photoID: PropTypes.number,
-        photoURL: PropTypes.string,
-        location: PropTypes.string,
-        dateTaken: PropTypes.string,
-        caption: PropTypes.string,
-        photoTags: PropTypes.string
-    };*/
-    
-    {/*<React.Fragment>
-                    {({ state, actions }) => 
-                        (
-                            state.photos.map((item,index)=>{
-                                return (
-                                    <div className="modal fade" id={"imagePopUp"+item.photoID} key={index}>
-                                        <div className="modal-dialog modal-lg" role="document">
-                                            <div className="modal-content">
-                                                <button type="button" className="close text-right px-2" data-dismiss="modal">
-                                                    <span>&times;</span>
-                                                </button>
-                                                <div className="card">
-                                                    <img className="card-img-top" src={item.photoURL} />
-                                                    <div className="card-body py-2">
-                                                        <div className="card-text">
-                                                            <ul className="list-inline d-flex justify-content-between text-secondary">
-                                                                <li className="list-inline-item">{item.location}</li>
-                                                                <li className="list-inline-item">{item.dateTaken}</li>
-                                                            </ul>
-                                                            <p>{item.caption}</p>
-                                                            <ul className="list-inline mb-0 text-center text-secondary">
-                                                                <li className="list-inline-item px-sm-3">tag1</li>
-                                                                <li className="list-inline-item px-sm-3">tag2</li>
-                                                                <li className="list-inline-item px-sm-3">tag3</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <a href="#" className="text-center mb-3" data-dismiss="modal"><small>close</small></a>
-                                                    
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                );
-                            })
-                        )
-                    }
-                </React.Fragment>*/}
-            
-                
-                
-                {/*<div className="modal fade" id="imagePopUp">
-                    <div className="modal-dialog modal-lg" role="document">
-                        <div className="modal-content">
-                            <button type="button" className="close text-right px-2" data-dismiss="modal">
-                                <span>&times;</span>
-                            </button>
-                            <div className="card">
-                                <img className="card-img-top" src="http://via.placeholder.com/1200x1000" />
-                                <div className="card-body py-2">
-                                    <div className="card-text">
-                                        <ul className="list-inline d-flex justify-content-between text-secondary">
-                                            <li className="list-inline-item">Location, Location</li>
-                                            <li className="list-inline-item">Date taken</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.</p>
-                                        <ul className="list-inline mb-0 text-center text-secondary">
-                                            <li className="list-inline-item px-sm-3">tag1</li>
-                                            <li className="list-inline-item px-sm-3">tag2</li>
-                                            <li className="list-inline-item px-sm-3">tag3</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <a href="#" className="text-center mb-3" data-dismiss="modal"><small>close</small></a>
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>*/}
+Gallery.propTypes = {
+    match: PropTypes.object
+};

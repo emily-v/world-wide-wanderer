@@ -93,7 +93,7 @@ export default class Layout extends React.Component {
                     location:"Cusco, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 62,
@@ -101,7 +101,7 @@ export default class Layout extends React.Component {
                     location:"Montana Machu Picchu, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 63,
@@ -109,7 +109,7 @@ export default class Layout extends React.Component {
                     location:"Urubamba, Sacred Valley, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 51,
@@ -117,7 +117,7 @@ export default class Layout extends React.Component {
                     location:"Barcelona, Spain",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Europe"]
+                    photoTags: ["europe"]
                 },
                 { 
                     photoID: 52,
@@ -125,7 +125,7 @@ export default class Layout extends React.Component {
                     location:"Barcelona, Spain",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Europe"]
+                    photoTags: ["europe"]
                 },
                 { 
                     photoID: 53,
@@ -133,7 +133,7 @@ export default class Layout extends React.Component {
                     location:"Marrakesh, Morocco",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Africa"]
+                    photoTags: ["africa"]
                 },
                 { 
                     photoID: 41,
@@ -141,7 +141,7 @@ export default class Layout extends React.Component {
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 42,
@@ -149,7 +149,7 @@ export default class Layout extends React.Component {
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 43,
@@ -157,7 +157,7 @@ export default class Layout extends React.Component {
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 31,
@@ -165,7 +165,7 @@ export default class Layout extends React.Component {
                     location:"Denver, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 32,
@@ -173,7 +173,7 @@ export default class Layout extends React.Component {
                     location:"Rocky Mountain National Park, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 33,
@@ -181,7 +181,7 @@ export default class Layout extends React.Component {
                     location:"Denver, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 21,
@@ -189,7 +189,7 @@ export default class Layout extends React.Component {
                     location:"Times Square, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 22,
@@ -197,7 +197,7 @@ export default class Layout extends React.Component {
                     location:"Brooklyn Bridge, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 23,
@@ -205,7 +205,7 @@ export default class Layout extends React.Component {
                     location:"Times Square, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 11,
@@ -213,7 +213,7 @@ export default class Layout extends React.Component {
                     location:"Tulum, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 12,
@@ -221,7 +221,7 @@ export default class Layout extends React.Component {
                     location:"Yucatan, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
+                    photoTags: ["northamerica"]
                 },
                 { 
                     photoID: 13,
@@ -229,7 +229,7 @@ export default class Layout extends React.Component {
                     location:"Chichen Itza, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
+                    photoTags: ["northamerica"]
                 }
             ],
             "products":[
