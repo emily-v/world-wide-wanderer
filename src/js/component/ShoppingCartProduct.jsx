@@ -9,6 +9,8 @@ import {Consumer} from "../stores/AppContext.jsx";
 
 
 function ShoppingCartProduct(props){
+    
+
     return (
                             
        
@@ -22,7 +24,7 @@ function ShoppingCartProduct(props){
                 <div className ="col-md-4">
                     <h6><strong>${props.productPrice}</strong></h6><p className="text-muted">x</p>
                     <select className="cart-item-qty-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
-                    <button type="button" className="btn btn-outline-secondary">Remove</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={() => this.deleteProduct(props.index)}>Remove</button>
                 </div>
             </div>
             <hr></hr>
@@ -38,7 +40,9 @@ ShoppingCartProduct.propTypes = {
         productName: PropTypes.string,
         productPrice: PropTypes.number,
         productImage: PropTypes.string,
-        productDescription: PropTypes.string
+        productDescription: PropTypes.string,
+        clickEvent:PropTypes.func,
+        index:PropTypes.number
     
     };
     

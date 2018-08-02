@@ -12,6 +12,7 @@ import {Consumer} from "../stores/AppContext.jsx";
 
 //create your first component
 export class ShoppingCart extends React.Component{
+
     
     render(){
         return (
@@ -46,6 +47,7 @@ export class ShoppingCart extends React.Component{
                                                 productPrice={item.productPrice}
                                                 productImage={item.productImage}
                                                 productDescription= {item.productDescription}
+                                                clickEvent={ (index) => this.deleteProduct(index)}
                                                 />;
                                             })
                                         )

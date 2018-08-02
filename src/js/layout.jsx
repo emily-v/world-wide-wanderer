@@ -339,7 +339,15 @@ export default class Layout extends React.Component {
                 
                 tempCart.push(arrayWithTheProduct[0]);
                 this.setState({cart: tempCart});
-            }
+            },
+            
+            deleteProduct: (index) => {
+              this.state.products.splice(index, 1);
+              this.setState({
+                  products: this.state.products
+              });
+          }
+            
         };
     }
 
