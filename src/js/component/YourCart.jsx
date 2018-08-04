@@ -20,29 +20,30 @@ export class YourCart extends React.Component{
 render(){
         
         return (
-            <div className="col-md-4 order-md-2 mb-4">
+            <Consumer>
+                {({ state, actions }) =>
+            (<div className="col-md-4 order-md-2 mb-4">
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
                     <span className="text-muted">Your cart</span>
                     {/*<span className="badge badge-secondary badge-pill">{this.state.totalItems}</span>*/}
                 </h4>
-                <ul className="list-group mb-3">
-                
-                    <Consumer>
-                        {({ state, actions }) => (state.cart.map((item, index) => {
+              
+                { state.cart.map((item, index) => {
                             return (
-                
-                                <li key={index} className="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div> 
-                                        <h6 className="my-0">{item.productName}</h6>
-                                        <img style={{width:210}} src={item.productImage}></img>
-                                        {/*<small className="text-muted">{item.productDescription}</small>*/}
-                                    </div>
-                                    <span className="text-muted">${item.productPrice}</span>
-                                </li>
-                     );
-                        }))}
-                    </Consumer>
-                </ul>
+                                <React.Fragment key={index}>
+                                    <ul className="list-group mb-3">
+                                        <li className="list-group-item d-flex justify-content-between lh-condensed">
+                                            <div> 
+                                                <h6 className="my-0">{item.productName}</h6>
+                                                <img style={{width:210}} src={item.productImage}></img>
+                                                {/*<small className="text-muted">{item.productDescription}</small>*/}
+                                            </div>
+                                            <span className="text-muted">${item.productPrice}</span>
+                                        </li>
+                                    </ul>
+                                </React.Fragment>);
+                            })
+                 }
                 <ul className="list-group mb-3">
                     <li className="list-group-item d-flex justify-content-between bg-light">
                         <div className="text-success">
@@ -65,10 +66,10 @@ render(){
                     </li>
                     <li className="list-group-item d-flex justify-content-between">
                         <span>Total (USD)</span>
-                        <strong>{(this.state.totalPrice - this.state.discount/100 * this.state.totalPrice).toFixed(2)}</strong>
+                        <strong>{(actions.flyByNight - this.state.discount/100 * actions.flyByNight).toFixed(2)}</strong>
                     </li>
                 </ul>
-        
+                            
                 <form className="card p-2">
                     <div className="input-group">
                         <input type="text" className="form-control" placeholder="Promo code"></input>
@@ -77,12 +78,12 @@ render(){
                         </div>
                     </div>
                 </form>
-            </div>
-
+            </div>)
+            }
+            </Consumer>
         );
-        
-}
     }
+}
     
 
 YourCart.propTypes = {

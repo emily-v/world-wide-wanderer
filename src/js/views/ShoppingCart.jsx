@@ -47,7 +47,7 @@ export class ShoppingCart extends React.Component{
                                                 productPrice={item.productPrice}
                                                 productImage={item.productImage}
                                                 productDescription= {item.productDescription}
-                                                clickEvent={ (index) => this.deleteProduct(index)}
+                                                /*clickEvent={ (index) => this.deleteProduct(index)}*/
                                                 />;
                                             })
                                         )
@@ -64,16 +64,22 @@ export class ShoppingCart extends React.Component{
                                     </button>
                                 </div>
                             </div>*/}
-                            <div className ="panel-footer">
-                                <div className ="row text-center">
-                                    <div className ="col-sm-9">
-                                        <h4 className ="text-right">Total <strong>$50.00</strong></h4>
-                                    </div>
-                                    <div className ="col-sm-3">
-                                        <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            <Consumer>
+                                {({ actions }) => 
+                                
+                                    (<div className ="panel-footer">
+                                        <div className ="row text-center">
+                                            <div className ="col-sm-9">
+                                                <h4 className ="text-right">Total <strong>{(actions.flyByNight)}</strong></h4>
+                                            </div>
+                                            <div className ="col-sm-3">
+                                                <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>
+                                            </div>
+                                        </div>
+                                    </div>)
+                                }
+                            </Consumer>
                             <hr></hr>
                         </div>
                     </div>

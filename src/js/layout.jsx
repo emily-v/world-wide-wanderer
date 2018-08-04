@@ -297,6 +297,7 @@ export default class Layout extends React.Component {
             "cart":[
                 
             ],
+            
             "session":{
                 
             }
@@ -341,12 +342,30 @@ export default class Layout extends React.Component {
                 this.setState({cart: tempCart});
             },
             
-            deleteProduct: (index) => {
-              this.state.products.splice(index, 1);
-              this.setState({
-                  products: this.state.products
-              });
-          }
+            deleteProduct: (potato) => {
+                let koala = this.state.cart;
+                
+                let kayak = koala.filter( (kiwi) => {
+                    return kiwi.productID !== potato ;  
+                });
+            
+                  //tempProduct.splice(index, 1);
+                  this.setState({cart: kayak});
+          },
+          
+          
+            flyByNight/*calculateTotalCart*/: () => {
+               
+               let cow = this.state.cart;
+               
+               let boat = 0;
+               
+               cow.forEach ( (butter) => {
+                   boat += butter.productPrice;
+               });
+
+               return boat;
+           }
             
         };
     }

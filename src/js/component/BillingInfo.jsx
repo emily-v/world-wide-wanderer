@@ -64,6 +64,15 @@ function BillingInfo(props){
                         <select className="custom-select d-block w-100" id="state" required="">
                             <option value="">Choose...</option>
                             <option>California</option>
+                            <option>Georgia</option>
+                            <option>Florida</option>
+                            <option>NewYork</option>
+                            <option>Texas</option>
+                            <option>Illinois</option>
+                            <option>Nevada</option>
+                            <option>Arizona</option>
+                            <option>Louisiana</option>
+                            <option>New Mexico</option>
                         </select>
                         <div className="invalid-feedback">
                             Please provide a valid state.
