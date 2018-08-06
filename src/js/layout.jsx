@@ -355,12 +355,11 @@ export default class Layout extends React.Component {
           
           
             flyByNight/*calculateTotalCart*/: () => {
+               let cow /*fullCart*/ = this.state.cart;
                
-               let cow = this.state.cart;
+               let boat/*sumOfCart*/ = 0;
                
-               let boat = 0;
-               
-               cow.forEach ( (butter) => {
+               cow.forEach ( (butter/*products*/) => {
                    boat += butter.productPrice;
                });
 
