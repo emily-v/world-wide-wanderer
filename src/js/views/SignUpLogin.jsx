@@ -104,3 +104,5 @@ SignUpLogin.propTypes = {
     session: PropTypes.object,
     actions: PropTypes.object
 };
+
+//test

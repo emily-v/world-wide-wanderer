@@ -15,6 +15,7 @@ import {SignUpLogin} from "./views/SignUpLogin.jsx";
 import {Profile} from "./views/Profile.jsx";
 import {EditProfile} from "./views/EditProfile.jsx";
 import {ShoppingCart} from "./views/ShoppingCart.jsx";
+import ScrollToTop from "./component/ScrollToTop.jsx";
 
 import {Provider} from "./stores/AppContext.jsx";
 
@@ -373,24 +374,26 @@ export default class Layout extends React.Component {
         return (
             <React.Fragment>
                 <BrowserRouter>
-                    <Switch>
-                        <Provider value={{state:this.state, actions:this.actions}}>
-                            <Route exact path="/" component={MainHome} />
-                            <Route exact path="/blog-home" component={BlogHome} />
-                            <Route exact path="/blog-post/:theid" component={BlogPost} />
-                            <Route exact path="/blog-archive/:year" component={BlogArchive} />
-                            <Route exact path="/blog-destinations/:tag" component={BlogDestinations} />
-                            <Route exact path="/gallery" component={Gallery} />
-                            <Route exact path="/storehome/" component={StoreHome} />
-                            <Route exact path="/confirmationpage/" component={ConfirmationPage} />
-                            <Route exact path="/singleproduct/:theid" component={SingleProduct} />
-                            <Route exact path="/checkout/" component={CheckOut} />
-                            <Route exact path="/signup-login" component={SignUpLogin} />
-                            <Route exact path="/profile" component={Profile} />
-                            <Route exact path="/edit-profile" component={EditProfile} />
-                            <Route exact path="/shoppingcart/" component={ShoppingCart} />
-                        </Provider>
-                    </Switch>
+                    <ScrollToTop>
+                        <Switch>
+                            <Provider value={{state:this.state, actions:this.actions}}>
+                                <Route exact path="/" component={MainHome} />
+                                <Route exact path="/blog-home" component={BlogHome} />
+                                <Route exact path="/blog-post/:theid" component={BlogPost} />
+                                <Route exact path="/blog-archive/:year" component={BlogArchive} />
+                                <Route exact path="/blog-destinations/:tag" component={BlogDestinations} />
+                                <Route exact path="/gallery" component={Gallery} />
+                                <Route exact path="/storehome/" component={StoreHome} />
+                                <Route exact path="/confirmationpage/" component={ConfirmationPage} />
+                                <Route exact path="/singleproduct/:theid" component={SingleProduct} />
+                                <Route exact path="/checkout/" component={CheckOut} />
+                                <Route exact path="/signup-login" component={SignUpLogin} />
+                                <Route exact path="/profile" component={Profile} />
+                                <Route exact path="/edit-profile" component={EditProfile} />
+                                <Route exact path="/shoppingcart/" component={ShoppingCart} />
+                            </Provider>
+                        </Switch>
+                    </ScrollToTop>
                 </BrowserRouter>
             </React.Fragment>
         );
