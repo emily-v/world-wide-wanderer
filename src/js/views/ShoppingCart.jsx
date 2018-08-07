@@ -71,7 +71,7 @@ export class ShoppingCart extends React.Component{
                                     (<div className ="panel-footer">
                                         <div className ="row text-center">
                                             <div className ="col-sm-9">
-                                                <h4 className ="text-right">Total <strong>{(actions.flyByNight)}</strong></h4>
+                                                <h4 className ="text-right">Total <strong>$ {(actions.flyByNight())}</strong></h4>
                                             </div>
                                             <div className ="col-sm-3">
                                                 <button type="button" className="btn btn-success btn-block"><Link to={"/checkout"} className="text-light">Checkout</Link></button>

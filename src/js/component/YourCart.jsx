@@ -68,7 +68,7 @@ render(){
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between">
                                         <span>Total (USD)</span>
-                                        <strong>${(actions.flyByNight - this.state.discount/100 * actions.flyByNight).toFixed(2)}</strong>
+                                        <strong>${(actions.flyByNight() - this.state.discount/100 * actions.flyByNight()).toFixed(2)}</strong>
                                     </li>
                                 </ul>
                                             
