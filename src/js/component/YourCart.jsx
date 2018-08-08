@@ -10,7 +10,7 @@ export class YourCart extends React.Component{
        super();
        this.state ={
            
-           discount:25,
+           discount:0,
            totalItems:0,
            totalPrice:0
            
@@ -52,13 +52,13 @@ render(){
                                             <h6 className="my-0">Promo code</h6>
                                             <small>{this.state.discount}%</small>
                                         </div>
-                                        <span className="text-success">-$5</span>
+                                        <span className="text-success">-$0</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div>
                                             <h6 className="my-0">Sales Tax</h6>
                                         </div>
-                                        <span className="text-muted">$0.73</span>
+                                        <span className="text-muted">$0.00</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div>

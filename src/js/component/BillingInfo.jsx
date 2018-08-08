@@ -152,6 +152,15 @@ function BillingInfo(props){
                         <select className="custom-select d-block w-100" id="state" required="">
                             <option value="">Choose...</option>
                             <option>California</option>
+                            <option>Georgia</option>
+                            <option>Florida</option>
+                            <option>NewYork</option>
+                            <option>Texas</option>
+                            <option>Illinois</option>
+                            <option>Nevada</option>
+                            <option>Arizona</option>
+                            <option>Louisiana</option>
+                            <option>New Mexico</option>
                         </select>
                         <div className="invalid-feedback">
                             Please provide a valid state.
@@ -217,7 +226,7 @@ function BillingInfo(props){
                     </div>
                 </div>
                 <hr className="mb-4"></hr>
-                <button className="btn btn-success btn-lg btn-block" type="submit">Complete Order</button>
+                <button className="btn btn-success btn-lg btn-block" type="submit"><Link to={"/confirmationpage"} className="text-light">Complete Order</Link></button>
             </form>
         </div>
 

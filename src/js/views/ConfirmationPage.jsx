@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import OrderSummary from '../component/OrderSummary.jsx';
 
-
+import {Consumer} from "../stores/AppContext.jsx";
 
 
 
@@ -25,7 +25,7 @@ export class ConfirmationPage extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <OrderSummary />
+                        <OrderSummary/>
                     </div>
                 </div>
             </div>    
