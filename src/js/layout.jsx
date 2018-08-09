@@ -301,7 +301,9 @@ export default class Layout extends React.Component {
             
             "session":{
                 
-            }
+            },
+            
+            "isLoading":true
         };
     
         this.actions = {
@@ -366,6 +368,19 @@ export default class Layout extends React.Component {
 
                return boat;
            }
+           
+           /*"loadInitialData": () => {
+                
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wp/v2/posts')
+                    .then(response => response.json())
+                    .then(data => this.setState({ posts: data, isLoading: false }))
+                    .catch(error => console.log(error));
+                    
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/photo')
+                    .then(response => response.json())
+                    .then(data => this.setState({ photo: data }))
+                    .catch(error => console.log(error));
+            }*/
             
         };
     }

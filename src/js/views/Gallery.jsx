@@ -78,7 +78,7 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                                     /*List all corresponding photoTags*/
                                                                                     return (
                                                                                         <li className="list-inline-item px-sm-3 mr-0"  key={index}>
-                                                                                            <Link to={"/blog-destinations/"+tag} className="text-secondary">{tagFormatted}</Link>{/*need to fix so modal closes AND link works (only one will work now)*/}
+                                                                                            <Link to={"/blog-destinations/"+tag} className="text-secondary"><a href="#" data-dismiss="modal">{tagFormatted}</a></Link>{/*need to fix so modal closes AND link works (only one will work now)*/}
                                                                                         </li>
                                                                                     );
                                                                                 })
