@@ -11,7 +11,7 @@ function FeaturedPost(props){
                     <img src={props.featuredImage} alt="post featured image" className="img-fluid pb-3"/>
                 </div>
                 <p className="text-secondary datePublished">{props.datePublished}</p>
-                <p className="featuredPostTextBlock">{props.postContent}
+                <p className="featuredPostTextBlock">{props.postExcerpt}
                     <Link className="text-dark" to={"/blog-post/"+props.postID}>...read more</Link>
                 </p>
             </div>
@@ -24,7 +24,7 @@ FeaturedPost.propTypes = {
         postTitle: PropTypes.string,
         featuredImage: PropTypes.string,
         datePublished: PropTypes.string,
-        postContent: PropTypes.string
+        postExcerpt: PropTypes.string
     };
 
 export default FeaturedPost;

@@ -19,20 +19,20 @@ export class BlogPost extends React.Component{
                         <Consumer>
                             {({ state, actions }) => 
                                 {
-                                    var selected = state.posts.filter(item=>item.postID === parseInt(this.props.match.params.theid));
+                                    var selected = state.posts.filter(item=>item.id === parseInt(this.props.match.params.theid));
                                     var post = selected[0];
                                     if (selected.length <= 0){
                                         return <h3>Loading....</h3>;
                                     }
                                         return(
                                             <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
-                                                <h1 className="my-3 postTitle">{post.postTitle}</h1>
+                                                <h1 className="my-3 postTitle">{post.title.rendered}</h1>
                                                 <div className="text-center postImageContainer">
-                                                    <img src={post.featuredImage} alt="post featured image" className="img-fluid pb-3"/>
+                                                    <img src={post.featured_media} alt="post featured image" className="img-fluid pb-3"/>
                                                 </div>
-                                                <p className="text-secondary datePublished">{post.datePublished}</p>
+                                                <p className="text-secondary datePublished">{post.date}</p>
                                                 <p className="text-secondary author">Author: {post.author}</p>
-                                                <p className="postTextBlock">{post.postContent}</p>
+                                                <p className="postTextBlock">{post.content.rendered}</p>
                                                 <div className="text-center postImageContainer">
                                                     <img src="http://via.placeholder.com/800x500" alt="post content image" className="img-fluid pb-3"/>
                                                 </div>

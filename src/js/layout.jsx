@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
         
         this.state = {
             "posts":[
-                { 
+                /*{ 
                     postID: 6,
                     postTitle:"Peru-sing Around Lima, Cusco and Machu Picchu",
                     datePublished: "July 26, 2018",
@@ -85,7 +85,7 @@ export default class Layout extends React.Component {
                     postCategory: "? can just use tags ?",
                     postTags: ["northamerica"],
                     author: "Emily"
-                }
+                }*/
             ],
             "photos":[
                 { 
@@ -367,9 +367,9 @@ export default class Layout extends React.Component {
                });
 
                return boat;
-           }
+           },
            
-           /*"loadInitialData": () => {
+           "loadInitialData": () => {
                 
                 fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wp/v2/posts')
                     .then(response => response.json())
@@ -380,7 +380,7 @@ export default class Layout extends React.Component {
                     .then(response => response.json())
                     .then(data => this.setState({ photo: data }))
                     .catch(error => console.log(error));
-            }*/
+            }
             
         };
     }

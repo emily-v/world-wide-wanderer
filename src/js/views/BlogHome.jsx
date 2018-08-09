@@ -21,6 +21,29 @@ export class BlogHome extends React.Component{
                             <Consumer>
                                 {({ state, actions }) => 
                                     (
+                                        state.isLoading ? (<p>Loading...</p>)
+                                        :
+                                        state.posts.map((item,index)=>{
+                                            return <FeaturedPost 
+                                                    key={index}
+                                                    postID={item.id}
+                                                    postTitle={item.title.rendered}
+                                                    datePublished={item.date}
+                                                    featuredImage={item.featured_media}
+                                                    postExcerpt={item.excerpt.rendered}
+                                                    postContent={item.content.rendered}
+                                                    postCategory={item.categories}
+                                                    postTags={item.tags}
+                                                    author={item.author}
+                                                    />;
+                                        })
+                                    )
+                                }
+                            </Consumer>
+                            {/* -----MAP WITH DUMMY CONTENT
+                            <Consumer>
+                                {({ state, actions }) => 
+                                    (
                                         state.posts.map((item,index)=>{
                                             return <FeaturedPost 
                                                     key={index}
@@ -36,7 +59,7 @@ export class BlogHome extends React.Component{
                                         })
                                     )
                                 }
-                            </Consumer>
+                            </Consumer>*/}
                         </div>
                         <div className="col-md-3">
                             <BlogSidebar />
