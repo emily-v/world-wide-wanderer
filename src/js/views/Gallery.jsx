@@ -29,7 +29,7 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                             state.photo.map((item,index)=>{
                                                 return(
                                                     <div className="col-6 col-sm-4 col-lg-3" key={index}>
-                                                        <img src={item.link} className="img-fluid img-thumbnail rounded-0" data-toggle="modal" data-target={"#imagePopUp"+item.photoID}/>
+                                                        <img src={item.meta_keys.image} className="img-fluid img-thumbnail rounded-0" data-toggle="modal" data-target={"#imagePopUp"+item.id}/>
                                                     </div>
                                                 );
                                             })
@@ -48,14 +48,14 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                 <span>&times;</span>
                                                             </button>
                                                             <div className="card">
-                                                                <img className="card-img-top" src={item.link} />
+                                                                <img className="card-img-top" src={item.meta_keys.image} />
                                                                 <div className="card-body py-2">
                                                                     <div className="card-text">
                                                                         <ul className="list-inline d-flex justify-content-between text-secondary">
-                                                                            <li className="list-inline-item">location not showing in json</li>
-                                                                            <li className="list-inline-item">custom date taken not showing in json</li>
+                                                                            <li className="list-inline-item">{item.meta_keys.location}</li>
+                                                                            <li className="list-inline-item">{item.meta_keys.date_taken}</li>
                                                                         </ul>
-                                                                        <p>{item.title.rendered}</p>{/*---SHOULD BE CAPTION NOT TITLE---*/}
+                                                                        <p>{item.meta_keys.caption}</p>{/*---SHOULD BE CAPTION NOT TITLE---*/}
                                                                         {/*----COMMENTING OUT TAGS IN IMAGE MODAL BECAUSE TAGS NOT WORKING----
                                                                         <ul className="list-inline mb-0">
                                                                             <li className="list-inline-item pr-sm-3 mr-0">Related destination blog posts:</li>

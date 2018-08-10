@@ -376,10 +376,10 @@ export default class Layout extends React.Component {
                     .then(data => this.setState({ posts: data, isLoading: false }))
                     .catch(error => console.log(error));
                     
-                /*fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/photo')
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/photo')
                     .then(response => response.json())
                     .then(data => this.setState({ photo: data }))
-                    .catch(error => console.log(error));*/
+                    .catch(error => console.log(error));
             }
             
         };
@@ -389,9 +389,6 @@ export default class Layout extends React.Component {
         this.actions.loadInitialData();
     }
     
-    componentWillUnmount() {
-        this.actions.loadInitialData();
-    }//console says needs componentWillUnmount but not working here
     
 
     render() {
