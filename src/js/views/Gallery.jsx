@@ -8,7 +8,7 @@ import Navbar from '../component/Navbar.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
-export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP CODE; ADD GALLERY TO NAVBAR--
+export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP CODE--
     render(){
         
         
@@ -24,10 +24,12 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                     {/*-----START IMAGE GALLERY-----*/}
                                     <div className="row no-gutters">
                                         {
-                                            state.photos.map((item,index)=>{
+                                            state.isLoading ? (<p>Loading...</p>)
+                                            :
+                                            state.photo.map((item,index)=>{
                                                 return(
                                                     <div className="col-6 col-sm-4 col-lg-3" key={index}>
-                                                        <img src={item.photoURL} className="img-fluid img-thumbnail rounded-0" data-toggle="modal" data-target={"#imagePopUp"+item.photoID}/>
+                                                        <img src={item.link} className="img-fluid img-thumbnail rounded-0" data-toggle="modal" data-target={"#imagePopUp"+item.photoID}/>
                                                     </div>
                                                 );
                                             })
@@ -37,29 +39,30 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                 {/*-----START SINGLE IMAGE POP-UP MODAL-----*/}
                                 <div>
                                     {
-                                        state.photos.map((item,index)=>{
+                                        state.photo.map((item,index)=>{
                                             return (
-                                                <div className="modal fade" id={"imagePopUp"+item.photoID} key={index}>
+                                                <div className="modal fade" id={"imagePopUp"+item.id} key={index}>
                                                     <div className="modal-dialog modal-lg" role="document">
                                                         <div className="modal-content">
                                                             <button type="button" className="close text-right px-2" data-dismiss="modal">
                                                                 <span>&times;</span>
                                                             </button>
                                                             <div className="card">
-                                                                <img className="card-img-top" src={item.photoURL} />
+                                                                <img className="card-img-top" src={item.link} />
                                                                 <div className="card-body py-2">
                                                                     <div className="card-text">
                                                                         <ul className="list-inline d-flex justify-content-between text-secondary">
-                                                                            <li className="list-inline-item">{item.location}</li>
-                                                                            <li className="list-inline-item">{item.dateTaken}</li>
+                                                                            <li className="list-inline-item">location not showing in json</li>
+                                                                            <li className="list-inline-item">custom date taken not showing in json</li>
                                                                         </ul>
-                                                                        <p>{item.caption}</p>
+                                                                        <p>{item.title.rendered}</p>{/*---SHOULD BE CAPTION NOT TITLE---*/}
+                                                                        {/*----COMMENTING OUT TAGS IN IMAGE MODAL BECAUSE TAGS NOT WORKING----
                                                                         <ul className="list-inline mb-0">
                                                                             <li className="list-inline-item pr-sm-3 mr-0">Related destination blog posts:</li>
                                                                             {
                                                                                 item.photoTags.map((tag,index)=>{
                                                                                     
-                                                                                    /*Format photoTags for nicer display*/
+                                                                                    Format photoTags for nicer display
                                                                                     var tagFormatted = "";
                                                                                     if (tag == "northamerica"){
                                                                                         tagFormatted = "North America";
@@ -75,15 +78,15 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                                         tagFormatted = "Asia";
                                                                                     }
                                                                                     
-                                                                                    /*List all corresponding photoTags*/
+                                                                                    List all corresponding photoTags
                                                                                     return (
                                                                                         <li className="list-inline-item px-sm-3 mr-0"  key={index}>
-                                                                                            <Link to={"/blog-destinations/"+tag} className="text-secondary"><a href="#" data-dismiss="modal">{tagFormatted}</a></Link>{/*need to fix so modal closes AND link works (only one will work now)*/}
+                                                                                            <Link to={"/blog-destinations/"+tag} className="text-secondary"><a href="#" data-dismiss="modal">{tagFormatted}</a></Link> ---need to fix so modal closes AND link works (only one will work now)---
                                                                                         </li>
                                                                                     );
                                                                                 })
                                                                             }
-                                                                        </ul>
+                                                                        </ul>*/}
                                                                     </div>
                                                                 </div>
                                                                 <a href="#" className="text-center mb-3" data-dismiss="modal"><small>close</small></a>

@@ -87,8 +87,8 @@ export default class Layout extends React.Component {
                     author: "Emily"
                 }*/
             ],
-            "photos":[
-                { 
+            "photo":[
+                /*{ 
                     photoID: 61,
                     photoURL:"https://images.unsplash.com/photo-1474904200416-6b2b7926f26f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78fae80d812b8bde75bc221a74d865d7&auto=format&fit=crop&w=1350&q=80",
                     location:"Cusco, Peru",
@@ -231,7 +231,7 @@ export default class Layout extends React.Component {
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
                     photoTags: ["northamerica"]
-                }
+                }*/
             ],
             "products":[
                 {
@@ -376,14 +376,23 @@ export default class Layout extends React.Component {
                     .then(data => this.setState({ posts: data, isLoading: false }))
                     .catch(error => console.log(error));
                     
-                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/photo')
+                /*fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/photo')
                     .then(response => response.json())
                     .then(data => this.setState({ photo: data }))
-                    .catch(error => console.log(error));
+                    .catch(error => console.log(error));*/
             }
             
         };
     }
+    
+    componentDidMount() {
+        this.actions.loadInitialData();
+    }
+    
+    componentWillUnmount() {
+        this.actions.loadInitialData();
+    }//console says needs componentWillUnmount but not working here
+    
 
     render() {
         return (

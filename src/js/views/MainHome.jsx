@@ -23,17 +23,19 @@ export class MainHome extends React.Component{
                                     <Consumer>
                                         {({ state, actions }) => 
                                             (
+                                                state.isLoading ? (<p>Loading...</p>)
+                                                :
                                                 state.posts.map((item,index)=>{
                                                     return <BlogCarousel 
                                                             key={index}
                                                             postIndex={index}
-                                                            postID={item.postID}
-                                                            postTitle={item.postTitle}
-                                                            datePublished={item.datePublished}
-                                                            featuredImage={item.featuredImage}
-                                                            postContent={item.postContent}
-                                                            postCategory={item.postCategory}
-                                                            postTags={item.postTags}
+                                                            postID={item.id}
+                                                            postTitle={item.title.rendered}
+                                                            datePublished={item.date}
+                                                            featuredImage={item.featured_media}
+                                                            postExcerpt={item.excerpt.rendered}
+                                                            postCategory={item.categories}
+                                                            postTags={item.tags}
                                                             author={item.author}
                                                             />;
                                                 })
@@ -70,14 +72,14 @@ export class MainHome extends React.Component{
                                                             if (index <= 2) {
                                                                 return <FeaturedPostSmall 
                                                                         key={index}
-                                                                        postIndex={index}
-                                                                        postID={item.postID}
-                                                                        postTitle={item.postTitle}
-                                                                        datePublished={item.datePublished}
-                                                                        featuredImage={item.featuredImage}
-                                                                        postContent={item.postContent}
-                                                                        postCategory={item.postCategory}
-                                                                        postTags={item.postTags}
+                                                                        postID={item.id}
+                                                                        postTitle={item.title.rendered}
+                                                                        datePublished={item.date}
+                                                                        featuredImage={item.featured_media}
+                                                                        postExcerpt={item.excerpt.rendered}
+                                                                        postContent={item.content.rendered}
+                                                                        postCategory={item.categories}
+                                                                        postTags={item.tags}
                                                                         author={item.author}
                                                                         />;
                                                             }            
