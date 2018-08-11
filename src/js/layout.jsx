@@ -380,6 +380,12 @@ export default class Layout extends React.Component {
                     .then(response => response.json())
                     .then(data => this.setState({ photo: data }))
                     .catch(error => console.log(error));
+                    
+                fetch('https://first-wordpress-kparrish.c9users.io/wp-json/sample_api/v1/product')
+                    .then(response => response.json())
+                    .then(data => this.setState({ photo: data }))
+                    .catch(error => console.log(error));    
+                    
             }
             
         };
