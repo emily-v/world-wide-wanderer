@@ -234,7 +234,7 @@ export default class Layout extends React.Component {
                 }*/
             ],
             "products":[
-                {
+                /*{
                     productID: 1,
                     productName: "Classic Backpack",
                     productPrice: 35,
@@ -293,7 +293,7 @@ export default class Layout extends React.Component {
                     productGallery: ["https://target.scene7.com/is/image/Target/53246709_Alt01?wid=1400","https://target.scene7.com/is/image/Target/53246709_Alt02?wid=1400"],
                     productRating: [1,2,3,4,5],
                     productCategory: "Travel Essential"
-                }
+                }*/
             ],
             "cart":[
                 
@@ -334,11 +334,11 @@ export default class Layout extends React.Component {
                     });
             },
             
-            addProductToCart: (productID) => {
+            addProductToCart: (id) => {
                 let tempCart = this.state.cart;
                 
-                let arrayWithTheProduct = this.state.products.filter( (products) => {
-                    return products.productID === productID;  
+                let arrayWithTheProduct = this.state.products.filter( (product) => {
+                    return product.id === id;  
                 });
                 
                 tempCart.push(arrayWithTheProduct[0]);
@@ -349,7 +349,7 @@ export default class Layout extends React.Component {
                 let koala = this.state.cart;
                 
                 let kayak = koala.filter( (kiwi) => {
-                    return kiwi.productID !== potato ;  
+                    return kiwi.id !== potato ;  
                 });
             
                   //tempProduct.splice(index, 1);
@@ -383,8 +383,10 @@ export default class Layout extends React.Component {
                     
                 fetch('https://first-wordpress-kparrish.c9users.io/wp-json/sample_api/v1/product')
                     .then(response => response.json())
-                    .then(data => this.setState({ photo: data }))
+                    .then(data => this.setState({ products: data }))
                     .catch(error => console.log(error));    
+                    
+                    
                     
             }
             

@@ -42,11 +42,11 @@ export class ShoppingCart extends React.Component{
                                             state.cart.map((item,index)=>{
                                                 return <ShoppingCartProduct
                                                 key={index}
-                                                productID={item.productID}
-                                                productName={item.productName}
-                                                productPrice={item.productPrice}
-                                                productImage={item.productImage}
-                                                productDescription= {item.productDescription}
+                                                productID={item.id}
+                                                productName={item.name}
+                                                productPrice={item.price}
+                                                productImage={item.image_id}
+                                                productDescription= {item.description}
                                                 /*clickEvent={ (index) => this.deleteProduct(index)}*/
                                                 />;
                                             })
@@ -95,17 +95,19 @@ export class ShoppingCart extends React.Component{
                                     <Consumer>
                                         {({ state, actions }) => 
                                             (
+                                                state.isLoading ? (<p>Loading...</p>)
+                                                :
                                                 state.posts.map((item,index)=>{
                                                     return <BlogCarousel 
                                                             key={index}
                                                             postIndex={index}
-                                                            postID={item.postID}
-                                                            postTitle={item.postTitle}
-                                                            datePublished={item.datePublished}
-                                                            featuredImage={item.featuredImage}
-                                                            postContent={item.postContent}
-                                                            postCategory={item.postCategory}
-                                                            postTags={item.postTags}
+                                                            postID={item.id}
+                                                            postTitle={item.title.rendered}
+                                                            datePublished={item.date}
+                                                            featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                            postExcerpt={item.excerpt.rendered}
+                                                            postCategory={item.categories}
+                                                            postTags={item.tags}
                                                             author={item.author}
                                                             />;
                                                 })
@@ -156,5 +158,7 @@ BlogCarousel.propTypes = {
 
 
 ShoppingCart.propTypes = {
+    
+    productPrice: PropTypes.number
         
     };

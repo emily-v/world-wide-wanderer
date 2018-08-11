@@ -36,11 +36,11 @@ render(){
                                                     <ul className="list-group mb-3">
                                                         <li className="list-group-item d-flex justify-content-between lh-condensed">
                                                             <div> 
-                                                                <h6 className="my-0">{item.productName}</h6>
-                                                                <img style={{width:210}} src={item.productImage}></img>
+                                                                <h6 className="my-0">{item.name}</h6>
+                                                                <img style={{width:210}} src={item.image_id}></img>
                                                                 {/*<small className="text-muted">{item.productDescription}</small>*/}
                                                             </div>
-                                                            <span className="text-muted">${item.productPrice}</span>
+                                                            <span className="text-muted">${item.price}</span>
                                                         </li>
                                                     </ul>
                                                 </React.Fragment>);

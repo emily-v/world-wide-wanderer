@@ -21,7 +21,7 @@ export class SingleProduct extends React.Component{
                             {({ state, actions }) => {
                             
                             var selected = state.products.filter(item => {
-                                return item.productID === parseInt (this.props.match.params.theid);
+                                return item.id === parseInt (this.props.match.params.theid);
                             });
                             
                             if(selected.length <=0) {return <h3>Loading....</h3>;}
@@ -29,9 +29,9 @@ export class SingleProduct extends React.Component{
                                 return  (
                                     <React.Fragment>
                                         <div className="col-md-7">
-                                            <h2><strong>{products.productName}</strong></h2>
+                                            <h2><strong>{products.name}</strong></h2>
                                             {
-                                                products.productGallery.map( (item, index) => {
+                                                products.gallery_image_ids.map( (item, index) => {
                                                     return <img className="pb-4 pr-5 img-responsive card-img-top" style={{width:150}} src={item} key={index}></img>;
                                                     
                                                 })
@@ -39,12 +39,12 @@ export class SingleProduct extends React.Component{
                                             {/*<img className="pr-4" src={products.productGallery}></img>
                                             <img className="pr-4" src={products.productGallery}></img>
                                             <img src={products.productGallery}></img>*/}
-                                            <img className="pl-10 pt-3 pb-3 img-fluid" src={products.productImage}></img>
+                                            <img className="pl-10 pt-3 pb-3 img-fluid" src={products.image_id}></img>
                                         </div>
                                         <div className="col-md-5">
                                             <h2><strong>Product Details</strong></h2>
                                             <hr></hr>
-                                            <h5>Price: ${products.productPrice}</h5>
+                                            <h5>Price: ${products.price}</h5>
                                             <hr />
                                             <h5>Qty: 1</h5>
                                             <hr></hr>
@@ -55,12 +55,12 @@ export class SingleProduct extends React.Component{
                                                 <a className="dropdown-item" href="#">4</a>
                                             </div>
                                           
-                                            <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (products.productID)}>Add to cart</button>
+                                            <button type="button pl-6" className="btn btn-success" onClick={()=>actions.addProductToCart (products.id)}>Add to cart</button>
                                          
                                             <hr></hr>
                                             <dl>
                                                 <dt>Description</dt>
-                                                <dd>{products.productDescription}</dd>
+                                                <dd>{products.description}</dd>
                                                 <dt>Size</dt>
                                                 <dd>One size fits all.</dd>
                                                 <hr></hr>

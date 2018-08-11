@@ -28,11 +28,11 @@ export class StoreHome extends React.Component{
                                             <div className="col-lg-4 col-md-6 mb-4 pt-4" key={index}>
                                                 <ProductCard
                                                         //key={index}
-                                                        productID={item.productID}
-                                                        productName={item.productName}
-                                                        productPrice={item.productPrice}
-                                                        productImage={item.productImage}
-                                                        productDescription= {item.productDescription}
+                                                        productID={item.id}
+                                                        productName={item.name}
+                                                        productPrice={item.price}
+                                                        productImage={item.image_id}
+                                                        productDescription= {item.description}
                                                 />
                                             </div>
                                         );
@@ -49,5 +49,19 @@ export class StoreHome extends React.Component{
 }
 
 StoreHome.propTypes = {
+    
+    productPrice: PropTypes.number
         
     };
+    
+    
+    
+    /*<ProductCard
+        //key={index}
+        productID={item.productID}
+        productName={item.productName}
+        productPrice={item.productPrice}
+        productImage={item.productImage}
+        productDescription= {item.productDescription}
+    />*/
+    
