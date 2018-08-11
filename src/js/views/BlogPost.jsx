@@ -28,7 +28,7 @@ export class BlogPost extends React.Component{
                                             <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
                                                 <h1 className="my-3 postTitle">{post.title.rendered}</h1>
                                                 <div className="text-center postImageContainer">
-                                                    <img src={post.featured_media} alt="post featured image" className="img-fluid pb-3"/>
+                                                    <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="post featured image" className="img-fluid pb-3"/>
                                                 </div>
                                                 <p className="text-secondary datePublished">{post.date}</p>
                                                 <p className="text-secondary author">Author: {post.author}</p>

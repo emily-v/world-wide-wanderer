@@ -32,7 +32,7 @@ export class MainHome extends React.Component{
                                                             postID={item.id}
                                                             postTitle={item.title.rendered}
                                                             datePublished={item.date}
-                                                            featuredImage={item.featured_media}
+                                                            featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
                                                             postExcerpt={item.excerpt.rendered}
                                                             postCategory={item.categories}
                                                             postTags={item.tags}
@@ -75,7 +75,7 @@ export class MainHome extends React.Component{
                                                                         postID={item.id}
                                                                         postTitle={item.title.rendered}
                                                                         datePublished={item.date}
-                                                                        featuredImage={item.featured_media}
+                                                                        featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
                                                                         postExcerpt={item.excerpt.rendered}
                                                                         postContent={item.content.rendered}
                                                                         postCategory={item.categories}

@@ -371,7 +371,7 @@ export default class Layout extends React.Component {
            
            "loadInitialData": () => {
                 
-                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wp/v2/posts')
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wp/v2/posts?_embed')
                     .then(response => response.json())
                     .then(data => this.setState({ posts: data, isLoading: false }))
                     .catch(error => console.log(error));
