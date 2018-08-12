@@ -30,6 +30,7 @@ export class BlogHome extends React.Component{
                                                     postTitle={item.title.rendered}
                                                     datePublished={item.date}
                                                     featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                    alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
                                                     postExcerpt={item.excerpt.rendered}
                                                     postContent={item.content.rendered}
                                                     postCategory={item.categories}

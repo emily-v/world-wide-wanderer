@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import InnerHTML from 'dangerously-set-inner-html';
+import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
@@ -33,6 +35,7 @@ export class MainHome extends React.Component{
                                                             postTitle={item.title.rendered}
                                                             datePublished={item.date}
                                                             featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                            alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
                                                             postExcerpt={item.excerpt.rendered}
                                                             postCategory={item.categories}
                                                             postTags={item.tags}
@@ -76,6 +79,7 @@ export class MainHome extends React.Component{
                                                                         postTitle={item.title.rendered}
                                                                         datePublished={item.date}
                                                                         featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                                        alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
                                                                         postExcerpt={item.excerpt.rendered}
                                                                         postContent={item.content.rendered}
                                                                         postCategory={item.categories}
@@ -134,10 +138,18 @@ function BlogCarousel(props){
     return(
         <div className={"carousel-item " + (props.postIndex === 0 ? "active" : "")}>
             <div className="card heroContentContainer">
-                <img src={props.featuredImage} alt="post featured image" className="card-img-top"/>
+                <img src={props.featuredImage} alt={props.alt_text} className="card-img-top"/>
                 <div className="card-body">
-                    <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post/"+props.postID}>{props.postTitle}</Link></h3>
-                    <p className="card-text text-secondary datePublished">{props.datePublished}</p>
+                    <h3 className="card-title postTitle">
+                        <Link className="text-dark" to={"/blog-post/"+props.postID}>
+                            <InnerHTML html={props.postTitle} />
+                        </Link>
+                    </h3>
+                    <p className="card-text text-secondary datePublished">
+                        <Moment format="MMMM D, YYYY">
+                            {props.datePublished}
+                        </Moment>
+                    </p>
                 </div>
             </div>
         </div>
@@ -149,6 +161,7 @@ BlogCarousel.propTypes = {
         postID: PropTypes.number,
         postTitle: PropTypes.string,
         featuredImage: PropTypes.string,
+        alt_text: PropTypes.string,
         datePublished: PropTypes.string,
         postContent: PropTypes.string
     };
@@ -157,11 +170,19 @@ function FeaturedPostSmall(props){
     return(
         <div className="row mb-3">
             <div className="col-4 px-2 align-self-center">
-                <Link to={"/blog-post/"+props.postID}><img className="img-fluid img-thumbnail" src={props.featuredImage} alt="post thumbnail image" /></Link>
+                <Link to={"/blog-post/"+props.postID}><img className="img-fluid img-thumbnail" src={props.featuredImage} alt={props.alt_text} /></Link>
             </div>
             <div className="col px-2">
-                <p className="mb-1"><Link className="text-dark" to={"/blog-post/"+props.postID}>{props.postTitle}</Link></p>
-                <p className="small mb-1">{props.datePublished}</p>
+                <p className="mb-1">
+                    <Link className="text-dark" to={"/blog-post/"+props.postID}>
+                        <InnerHTML html={props.postTitle} />
+                    </Link>
+                </p>
+                <p className="small mb-1">
+                    <Moment format="MMMM D, YYYY">
+                        {props.datePublished}
+                    </Moment>
+                </p>
             </div>
         </div>
     );
@@ -172,6 +193,7 @@ FeaturedPostSmall.propTypes = {
         postID: PropTypes.number,
         postTitle: PropTypes.string,
         featuredImage: PropTypes.string,
+        alt_text: PropTypes.string,
         datePublished: PropTypes.string,
         postContent: PropTypes.string
     };

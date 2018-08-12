@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import InnerHTML from 'dangerously-set-inner-html';
+import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
 import ProductCard from '../component/ProductCard.jsx';
@@ -11,6 +13,9 @@ import {Consumer} from "../stores/AppContext.jsx";
 export class BlogPost extends React.Component{
     
     render(){
+        
+        
+        
         return (
             <div>
                 <Navbar />
@@ -23,16 +28,18 @@ export class BlogPost extends React.Component{
                                     var post = selected[0];
                                     if (selected.length <= 0){
                                         return <h3>Loading....</h3>;
-                                    }
+                                    } 
                                         return(
                                             <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
                                                 <h1 className="my-3 postTitle">{post.title.rendered}</h1>
                                                 <div className="text-center postImageContainer">
                                                     <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="post featured image" className="img-fluid pb-3"/>
                                                 </div>
-                                                <p className="text-secondary datePublished">{post.date}</p>
+                                                <p className="text-secondary datePublished"><Moment format="MMMM D, YYYY">{post.date}</Moment></p>
                                                 <p className="text-secondary author">Author: {post.author}</p>
-                                                <p className="postTextBlock">{post.content.rendered}</p>
+                                                <div className="postTextBlock">
+                                                    <InnerHTML html={post.content.rendered} />
+                                                </div>
                                                 {/*<div className="text-center postImageContainer">
                                                     <img src="http://via.placeholder.com/800x500" alt="post content image" className="img-fluid pb-3"/>
                                                 </div>
