@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import InnerHTML from 'dangerously-set-inner-html';
+import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
 //import ProductCard from '../component/ProductCard.jsx';
@@ -53,7 +55,11 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                     <div className="card-text">
                                                                         <ul className="list-inline d-flex justify-content-between text-secondary">
                                                                             <li className="list-inline-item">{item.meta_keys.location}</li>
-                                                                            <li className="list-inline-item">{item.meta_keys.date_taken}</li>
+                                                                            <li className="list-inline-item">
+                                                                                <Moment parse="YYYYMMDD" format="MMMM D, YYYY">
+                                                                                    {item.meta_keys.date_taken}
+                                                                                </Moment>
+                                                                            </li>
                                                                         </ul>
                                                                         <p>{item.meta_keys.caption}</p>
                                                                         {/*----COMMENTING OUT TAGS IN IMAGE MODAL BECAUSE TAGS NOT WORKING----

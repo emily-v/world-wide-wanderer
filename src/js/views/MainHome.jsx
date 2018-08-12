@@ -6,6 +6,7 @@ import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
+import BlogCarousel from '../component/BlogCarousel.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -18,8 +19,7 @@ export class MainHome extends React.Component{
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-9 border-right p-md-5 mainContentContainer">
-                            {/*-----BEGIN HERO CONTENT-----*/}
-                            {/*--Card Carousel Format--*/}
+                            {/*-----BEGIN BLOG POST CAROUSEL-----*/}
                             <div className="carousel slide" id="carouselControls" data-ride="carousel">
                                 <div className="carousel-inner">
                                     <Consumer>
@@ -134,38 +134,7 @@ export class MainHome extends React.Component{
     }
 }
 
-function BlogCarousel(props){
-    return(
-        <div className={"carousel-item " + (props.postIndex === 0 ? "active" : "")}>
-            <div className="card heroContentContainer">
-                <img src={props.featuredImage} alt={props.alt_text} className="card-img-top"/>
-                <div className="card-body">
-                    <h3 className="card-title postTitle">
-                        <Link className="text-dark" to={"/blog-post/"+props.postID}>
-                            <InnerHTML html={props.postTitle} />
-                        </Link>
-                    </h3>
-                    <p className="card-text text-secondary datePublished">
-                        <Moment format="MMMM D, YYYY">
-                            {props.datePublished}
-                        </Moment>
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
-}
 
-BlogCarousel.propTypes = {
-        postIndex: PropTypes.number,
-        postID: PropTypes.number,
-        postTitle: PropTypes.string,
-        featuredImage: PropTypes.string,
-        alt_text: PropTypes.string,
-        datePublished: PropTypes.string,
-        postContent: PropTypes.string
-    };
-    
 function FeaturedPostSmall(props){
     return(
         <div className="row mb-3">

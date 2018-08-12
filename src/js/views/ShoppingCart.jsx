@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import Navbar from '../component/Navbar.jsx';
 import ShoppingCartProduct from '../component/ShoppingCartProduct.jsx';
+import BlogCarousel from '../component/BlogCarousel.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -131,30 +132,6 @@ export class ShoppingCart extends React.Component{
         );
     }
 }
-
-
-function BlogCarousel(props){
-    return(
-        <div className={"carousel-item " + (props.postIndex === 0 ? "active" : "")}>
-            <div className="card heroContentContainer">
-                <img src={props.featuredImage} alt="post featured image" className="card-img-top"/>
-                <div className="card-body">
-                    <h3 className="card-title postTitle"><Link className="text-dark" to={"/blog-post/"+props.postID}>{props.postTitle}</Link></h3>
-                    <p className="card-text text-secondary datePublished">{props.datePublished}</p>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-BlogCarousel.propTypes = {
-        postIndex: PropTypes.number,
-        postID: PropTypes.number,
-        postTitle: PropTypes.string,
-        featuredImage: PropTypes.string,
-        datePublished: PropTypes.string,
-        postContent: PropTypes.string
-    };
 
 
 ShoppingCart.propTypes = {

@@ -24,23 +24,32 @@ export class BlogPost extends React.Component{
                         <Consumer>
                             {({ state, actions }) => 
                                 {
+                                    
                                     var selected = state.posts.filter(item=>item.id === parseInt(this.props.match.params.theid));
                                     var post = selected[0];
+                                    
+                                    if (post.author===1){
+                                        var authorName = "Emily V";
+                                    }
+                                    
                                     if (selected.length <= 0){
                                         return <h3>Loading....</h3>;
                                     } 
                                         return(
                                             <div className="col-12 col-md-9 border-right p-md-5 postContentContainer">
-                                                <h1 className="my-3 postTitle">{post.title.rendered}</h1>
+                                                <h1 className="my-3 postTitle">
+                                                    <InnerHTML html={post.title.rendered} />
+                                                </h1>
                                                 <div className="text-center postImageContainer">
-                                                    <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="post featured image" className="img-fluid pb-3"/>
+                                                    <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt={post._embedded['wp:featuredmedia']['0'].alt_text} className="img-fluid pb-3"/>
                                                 </div>
                                                 <p className="text-secondary datePublished"><Moment format="MMMM D, YYYY">{post.date}</Moment></p>
-                                                <p className="text-secondary author">Author: {post.author}</p>
+                                                <p className="text-secondary author">Author: {authorName}</p>
                                                 <div className="postTextBlock">
                                                     <InnerHTML html={post.content.rendered} />
                                                 </div>
-                                                {/*<div className="text-center postImageContainer">
+                                                {/* (filler content)
+                                                <div className="text-center postImageContainer">
                                                     <img src="http://via.placeholder.com/800x500" alt="post content image" className="img-fluid pb-3"/>
                                                 </div>
                                                 <p className="postTextBlock">Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.</p>
