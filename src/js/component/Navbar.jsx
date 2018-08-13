@@ -30,7 +30,7 @@ class Navbar extends React.Component{
                     </button>
                     <div className="collapse navbar-collapse" id="navbarToggleContainer">
                         <Link to={"/"} className="navbar-brand d-none d-sm-inline-block">
-                            <img src="http://via.placeholder.com/55x55" alt="logo" className="rounded-circle"/>
+                            <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo" width="60" className="rounded-circle"/>
                         </Link>
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
@@ -67,9 +67,9 @@ class Navbar extends React.Component{
                         </Consumer>
                     </div>
                 </nav>
-                <header className="bg-light p-3 text-center">
-                    <img src="http://via.placeholder.com/80x80" alt="logo" className="rounded-circle mr-2"/>
-                    <img src="http://via.placeholder.com/200x80" alt="website name" className="ml-2" />
+                <header className="p-3 text-center border-bottom">
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo" width="120" className="rounded-circle mr-2"/>
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-1-e1534169335609.png" alt="website name" height="100" className="ml-sm-2" /> {/*--ADD CSS SO IMAGE RESIZES ON XS SCREEN--*/}
                 </header>
             </div>
         );
