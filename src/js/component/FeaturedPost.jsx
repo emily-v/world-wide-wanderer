@@ -7,7 +7,7 @@ import Moment from 'react-moment';
 function FeaturedPost(props){
     return (
         <div>
-            <div className="border-bottom featuredPostContainer">
+            <div className="bottomBorder featuredPostContainer">
                 <h1 className="my-3 postTitle">
                     <Link className="text-dark" to={"/blog-post/"+props.postID}>
                         <InnerHTML html={props.postTitle} />

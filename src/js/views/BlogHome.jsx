@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import FeaturedPost from '../component/FeaturedPost.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -16,7 +17,7 @@ export class BlogHome extends React.Component{
                 <Navbar />
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-12 col-md-9 border-right p-md-5 blogHomeContentContainer">
+                        <div className="col-12 col-md-9 px-md-5 pb-md-5 mt-md-5 sidebarBorder">
                             <h3 className="text-secondary">All Posts</h3>
                             <Consumer>
                                 {({ state, actions }) => 
@@ -67,6 +68,7 @@ export class BlogHome extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }

@@ -24,7 +24,7 @@ class Navbar extends React.Component{
         
         return (
             <div>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-secondary navbar-toggleable-md">
+                <nav className="navbar navbar-expand-sm navbar-dark navbar-toggleable-md">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContainer">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -67,9 +67,9 @@ class Navbar extends React.Component{
                         </Consumer>
                     </div>
                 </nav>
-                <header className="p-3 text-center border-bottom">
-                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo" width="120" className="rounded-circle mr-2"/>
-                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-1-e1534169335609.png" alt="website name" height="100" className="ml-sm-2" /> {/*--ADD CSS SO IMAGE RESIZES ON XS SCREEN--*/}
+                <header className="p-3 mb-1 text-center">
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo" width="140" className="rounded-circle mr-2"/>
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-1-e1534169335609.png" alt="website name" height="140" className="ml-sm-2" /> {/*--ADD CSS SO IMAGE RESIZES ON XS SCREEN--*/}
                 </header>
             </div>
         );

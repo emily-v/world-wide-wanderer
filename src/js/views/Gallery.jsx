@@ -5,8 +5,7 @@ import InnerHTML from 'dangerously-set-inner-html';
 import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
-//import ProductCard from '../component/ProductCard.jsx';
-//import BlogSidebar from '../component/BlogSidebar.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -107,7 +106,8 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                             </React.Fragment>
                         )
                     }
-                </Consumer>       
+                </Consumer>
+                <Footer />
             </div>
         );
     }

@@ -7,6 +7,7 @@ import Moment from 'react-moment';
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import BlogCarousel from '../component/BlogCarousel.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -18,7 +19,7 @@ export class MainHome extends React.Component{
                 <Navbar />
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-12 col-md-9 border-right p-md-5 mainContentContainer">
+                        <div className="col-12 col-md-9 px-md-5 pb-md-5 mt-md-5 sidebarBorder">
                             {/*-----BEGIN BLOG POST CAROUSEL-----*/}
                             <div className="carousel slide" id="carouselControls" data-ride="carousel">
                                 <div className="carousel-inner">
@@ -57,14 +58,14 @@ export class MainHome extends React.Component{
                             </div>
                             
                             {/*-----WELCOME MESSAGE-----*/}
-                            <p className="border-top border-bottom py-3 lead welcomeMessage"><strong>Welcome! </strong>Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom.</p>
+                            <p className="py-3 lead bottomBorder"><strong>Welcome! </strong>Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom.</p>
                             {/*-----BEGIN FEATURED CONTENT SECTION-----*/}
                             <div className="row featuredContentContainer">
                                 <div className="card-deck">                                
                                     {/*-----BEGIN FEATURED POSTS CARD-----*/}
                                     <div className="card">
-                                        <div className="card-header d-flex justify-content-between">
-                                            <h4><Link to={"/blog-home"} className="text-dark">Featured Posts</Link></h4>
+                                        <div className="card-header d-flex justify-content-between smallFeaturedCard">
+                                            <h4><Link to={"/blog-home"} className="font-weight-normal text-dark">Featured Posts</Link></h4>
                                             <button className="btn btn-sm"><Link to={"/blog-home"} className="text-dark">See more</Link></button>
                                         </div>
                                         <div className="card-body">
@@ -72,7 +73,7 @@ export class MainHome extends React.Component{
                                                 {({ state, actions }) => 
                                                     (
                                                         state.posts.map((item,index)=>{
-                                                            if (index <= 2) {
+                                                            if (index <= 3) {
                                                                 return <FeaturedPostSmall 
                                                                         key={index}
                                                                         postID={item.id}
@@ -95,8 +96,8 @@ export class MainHome extends React.Component{
                                     </div>
                                     {/*-----BEGIN FEATURED PRODUCTS CARD-----*/}
                                     <div className="card">
-                                        <div className="card-header d-flex justify-content-between">
-                                            <h4><Link to={"/storehome"} className="text-dark">Featured Products</Link></h4>
+                                        <div className="card-header d-flex justify-content-between smallFeaturedCard">
+                                            <h4><Link to={"/storehome"} className="text-dark font-weight-normal">Featured Products</Link></h4>
                                             <button className="btn btn-sm"><Link to={"/storehome"} className="text-dark">See more</Link></button>
                                         </div>
                                         <div className="card-body">
@@ -107,11 +108,11 @@ export class MainHome extends React.Component{
                                                             if (index <= 2) {
                                                                 return <FeaturedProductSmall 
                                                                         key={index}
-                                                                        productID={item.productID}
-                                                                        productName={item.productName}
-                                                                        productPrice={item.productPrice}
-                                                                        productImage={item.productImage}
-                                                                        productDescription={item.productDescription}
+                                                                        productID={item.id}
+                                                                        productName={item.name}
+                                                                        productPrice={item.price}
+                                                                        productImage={item.img_src}
+                                                                        productDescription={item.description}
                                                                         />;
                                                             }            
                                                         })
@@ -129,6 +130,7 @@ export class MainHome extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
@@ -175,7 +177,7 @@ function FeaturedProductSmall(props){
             </div>
             <div className="col px-2">
                 <p className="mb-1"><Link to={"/singleproduct/"+props.productID} className="text-dark">{props.productName}</Link></p>
-                <p className="small mb-1">${props.productPrice}</p>
+                <p className="small mb-1">${parseFloat(props.productPrice)}</p>
             </div>
         </div>
     );
@@ -186,7 +188,7 @@ FeaturedProductSmall.propTypes = {
         productID: PropTypes.number,
         productName: PropTypes.string,
         productImage: PropTypes.string,
-        productPrice: PropTypes.number
+        productPrice: PropTypes.string
     };
 
     

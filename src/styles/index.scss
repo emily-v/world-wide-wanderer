@@ -12,3 +12,35 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+/*----NAVBAR STYLES-----*/
+.navbar {
+    background-color: #31708e;
+}
+
+.nav-item{
+    font-size: 1.25rem;
+}
+
+/*header {
+    border-bottom: 2px solid #8fc1e3;
+}*/
+
+/*----SIDEBAR STYLES----*/
+.sidebarBorder {
+    border-right: 2px solid #8fc1e3;
+}
+
+/*----MAIN HOME STYLES----*/
+.bottomBorder {
+    border-bottom: 1px solid #8fc1e3;
+}
+
+.smallFeaturedCard .btn {
+    border: 1px solid #31708e;
+}
+
+/*----FOOTER STYLES----*/
+footer {
+    background-color: #31708e;
+}
