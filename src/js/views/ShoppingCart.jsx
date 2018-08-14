@@ -39,6 +39,7 @@ export class ShoppingCart extends React.Component{
                                 <hr></hr>
                                 <Consumer>
                                     {({ state, actions }) => 
+                            
                                         (
                                             state.cart.map((item,index)=>{
                                                 return <ShoppingCartProduct
@@ -46,7 +47,7 @@ export class ShoppingCart extends React.Component{
                                                 productID={item.id}
                                                 productName={item.name}
                                                 productPrice={item.price}
-                                                productImage={item.image_id}
+                                                productImage={item.img_src}
                                                 productDescription= {item.description}
                                                 /*clickEvent={ (index) => this.deleteProduct(index)}*/
                                                 />;

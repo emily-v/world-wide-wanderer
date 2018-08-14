@@ -20,7 +20,7 @@ function OrderSummary(props){
                                             return (
                                                 <React.Fragment key={index}>
                                                     <h6 className="my-0">{item.name}</h6>
-                                                    <a href="https://placeholder.com"><img style={{width:210}} src={item.image_id}></img></a>
+                                                    <a href="https://placeholder.com"><img style={{width:210}} src={item.img_src}></img></a>
                                                     <h6 className="text-muted">${item.price}</h6>
                                                     <hr></hr>
                                                 </React.Fragment>);

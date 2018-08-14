@@ -15,7 +15,7 @@ function ProductCard(props){
                 <h4 className="card-title">
                     <Link className="text-primary" to= {"/singleproduct/"+props.productID}>{props.productName}</Link>
                 </h4>
-                <h5>${props.productPrice}</h5>
+                <h5>${parseFloat(props.productPrice)}</h5>
                 <p className="card-text">{props.productDescription}</p>
                 <Consumer>
                     {
@@ -38,7 +38,7 @@ function ProductCard(props){
 ProductCard.propTypes = {
         productID: PropTypes.number,
         productName: PropTypes.string,
-        productPrice: PropTypes.number,
+        productPrice: PropTypes.string,
         productImage: PropTypes.string,
         productDescription: PropTypes.string
     

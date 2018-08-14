@@ -31,7 +31,7 @@ export class StoreHome extends React.Component{
                                                         productID={item.id}
                                                         productName={item.name}
                                                         productPrice={item.price}
-                                                        productImage={item.image_id}
+                                                        productImage={item.img_src}
                                                         productDescription= {item.description}
                                                 />
                                             </div>

@@ -12,7 +12,7 @@ function BillingInfo(props){
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <label htmlFor="firstName">First name</label>
-                        <input type="text" className="form-control" id="firstName" placeholder="" value="" required=""></input>
+                        <input type="text" className="form-control" id="firstName" placeholder=""  required=""></input>
                         <div className="invalid-feedback">
                             Valid first name is required.
                         </div>
@@ -20,7 +20,7 @@ function BillingInfo(props){
                     
                     <div className="col-md-6 mb-3">
                         <label htmlFor="lastName">Last name</label>
-                        <input type="text" className="form-control" id="lastName" placeholder="" value="" required=""></input>
+                        <input type="text" className="form-control" id="lastName" placeholder=""  required=""></input>
                         <div className="invalid-feedback">
                             Valid last name is required.
                         </div>

@@ -363,7 +363,8 @@ export default class Layout extends React.Component {
                let boat/*sumOfCart*/ = 0;
                
                cow.forEach ( (butter/*products*/) => {
-                   boat += butter.productPrice;
+                   boat += parseFloat (butter.price);
+                   console.log  ("price", butter);
                });
 
                return boat;

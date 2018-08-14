@@ -31,20 +31,20 @@ export class SingleProduct extends React.Component{
                                         <div className="col-md-7">
                                             <h2><strong>{products.name}</strong></h2>
                                             {
-                                                products.gallery_image_ids.map( (item, index) => {
-                                                    return <img className="pb-4 pr-5 img-responsive card-img-top" style={{width:150}} src={item} key={index}></img>;
+                                                products.gallery.map( (item, index) => {
+                                                    return <img className="pb-4 pr-5 img-responsive card-img-top" style={{width:150}} src={item.src} key={index}></img>;
                                                     
                                                 })
                                             }
                                             {/*<img className="pr-4" src={products.productGallery}></img>
                                             <img className="pr-4" src={products.productGallery}></img>
                                             <img src={products.productGallery}></img>*/}
-                                            <img className="pl-10 pt-3 pb-3 img-fluid" src={products.image_id}></img>
+                                            <img className="pl-10 pt-3 pb-3 img-fluid" src={products.img_src}></img>
                                         </div>
                                         <div className="col-md-5">
                                             <h2><strong>Product Details</strong></h2>
                                             <hr></hr>
-                                            <h5>Price: ${products.price}</h5>
+                                            <h5>Price: ${parseFloat(products.price)}</h5>
                                             <hr />
                                             <h5>Qty: 1</h5>
                                             <hr></hr>
@@ -83,7 +83,7 @@ export class SingleProduct extends React.Component{
 
 SingleProduct.propTypes = {
     match: PropTypes.object,
-    productGallery: PropTypes.array,
+    gallery: PropTypes.array,
     productID: PropTypes.number
     
     };
