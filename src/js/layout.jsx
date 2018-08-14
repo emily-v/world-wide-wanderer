@@ -317,8 +317,11 @@ export default class Layout extends React.Component {
                             password:receivedPassword,
                             token:"assdflhlkjcugjsd1234"
                         }
+
                     });
-                    
+                
+                //var loggedIn = true;                    
+                
                 var data = {
                     "username":receivedUsername, 
                     "password":receivedPassword

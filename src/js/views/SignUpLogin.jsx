@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import {Consumer} from "../stores/AppContext.jsx";
@@ -12,12 +12,20 @@ export class SignUpLogin extends React.Component{
         
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            loggedIn:false
         };
     }
     
     render(){
+        /*if (typeof(this.state.session !== 'undefined')){
+            return <Redirect to="/storehome/" />;
+        }*/
         
+        /*if (this.state.loggedIn == true){
+            return <Redirect to="/storehome/" />;
+        }*/
+
         return (
             <div>
                 <Navbar />
@@ -53,6 +61,7 @@ export class SignUpLogin extends React.Component{
                                                 <div className="card-body">
                                                     <form role="form" onSubmit={(e) => {
                                                                                         e.preventDefault();
+                                                                                        //this.state.loggedIn == true;
                                                                                         actions.loadSession(this.state.username, this.state.password);
                                                     }}>
                                                         <input type="email" className="form-control mb-2" value={this.state.username} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
@@ -105,4 +114,3 @@ SignUpLogin.propTypes = {
     actions: PropTypes.object
 };
 
-//test
