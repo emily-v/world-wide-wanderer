@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Navbar from '../component/Navbar.jsx';
 import ProductCard from '../component/ProductCard.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -18,8 +19,10 @@ export class StoreHome extends React.Component{
                 <div className="container">
                     <h3>Products</h3>
                     <hr></hr>
+                    <div className="alert alert-info center-block" role="alert">
+                        <strong>Hello Wanderer!</strong> Thanks for checking out our shop, Please Sign up or Login if you would like to view the items in your cart.
+                    </div>
                     <div className="row">
-                        
                         <Consumer>
                             {({ state, actions }) => 
                                 (
@@ -43,6 +46,7 @@ export class StoreHome extends React.Component{
                         
                     </div>
                 </div>
+                <Footer />
             </div>    
         );
     }

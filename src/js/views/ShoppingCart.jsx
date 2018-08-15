@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from '../component/Navbar.jsx';
 import ShoppingCartProduct from '../component/ShoppingCartProduct.jsx';
 import BlogCarousel from '../component/BlogCarousel.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -129,6 +130,7 @@ export class ShoppingCart extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }

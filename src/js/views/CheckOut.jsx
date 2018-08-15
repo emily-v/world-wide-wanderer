@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import YourCart from '../component/YourCart.jsx';
 import BillingInfo from '../component/BillingInfo.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -21,6 +22,7 @@ export class CheckOut extends React.Component{
                         <BillingInfo />   
                     </div>
                 </div>
+                <Footer />
             </div>    
         );
     }

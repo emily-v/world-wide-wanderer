@@ -12,7 +12,8 @@ export class YourCart extends React.Component{
            
            discount:0,
            totalItems:0,
-           totalPrice:0
+           totalPrice:0,
+           salesTax: 0
            
        };
    } 
@@ -58,7 +59,7 @@ render(){
                                         <div>
                                             <h6 className="my-0">Sales Tax</h6>
                                         </div>
-                                        <span className="text-muted">$0.00</span>
+                                        <span className="text-muted">${this.state.salesTax}</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div>
@@ -68,7 +69,7 @@ render(){
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between">
                                         <span>Total (USD)</span>
-                                        <strong>${(actions.flyByNight() - this.state.discount/100 * actions.flyByNight()).toFixed(2)}</strong>
+                                        <strong>${(actions.flyByNight() + this.state.salesTax - this.state.discount/100 * actions.flyByNight()).toFixed(2)}</strong>
                                     </li>
                                 </ul>
                                             

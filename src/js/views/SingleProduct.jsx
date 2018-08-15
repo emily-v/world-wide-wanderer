@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import Navbar from '../component/Navbar.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -74,6 +75,7 @@ export class SingleProduct extends React.Component{
                         </Consumer>
                     </div>
                 </div>
+                <Footer />
             </div> 
             );
         }

@@ -27,8 +27,9 @@ function ShoppingCartProduct(props){
                             <h4 className ="product-name"><strong>{props.productName}</strong></h4><h4><small>{props.productDescription}</small></h4>
                         </div>
                         <div className ="col-md-4">
-                            <h6><strong>${parseFloat(props.productPrice)}</strong></h6><p className="text-muted">x</p>
-                            <select className="cart-item-qty-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+                            <h6><strong>${parseFloat(props.productPrice)}</strong></h6>
+                            {/*<p className="text-muted">x</p>
+                            <select className="cart-item-qty-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>*/}
                             <button type="button" className="btn btn-outline-secondary" onClick={()=>actions.deleteProduct (props.productID)}>Remove</button>
                         </div>
                     </div>

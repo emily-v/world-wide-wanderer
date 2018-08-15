@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Navbar from '../component/Navbar.jsx';
 import OrderSummary from '../component/OrderSummary.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -28,6 +29,7 @@ export class ConfirmationPage extends React.Component{
                         <OrderSummary/>
                     </div>
                 </div>
+                <Footer />
             </div>    
         );
     }

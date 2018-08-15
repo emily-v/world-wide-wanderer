@@ -12,7 +12,7 @@ function OrderSummary(props){
                     {
                         return(
         
-                            <div className="card pt-4">
+                            <div className="card pt-4 mb-8">
                                 <div className="card-body">
                                     <h2 className="card-title">Order Summary</h2>
                                     <hr></hr>
@@ -31,7 +31,7 @@ function OrderSummary(props){
                                 <ul className="list-group list-group-flush">
                                     <li className="list-group-item"><strong>Subtotal:</strong> ${(actions.flyByNight())}</li>
                                     <li className="list-group-item"><strong>Shipping:</strong> Free </li>
-                                    <li className="list-group-item"><strong>Sales Tax:</strong> $0.00 </li>
+                                    <li className="list-group-item"><strong>Sales Tax:</strong> $0.00</li>
                                 </ul>
                                 <div className="card-body">
                                     <h3 className="card-title">Order Total: ${(actions.flyByNight())}</h3>
