@@ -337,6 +337,20 @@ export default class Layout extends React.Component {
                     });
             },
             
+            "createUser": (first_name, last_name, email, password)  => {
+                this.setState(
+                    {
+                        userdata: {
+                            "firstName":first_name,
+                            "lastName":last_name,
+                            "email":email,
+                            "username":email,
+                            "password":password
+                        }
+                    }    
+                );
+            },
+            
             addProductToCart: (id) => {
                 let tempCart = this.state.cart;
                 

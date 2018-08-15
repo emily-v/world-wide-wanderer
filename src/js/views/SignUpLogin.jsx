@@ -12,8 +12,8 @@ export class SignUpLogin extends React.Component{
         
         this.state = {
             username: "",
-            password: "",
-            loggedIn:false
+            password: ""
+            //loggedIn:false
         };
     }
     
@@ -42,12 +42,15 @@ export class SignUpLogin extends React.Component{
                                                 </div>
                                                 <div className="card-body">
                                                     
-                                                    <form>
-                                                        <input className="form-control mb-2" placeholder="First name"/>
-                                                        <input className="form-control mb-2" placeholder="Last name"/>
-                                                        <input type="email" className="form-control mb-2" placeholder="Email address"/>
-                                                        <input type="password" className="form-control mb-2" placeholder="Create password"/>
-                                                        <input type="password" className="form-control mb-2" placeholder="Re-type password"/>
+                                                    <form onSubmit={(e) => {
+                                                                            e.preventDefault();
+                                                                            actions.createUser(this.state.firstName, this.state.lastName, this.state.email, this.state.password);
+                                                    }}>
+                                                        <input className="form-control mb-2" value={this.state.firstName} placeholder="First name" onChange={(e) => this.setState({firstName: e.target.value})}/>
+                                                        <input className="form-control mb-2" value={this.state.lastName} placeholder="Last name" onChange={(e) => this.setState({lastName: e.target.value})}/>
+                                                        <input type="email" className="form-control mb-2" value={this.state.email} placeholder="Email address" onChange={(e) => this.setState({email: e.target.value, username: e.target.value})}/>
+                                                        <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Create password" onChange={(e) => this.setState({password: e.target.value})}/> {/*--HOW TO MAKE THIS NOT POPULATE 'LOG IN' INPUT?--*/}
+                                                        <input type="password" className="form-control mb-2" value={""} placeholder="Re-type password"/> {/*--HOW TO VALIDATE SAME PASSWORD TYPED?--*/}
                                                         <button type="submit" className="btn btn-primary btn-block">Sign up</button>
                                                     </form>
                                                 </div>
@@ -66,8 +69,6 @@ export class SignUpLogin extends React.Component{
                                                     }}>
                                                         <input type="email" className="form-control mb-2" value={this.state.username} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
                                                         <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
-                                                        {/*---NEED TO FIX!!---LINKING TO PROFILE FROM LOG IN BUTTON DOES NOT SAVE SESSION
-                                                        <button type="submit" className="btn btn-primary btn-block mb-2"><Link to={"/profile"} className="text-white">Log In</Link></button>change so that only directs to profile on login...if login incorrect, show modal, etc.*/}
                                                         <button type="submit" className="btn btn-primary btn-block mb-2">Log In</button>
                                                         <button type="button" className="btn btn-outline-secondary btn-block btn-sm" data-toggle="modal" data-target="#forgotPassword">Lost your password?</button>
                                                     </form>
