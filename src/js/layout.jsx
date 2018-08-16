@@ -343,14 +343,19 @@ export default class Layout extends React.Component {
             },
             
             "createUser": (receivedFirstName, receivedLastName, receivedEmail, receivedPassword)  => {
-                var data = {
+                var newUserData = {
                    "first_name":receivedFirstName,
                     "last_name":receivedLastName,
                     "email":receivedEmail,
                     //"username":receivedEmail,
                     "password":receivedPassword
                   };
-                 const that = this;
+                  
+                var data = {
+                    "username":receivedEmail, 
+                    "password":receivedPassword
+                  };
+                const that = this;
                 
                 //PUT NEW USER
                 fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/user', {
@@ -358,7 +363,7 @@ export default class Layout extends React.Component {
                     headers: {
                         "Content-Type": "application/json; charset=utf-8"
                     },
-                    body: JSON.stringify(data), // body data type must match "Content-Type" header
+                    body: JSON.stringify(newUserData), // body data type must match "Content-Type" header
                 })
                 .then(response => response.json())
                 .then(function(myJson) {
@@ -390,6 +395,9 @@ export default class Layout extends React.Component {
                     that.setState(
                     {
                         session: {
+                            id:1000,
+                            username:receivedEmail,
+                            password:receivedPassword,
                             token:myJson.token
                         }
 
