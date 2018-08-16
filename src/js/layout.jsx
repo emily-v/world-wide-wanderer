@@ -308,24 +308,95 @@ export default class Layout extends React.Component {
     
         this.actions = {
             
-            "loadSession": (receivedUsername, receivedPassword) => {
-                this.setState(
-                    {
-                        session: {
-                            id:1000,
-                            username:receivedUsername,
-                            password:receivedPassword,
-                            token:"assdflhlkjcugjsd1234"
-                        }
-
-                    });
-                
-                //var loggedIn = true;                    
+            "logIn": (receivedUsername, receivedPassword) => {
                 
                 var data = {
                     "username":receivedUsername, 
                     "password":receivedPassword
                   };
+                 const that = this;
+                
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/jwt-auth/v1/token', {
+                    method: "POST", // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    },
+                    body: JSON.stringify(data), // body data type must match "Content-Type" header
+                })
+                .then(response => response.json())
+                .then(function(myJson) {
+                    console.log("LOGIN", myJson);
+                    console.log("TOKEN", myJson.token);
+                    that.setState(
+                    {
+                        session: {
+                            id:1000,
+                            username:receivedUsername,
+                            password:receivedPassword,
+                            token:myJson.token
+                        }
+
+                    });
+                  });
+                
+                
+            },
+            
+            "createUser": (receivedFirstName, receivedLastName, receivedEmail, receivedPassword)  => {
+                var data = {
+                   "first_name":receivedFirstName,
+                    "last_name":receivedLastName,
+                    "email":receivedEmail,
+                    //"username":receivedEmail,
+                    "password":receivedPassword
+                  };
+                 const that = this;
+                
+                //PUT NEW USER
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/user', {
+                    method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    },
+                    body: JSON.stringify(data), // body data type must match "Content-Type" header
+                })
+                .then(response => response.json())
+                .then(function(myJson) {
+                    console.log("NEW USER", myJson);
+                    that.setState(
+                    {
+                        userdata: {
+                            "first_name":receivedFirstName,
+                            "last_name":receivedLastName,
+                            "email":receivedEmail,
+                            "username":receivedEmail,
+                            "password":receivedPassword
+                        }
+                    });
+                  });
+                
+                //POST USER TOKEN
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/jwt-auth/v1/token', {
+                    method: "POST", // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    },
+                    body: JSON.stringify(data), // body data type must match "Content-Type" header
+                })
+                .then(response => response.json())
+                .then(function(myJson) {
+                    console.log("LOGIN", myJson);
+                    console.log("TOKEN", myJson.token);
+                    that.setState(
+                    {
+                        session: {
+                            token:myJson.token
+                        }
+
+                    });
+                  });
+                
+                
             },
             
             "logout":() => {
@@ -335,20 +406,6 @@ export default class Layout extends React.Component {
                             
                         }
                     });
-            },
-            
-            "createUser": (first_name, last_name, email, password)  => {
-                this.setState(
-                    {
-                        userdata: {
-                            "firstName":first_name,
-                            "lastName":last_name,
-                            "email":email,
-                            "username":email,
-                            "password":password
-                        }
-                    }    
-                );
             },
             
             addProductToCart: (id) => {
