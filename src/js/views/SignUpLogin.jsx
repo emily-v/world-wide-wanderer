@@ -39,12 +39,14 @@ export class SignUpLogin extends React.Component{
                                                         
                                                         <form onSubmit={(e) => {
                                                                                 e.preventDefault();
-                                                                                actions.createUser(this.state.firstName, this.state.lastName, this.state.email, this.state.password);
+                                                                                actions.createUser(this.state.first_name, this.state.last_name, this.state.newEmail, this.state.newPassword);
+                                                                                actions.logIn(this.state.newEmail, this.state.newPassword);
+                                                                                //--Create modal with success message--
                                                         }}>
-                                                            <input className="form-control mb-2" value={this.state.firstName} placeholder="First name" onChange={(e) => this.setState({firstName: e.target.value})}/>
-                                                            <input className="form-control mb-2" value={this.state.lastName} placeholder="Last name" onChange={(e) => this.setState({lastName: e.target.value})}/>
-                                                            <input type="email" className="form-control mb-2" value={this.state.email} placeholder="Email address" onChange={(e) => this.setState({email: e.target.value, username: e.target.value})}/>
-                                                            <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Create password" onChange={(e) => this.setState({password: e.target.value})}/> {/*--HOW TO MAKE THIS NOT POPULATE 'LOG IN' INPUT?--*/}
+                                                            <input className="form-control mb-2" value={this.state.first_name} placeholder="First name" onChange={(e) => this.setState({first_name: e.target.value})}/>
+                                                            <input className="form-control mb-2" value={this.state.last_name} placeholder="Last name" onChange={(e) => this.setState({last_name: e.target.value})}/>
+                                                            <input type="email" className="form-control mb-2" value={this.state.newEmail} placeholder="Email address" onChange={(e) => this.setState({newEmail: e.target.value})}/>
+                                                            <input type="password" className="form-control mb-2" value={this.state.newPassword} placeholder="Create password" onChange={(e) => this.setState({newPassword: e.target.value})}/> {/*--HOW TO MAKE THIS NOT POPULATE 'LOG IN' INPUT?--*/}
                                                             <input type="password" className="form-control mb-2" value={""} placeholder="Re-type password"/> {/*--HOW TO VALIDATE SAME PASSWORD TYPED?--*/}
                                                             <button type="submit" className="btn btn-primary btn-block">Sign up</button>
                                                         </form>
@@ -59,7 +61,7 @@ export class SignUpLogin extends React.Component{
                                                     <div className="card-body">
                                                         <form role="form" onSubmit={(e) => {
                                                                                             e.preventDefault();
-                                                                                            actions.loadSession(this.state.username, this.state.password);
+                                                                                            actions.logIn(this.state.username, this.state.password);
                                                         }}>
                                                             <input type="email" className="form-control mb-2" value={this.state.username} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
                                                             <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
