@@ -309,38 +309,23 @@ export default class Layout extends React.Component {
         this.actions = {
             
             "loadSession": (receivedUsername, receivedPassword) => {
-                
-                var data = {
-                    "username":receivedUsername, 
-                    "password":receivedPassword
-                  };
-                 const that = this;
-                
-                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/jwt-auth/v1/token', {
-                    method: "POST", // *GET, POST, PUT, DELETE, etc.
-                    headers: {
-                        "Content-Type": "application/json; charset=utf-8",
-                        // "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: JSON.stringify(data), // body data type must match "Content-Type" header
-                })
-                .then(response => response.json())
-                .then(function(myJson) {
-                    console.log("LOGIN", myJson);
-                    console.log("TOKEN", myJson.token);
-                    that.setState(
+                this.setState(
                     {
                         session: {
                             id:1000,
                             username:receivedUsername,
                             password:receivedPassword,
-                            token:myJson.token
+                            token:"assdflhlkjcugjsd1234"
                         }
 
                     });
-                  });
                 
+                //var loggedIn = true;                    
                 
+                var data = {
+                    "username":receivedUsername, 
+                    "password":receivedPassword
+                  };
             },
             
             "logout":() => {
