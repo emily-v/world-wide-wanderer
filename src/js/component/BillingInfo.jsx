@@ -8,16 +8,17 @@ export default class BillingInfo extends React.Component{
    constructor(props){
        super(props);
        this.state ={
+        
         first_name: "",
         last_name: "",
-        address_1: "",
+        address: "",
         address_2: "",
         city: "",
         state: "",
         postcode: "",
         country: "",
-        email: "",
-        phone: ""
+        email: ""
+
         
            
        };
@@ -33,7 +34,11 @@ render(){
                         
                             <div className="col-md-8 order-md-1">
                                 <h4 className="mb-3">Billing address</h4>
-                                <form className="needs-validation" noValidate="">
+                                <form onSubmit={(e) => {
+                                                            e.preventDefault();
+                                                            actions.submitOrder(this.state.first_name, this.state.last_name, this.state.address, this.state.address_2, this.state.city, this.state.state, this.state.postcode, this.state.country, this.state.email);
+
+                                                        }}>
                         
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
@@ -63,7 +68,7 @@ render(){
                         
                                     <div className="mb-3">
                                         <label htmlFor="address">Address</label>
-                                        <input type="text" className="form-control" id="address" placeholder="1234 Main St" required=""></input>
+                                        <input type="text" className="form-control" value={this.state.address} placeholder="123 Main St." onChange={(e) => this.setState({address: e.target.value})}/>
                                         <div className="invalid-feedback">
                                             Please enter your shipping address.
                                         </div>
@@ -71,7 +76,7 @@ render(){
                                     
                                     <div className="mb-3">
                                         <label htmlFor="address2">Address 2 <span className="text-muted">(Optional)</span></label>
-                                        <input type="text" className="form-control" id="address2" placeholder="Apartment or suite"></input>
+                                        <input type="text" className="form-control" value={this.state.address_2} placeholder="Apartment or Suite" onChange={(e) => this.setState({address_2: e.target.value})}/>
                                     </div>
                         
                                     <div className="row">
@@ -106,7 +111,7 @@ render(){
                                         </div>
                                         <div className="col-md-3 mb-3">
                                             <label htmlFor="zip">Zip</label>
-                                            <input type="text" className="form-control" id="zip" placeholder="" required=""></input>
+                                            <input type="text" className="form-control" value={this.state.postcode} placeholder="" onChange={(e) => this.setState({postcode: e.target.value})}/>
                                             <div className="invalid-feedback">
                                               Zip code required.
                                             </div>
@@ -126,7 +131,7 @@ render(){
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
                                             <label htmlFor="firstName">First name</label>
-                                            <input type="text" className="form-control" id="firstName" placeholder=""  required=""></input>
+                                            <input type="text" className="form-control" value={this.state.firstName} placeholder="First name" onChange={(e) => this.setState({firstName: e.target.value})}/>
                                             <div className="invalid-feedback">
                                                 Valid first name is required.
                                             </div>
@@ -134,7 +139,7 @@ render(){
                                         
                                         <div className="col-md-6 mb-3">
                                             <label htmlFor="lastName">Last name</label>
-                                            <input type="text" className="form-control" id="lastName" placeholder=""  required=""></input>
+                                            <input type="text" className="form-control" value={this.state.lastName} placeholder="Last name" onChange={(e) => this.setState({lastName: e.target.value})}/>
                                             <div className="invalid-feedback">
                                                 Valid last name is required.
                                             </div>
@@ -143,7 +148,7 @@ render(){
                                     
                                     <div className="mb-3">
                                         <label htmlFor="email">Email <span className="text-muted">(Optional)</span></label>
-                                        <input type="email" className="form-control" id="email" placeholder="you@example.com"></input>
+                                        <input type="email" className="form-control" value={this.state.email} placeholder="you@example.com" onChange={(e) => this.setState({email: e.target.value})}/>
                                         <div className="invalid-feedback">
                                             Please enter a valid email address for shipping updates.
                                         </div>
@@ -151,7 +156,7 @@ render(){
                         
                                     <div className="mb-3">
                                         <label htmlFor="address">Address</label>
-                                        <input type="text" className="form-control" id="address" placeholder="1234 Main St" required=""></input>
+                                        <input type="text" className="form-control" value={this.state.address} placeholder="123 Main St." onChange={(e) => this.setState({address: e.target.value})}/>
                                         <div className="invalid-feedback">
                                             Please enter your shipping address.
                                         </div>
@@ -159,7 +164,7 @@ render(){
                                     
                                     <div className="mb-3">
                                         <label htmlFor="address2">Address 2 <span className="text-muted">(Optional)</span></label>
-                                        <input type="text" className="form-control" id="address2" placeholder="Apartment or suite"></input>
+                                        <input type="text" className="form-control" value={this.state.address_2} placeholder="Apartment or Suite" onChange={(e) => this.setState({address_2: e.target.value})}/>
                                     </div>
                         
                                     <div className="row">
@@ -175,7 +180,7 @@ render(){
                                         </div>
                                         <div className="col-md-4 mb-3">
                                             <label htmlFor="state">State</label>
-                                            <select className="custom-select d-block w-100" id="state" required="">
+                                            <select className="custom-select d-block w-100" id="state" defaultValue="Choose..." onChange={(e) => this.props.changeHandler(e.target.value) }>
                                                 <option value="">Choose...</option>
                                                 <option>California</option>
                                                 <option>Georgia</option>
@@ -194,7 +199,7 @@ render(){
                                         </div>
                                         <div className="col-md-3 mb-3">
                                             <label htmlFor="zip">Zip</label>
-                                            <input type="text" className="form-control" id="zip" placeholder="" required=""></input>
+                                            <input type="text" className="form-control" value={this.state.postcode} placeholder="" onChange={(e) => this.setState({postcode: e.target.value})}/>
                                             <div className="invalid-feedback">
                                               Zip code required.
                                             </div>
@@ -206,7 +211,7 @@ render(){
                                     
                                     <div className="d-block my-3">
                                         <div className="custom-control custom-radio">
-                                            <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required=""></input>
+                                            <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" required=""></input>
                                             <label className="custom-control-label" htmlFor="credit">Credit card</label>
                                         </div>
                                         <div className="custom-control custom-radio">
@@ -263,11 +268,6 @@ render(){
             );
         }
     }
-
-
-
-
-
 
 
 
@@ -505,6 +505,8 @@ render(){
     
 
 BillingInfo.propTypes = {
+    actions: PropTypes.object,
+    changeHandler: PropTypes.string
     
     };
     
