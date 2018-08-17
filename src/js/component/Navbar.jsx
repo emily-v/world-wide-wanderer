@@ -43,11 +43,11 @@ class Navbar extends React.Component{
                                 <Link to={"/storehome/"} className="nav-link" href="#">Store</Link>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">About</a>
+                                <Link to={"/about"} className="nav-link" >About</Link>
                             </li>
-                            <li className="nav-item active">
+                            {/*<li className="nav-item active">
                                 <a className="nav-link" href="#">Contact</a>
-                            </li>
+                            </li>*/}
                         </ul>
                         <Consumer>
                             {({ state, actions }) => 
@@ -68,8 +68,8 @@ class Navbar extends React.Component{
                     </div>
                 </nav>
                 <header className="p-3 mb-1 text-center">
-                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo" width="140" className="rounded-circle mr-2"/>
-                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-1-e1534169335609.png" alt="website name" height="140" className="ml-sm-2" /> {/*--ADD CSS SO IMAGE RESIZES ON XS SCREEN--*/}
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-e1534169380538.png" alt="logo"  className="rounded-circle mr-sm-2" id="banner-logo"/>
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/1-1-e1534169335609.png" alt="website name" className="mx-auto ml-sm-2" id="banner-name" />
                 </header>
             </div>
         );

@@ -22,6 +22,13 @@
     font-size: 1.25rem;
 }
 
+#banner-logo{
+    width:100px;
+}
+
+#banner-name{
+    height:80px;
+}
 /*header {
     border-bottom: 2px solid #8fc1e3;
 }*/
@@ -43,4 +50,17 @@
 /*----FOOTER STYLES----*/
 footer {
     background-color: #31708e;
+}
+
+
+@media only screen and (min-width:500px) {
+
+    #banner-logo{
+    width:140px;
+    }
+    
+    #banner-name{
+        height:140px;
+    }
+   
 }

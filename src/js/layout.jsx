@@ -7,6 +7,7 @@ import { BlogPost } from "./views/BlogPost.jsx";
 import { BlogArchive } from "./views/BlogArchive.jsx";
 import { BlogDestinations } from "./views/BlogDestinations.jsx";
 import { Gallery } from "./views/Gallery.jsx";
+import { About } from "./views/About.jsx";
 import { StoreHome } from "./views/StoreHome.jsx";
 import { ConfirmationPage } from "./views/ConfirmationPage.jsx";
 import { SingleProduct } from "./views/SingleProduct.jsx";
@@ -584,6 +585,7 @@ export default class Layout extends React.Component {
                                 <Route exact path="/blog-archive/:year" component={BlogArchive} />
                                 <Route exact path="/blog-destinations/:tag" component={BlogDestinations} />
                                 <Route exact path="/gallery" component={Gallery} />
+                                <Route exact path="/about" component={About} />
                                 <Route exact path="/storehome/" component={StoreHome} />
                                 <Route exact path="/confirmationpage/" component={ConfirmationPage} />
                                 <Route exact path="/singleproduct/:theid" component={SingleProduct} />
