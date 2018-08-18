@@ -53,7 +53,7 @@ class Navbar extends React.Component{
                             {({ state, actions }) => 
                                 (
                                   
-                                    typeof state.session.username !== 'undefined' ?
+                                    typeof state.session.token !== 'undefined' ?
                                         <div>    
                                             <button className="btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
                                             <button className="btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}

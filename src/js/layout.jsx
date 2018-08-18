@@ -329,13 +329,7 @@ export default class Layout extends React.Component {
                         console.log("LOGIN", myJson);
                         console.log("TOKEN", myJson.token);
                         that.setState({
-                            session: {
-                                id: 1000,
-                                username: receivedUsername,
-                                password: receivedPassword,
-                                token: myJson.token
-                            }
-
+                            session: myJson
                         });
                     });
 
