@@ -412,6 +412,7 @@ export default class Layout extends React.Component {
                     }
                 });
             },
+            
 
             //POST SUBMIT ORDER
             "submitOrder": (customerFirstName, customerLastName, customerAddress, customerAddress2, customerCity, customerState, customerPostcode, customerCountry, customerEmail,customerCreditCardNumber, customerNameOnCard, customerCreditCardExpiration, customerCreditCardCVV) => {
@@ -461,22 +462,27 @@ export default class Layout extends React.Component {
                         
                         ]
                 };
-                fetch('https://first-wordpress-kparrish.c9users.io/wp-json/wc/v2/payment_gateways/<id>', {
-                        method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                console.log ("Autho", this.state.session.token);
+                
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wc/v2/orders', {
+                        method: "POST", // *GET, POST, PUT, DELETE, etc.
                         headers: {
-                            "Content-Type": "application/json; charset=utf-8"
+                            "Content-Type": "application/json; charset=utf-8",
+                            "Authorization": 'Bearer '+this.state.session.token
                         },
-                        body: JSON.stringify(paymentData) // body data type must match "Content-Type" header
+                    
+                        body: JSON.stringify(orderData) // body data type must match "Content-Type" header
                     })
                     .then(response => response.json())
                     .then(function(myJson) {
+                        console.log ("PAYMENT", myJson);
 
-                        fetch('https://first-wordpress-kparrish.c9users.io/wp-json/wc/v2/orders', {
+                        fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wc/v2/payment_gateways', {
                                 method: "PUT", // *GET, POST, PUT, DELETE, etc.
                                 headers: {
                                     "Content-Type": "application/json; charset=utf-8"
                                 },
-                                body: JSON.stringify(orderData) // body data type must match "Content-Type" header
+                                body: JSON.stringify(paymentData) // body data type must match "Content-Type" header
                             })
                             .then(response => response.json())
                             .then(function(myJson) {
@@ -554,7 +560,7 @@ export default class Layout extends React.Component {
                     .then(data => this.setState({ photo: data }))
                     .catch(error => console.log(error));
 
-                fetch('https://first-wordpress-kparrish.c9users.io/wp-json/sample_api/v1/product')
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/product')
                     .then(response => response.json())
                     .then(data => this.setState({ products: data }))
                     .catch(error => console.log(error));

@@ -180,7 +180,7 @@ render(){
                                         </div>
                                         <div className="col-md-4 mb-3">
                                             <label htmlFor="state">State</label>
-                                            <select className="custom-select d-block w-100" id="state" defaultValue="Choose..." onChange={(e) => this.props.changeHandler(e.target.value) }>
+                                            <select className="custom-select d-block w-100" id="state" defaultValue="Choose..." onChange={(e) => this.setState({state: e.target.value})}>
                                                 <option value="">Choose...</option>
                                                 <option>California</option>
                                                 <option>Georgia</option>
@@ -257,7 +257,7 @@ render(){
                                         </div>
                                     </div>
                                     <hr className="mb-4"></hr>
-                                    <button className="btn btn-success btn-lg btn-block" type="submit"><Link to={"/confirmationpage"} className="text-light">Complete Order</Link></button>
+                                    <button className="btn btn-success btn-lg btn-block" type="submit">Complete Order</button>
                                 </form>
                             </div>
             
