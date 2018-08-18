@@ -423,17 +423,14 @@ export default class Layout extends React.Component {
                     "nameOnCard": customerNameOnCard,
                     "creditCardExpiration": customerCreditCardExpiration,
                     "creditCardCVV":customerCreditCardCVV,
-                    "line_items": [
-                    {
-                      "product_id": 93,
-                      "quantity": 2
-                    },
-                    {
-                      "product_id": 22,
-                      "variation_id": 23,
-                      "quantity": 1
-                    }]
-                                };
+                    
+                    "line_items": this.state.cart.map ((hippo) => {
+                                    return {
+                                        product_id : hippo.id,
+                                        quantity : 1
+                                    };
+                                })    
+                    };
 
                 const that = this;
                 var paymentData ={
@@ -479,11 +476,12 @@ export default class Layout extends React.Component {
                         body: JSON.stringify(orderData) // body data type must match "Content-Type" header
                     })
                     .then(response => response.json())
-                    .then(function(myJson) {
+                    .then( (myJson) => {
                         console.log ("PAYMENT", myJson);
                         
                         this.setState({
-                            orderData: myJson
+                            orderData: myJson,
+                            /*cart: [ ]*/
         
                         });
 
@@ -579,7 +577,7 @@ export default class Layout extends React.Component {
                     .then(data => this.setState({ photo: data }))
                     .catch(error => console.log(error));
 
-                fetch('https://first-wordpress-kparrish.c9users.io/wp-json/sample_api/v1/product')
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/sample_api/v1/product')
                     .then(response => response.json())
                     .then(data => this.setState({ products: data }))
                     .catch(error => console.log(error));
