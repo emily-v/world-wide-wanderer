@@ -407,7 +407,7 @@ export default class Layout extends React.Component {
                 });
             },
 
-            //POST SUBMIT ORDER
+                        //POST SUBMIT ORDER
             "submitOrder": (customerFirstName, customerLastName, customerAddress, customerAddress2, customerCity, customerState, customerPostcode, customerCountry, customerEmail,customerCreditCardNumber, customerNameOnCard, customerCreditCardExpiration, customerCreditCardCVV) => {
                 var orderData = {
                     "first_name": customerFirstName,
@@ -422,8 +422,18 @@ export default class Layout extends React.Component {
                     "creditCardNumber": customerCreditCardNumber,
                     "nameOnCard": customerNameOnCard,
                     "creditCardExpiration": customerCreditCardExpiration,
-                    "creditCardCVV":customerCreditCardCVV
-                };
+                    "creditCardCVV":customerCreditCardCVV,
+                    "line_items": [
+                    {
+                      "product_id": 93,
+                      "quantity": 2
+                    },
+                    {
+                      "product_id": 22,
+                      "variation_id": 23,
+                      "quantity": 1
+                    }]
+                                };
 
                 const that = this;
                 var paymentData ={
@@ -455,22 +465,34 @@ export default class Layout extends React.Component {
                         
                         ]
                 };
-                fetch('https://first-wordpress-kparrish.c9users.io/wp-json/wc/v2/payment_gateways/<id>', {
-                        method: "PUT", // *GET, POST, PUT, DELETE, etc.
-                        headers: {
-                            "Content-Type": "application/json; charset=utf-8"
-                        },
-                        body: JSON.stringify(paymentData) // body data type must match "Content-Type" header
+                console.log ("Autho", this.state.session.token);
+                
+                
+                
+                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wc/v2/orders', {
+                        method: "POST", // *GET, POST, PUT, DELETE, etc.
+                        headers: new Headers({
+                            "Content-Type": "application/json; charset=utf-8",
+                            "Authorization": 'Bearer '+this.state.session.token
+                        }),
+                    
+                        body: JSON.stringify(orderData) // body data type must match "Content-Type" header
                     })
                     .then(response => response.json())
                     .then(function(myJson) {
+                        console.log ("PAYMENT", myJson);
+                        
+                        this.setState({
+                            orderData: myJson
+        
+                        });
 
-                        fetch('https://first-wordpress-kparrish.c9users.io/wp-json/wc/v2/orders', {
+                        /*fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wc/v2/payment_gateways', {
                                 method: "PUT", // *GET, POST, PUT, DELETE, etc.
                                 headers: {
                                     "Content-Type": "application/json; charset=utf-8"
                                 },
-                                body: JSON.stringify(orderData) // body data type must match "Content-Type" header
+                                body: JSON.stringify(paymentData) // body data type must match "Content-Type" header
                             })
                             .then(response => response.json())
                             .then(function(myJson) {
@@ -492,13 +514,22 @@ export default class Layout extends React.Component {
 
                                     }
                                 });
-                            });
+                            });*/
 
                     });
 
 
 
             },
+            
+            "cart": () => {
+                this.setState({
+                    session: {
+
+                    }
+                });
+            },
+
 
             addProductToCart: (id) => {
                 let tempCart = this.state.cart;

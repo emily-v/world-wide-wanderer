@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
+import { Redirect } from "react-router-dom";
 
 export default class BillingInfo extends React.Component{
     
@@ -30,8 +31,10 @@ render(){
             <Consumer>
                 {({ state, actions }) =>
                     {
+                    if (typeof(state.orderData) !== 'undefined'){
+                                return (<Redirect to="/confirmationpage/" />);
+                            }else{
                         return( 
-                        
                             <div className="col-md-8 order-md-1">
                                 <h4 className="mb-3">Billing address</h4>
                                 <form onSubmit={(e) => {
@@ -261,13 +264,14 @@ render(){
                                 </form>
                             </div>
             
-                        );
+                            );
+                        }
                     }
                 }
             </Consumer>
-            );
-        }
+        );
     }
+}
 
 
 
