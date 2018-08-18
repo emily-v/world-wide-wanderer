@@ -10,9 +10,11 @@ import '../styles/index.scss';
 
 //import your own components
 import Layout from './layout.jsx';
+//import Layout2 from './layout2.jsx';
 
 //render your react application
 ReactDOM.render(
     <Layout />,
+    //<Layout2 />,
     document.querySelector('#app')
 );

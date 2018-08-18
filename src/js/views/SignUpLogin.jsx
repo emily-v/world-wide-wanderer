@@ -25,7 +25,7 @@ export class SignUpLogin extends React.Component{
                 <Consumer>
                     {({ state, actions }) => 
                         {
-                            if (typeof(state.session.token) !== 'undefined' && $("#loginMessageModal").modal('hide')){
+                            if (typeof(state.session.token) !== 'undefined'){ //&& $("#loginMessageModal").modal('hide')){
                                 return (<Redirect to="/storehome/" />);
                             }else{
                                 return(

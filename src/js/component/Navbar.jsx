@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import {Consumer} from "../stores/AppContext.jsx";//
@@ -57,7 +57,7 @@ class Navbar extends React.Component{
                                         <div>    
                                             <button className="btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
                                             <button className="btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
-                                            <button className="btn btn-outline-light" onClick={() => actions.logout()}><Link to="#" className="text-white">Log Out</Link></button> {/*redirect to store home on click*/}
+                                            <button className="btn btn-outline-light" onClick={() => actions.logout()}>Log Out</button> {/*redirect to store home on click*/}
                                         </div>
                                     :
                                         <button className="btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>
