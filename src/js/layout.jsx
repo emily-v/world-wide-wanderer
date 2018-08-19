@@ -56,7 +56,15 @@ export default class Layout extends React.Component {
             "cart": [
 
             ],
-
+            
+            "orders": [
+                   /* {
+                        orderData: myJson
+                        
+                    }*/
+                        
+            ],
+            
             "session": {
 
             },
@@ -238,7 +246,7 @@ export default class Layout extends React.Component {
                         
                         this.setState({
                             orderData: myJson,
-                            /*cart: [ ]*/
+                            cart: [ ]
         
                         });
 

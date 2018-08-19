@@ -16,25 +16,65 @@ export class ConfirmationPage extends React.Component{
         return (
             <div>
                 <Navbar />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <div className="card">
-                                <div className="card-body">
-                                    <h3 className="card-title text-center">Thank you for your order!</h3>
-                                    <p className="card-text text-center">Your order number is: XXXX-XXXX</p>
+                <Consumer>
+                    {({ state, actions }) => {
+                        
+                            return (
+                                <div className="container d-flex justify-content-center">
+                                    <div className="row">
+                                        {/*<div className="col-sm-6">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <h3 className="card-title text-center">Thank you for your order!</h3>
+                                                    <p className="card-text text-center">Your order number is: {actions.order_key}</p>
+                                                </div>
+                                            </div>
+                                        </div>*/}
+                                        <OrderSummary/>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <OrderSummary/>
-                    </div>
-                </div>
+                            );
+                        }
+                    }
+                </Consumer>
                 <Footer />
-            </div>    
+            </div> 
+            
         );
     }
 }
 
+
+
 ConfirmationPage.propTypes = {
+    orders: PropTypes.object
         
     };
+    
+    
+    
+    
+                {/*<Consumer>
+                    {({ state, actions }) => {
+                    (
+                        actions.submitOrder.map((item,index)=>{
+                        return (
+                            <div className="container"key={index}>
+                                <div className="row">
+                                    <div className="col-sm-6">
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <h3 className="card-title text-center">Thank you for your order!</h3>
+                                                <p className="card-text text-center">Your order number is: {this.actions.order_key}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <OrderSummary/>
+                                </div>
+                            </div>
+                        );
+                    })
+                    );
+                }
+                    }
+                </Consumer>*/}
