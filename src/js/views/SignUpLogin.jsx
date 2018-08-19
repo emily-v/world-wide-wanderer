@@ -49,7 +49,7 @@ export class SignUpLogin extends React.Component{
                                                                 <input className="form-control mb-2" value={this.state.last_name} placeholder="Last name" onChange={(e) => this.setState({last_name: e.target.value})}/>
                                                                 <input type="email" className="form-control mb-2" value={this.state.newEmail} placeholder="Email address" onChange={(e) => this.setState({newEmail: e.target.value})}/>
                                                                 <input type="password" className="form-control mb-2" value={this.state.newPassword} placeholder="Create password" onChange={(e) => this.setState({newPassword: e.target.value})}/> {/*--HOW TO MAKE THIS NOT POPULATE 'LOG IN' INPUT?--*/}
-                                                                <input type="password" className="form-control mb-2" value={""} placeholder="Re-type password"/> {/*--HOW TO VALIDATE SAME PASSWORD TYPED?--*/}
+                                                                {/*<input type="password" className="form-control mb-2" value={""} placeholder="Re-type password"/> --HOW TO VALIDATE SAME PASSWORD TYPED?--*/}
                                                                 <button type="submit" className="btn btn-primary btn-block">Sign up</button>
                                                             </form>
                                                         </div>

@@ -39,7 +39,7 @@ function BlogSidebar(props){
                         <li><Link to={"/blog-destinations/"+"northamerica"} className="text-dark">North America</Link></li>
                         <li><Link to={"/blog-destinations/"+"unitedstates"} className="text-dark">United States</Link></li>
                         <li><Link to={"/blog-destinations/"+"southamerica"} className="text-dark">South America</Link></li>
-                        <li><Link to={"/blog-destinations/"+"europe"} className="text-dark">Europe</Link></li>
+                        <li><Link to={"/blog-destinations/"+17} className="text-dark">Europe</Link></li>
                         <li><Link to={"/blog-destinations/"+"africa"} className="text-dark">Africa</Link></li>
                         <li><Link to={"/blog-destinations/"+"asia"} className="text-dark">Asia</Link></li>
                     </ul>

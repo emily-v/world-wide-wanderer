@@ -19,7 +19,7 @@ export class BlogDestinations extends React.Component{
             tagFormatted = "United States";
         } else if (this.props.match.params.tag == "southamerica"){
             tagFormatted = "South America";
-        } else if (this.props.match.params.tag == "europe"){
+        } else if (this.props.match.params.tag == 17){
             tagFormatted = "Europe";
         } else if (this.props.match.params.tag == "africa"){
             tagFormatted = "Africa";
@@ -37,24 +37,24 @@ export class BlogDestinations extends React.Component{
                             <Consumer>
                                 {({ state, actions }) => 
                                     (
+                                        state.isLoading ? (<p>Loading...</p>)
+                                        :
                                         state.posts.map((item,index)=>{
-                                            if (item.postTags.includes(this.props.match.params.tag)) {
-                                                return (
-                                                    <div>
-                                                        
-                                                        <FeaturedPost 
-                                                            key={index}
-                                                            postID={item.postID}
-                                                            postTitle={item.postTitle}
-                                                            datePublished={item.datePublished}
-                                                            featuredImage={item.featuredImage}
-                                                            postContent={item.postContent}
-                                                            postCategory={item.postCategory}
-                                                            postTags={item.postTags}
-                                                            author={item.author}
-                                                            />
-                                                    </div>  
-                                                );
+                                            //var itemTags = {item.tags};
+                                            if (item.tags.includes(this.props.match.params.tag)) {
+                                                return <FeaturedPost 
+                                                        key={index}
+                                                        postID={item.id}
+                                                        postTitle={item.title.rendered}
+                                                        datePublished={item.date}
+                                                        featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                        alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
+                                                        postExcerpt={item.excerpt.rendered}
+                                                        postContent={item.content.rendered}
+                                                        postCategory={item.categories}
+                                                        postTags={item.tags}
+                                                        author={item.author}
+                                                        />;
                                             }
                                         })
                                     )

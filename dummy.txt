@@ -2,7 +2,17 @@ constructor(){
         super();
         
         this.state = {
-            "posts":[
+            "posts": [
+                /*{ 
+                    postID: 6,
+                    postTitle:"Peru-sing Around Lima, Cusco and Machu Picchu",
+                    datePublished: "July 26, 2018",
+                    featuredImage: "https://images.unsplash.com/photo-1507791326281-5c006a450da0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=49a168d4a1ec80488271faef172b8af3&auto=format&fit=crop&w=1778&q=80",
+                    postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
+                    postCategory: "? can just use tags ?",
+                    postTags: ["southamerica"],
+                    author: "Keshaunda"
+                },
                 { 
                     postID: 5,
                     postTitle:"An Ornate Week in Barcelona, Spain and Marrakesh, Morocco",
@@ -10,7 +20,7 @@ constructor(){
                     featuredImage: "https://images.unsplash.com/photo-1468412526475-8cc70299f66f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc327e42db1f0e2e3cefb80132a6a3ce&auto=format&fit=crop&w=1350&q=80",
                     postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
                     postCategory: "? can just use tags ?",
-                    postTags: ["Europe", "Africa"],
+                    postTags: ["europe", "africa"],
                     author: "Keshaunda"
                 },
                 { 
@@ -20,7 +30,7 @@ constructor(){
                     featuredImage: "https://images.unsplash.com/photo-1508870557820-ab41597b37e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fbe75d3c3cbe856770bf9f82b6bd6a0&auto=format&fit=crop&w=1350&q=80",
                     postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
                     postCategory: "? can just use tags ?",
-                    postTags: ["North America", "United States"],
+                    postTags: ["northamerica", "unitedstates"],
                     author: "Emily"
                 },
                 { 
@@ -30,7 +40,7 @@ constructor(){
                     featuredImage: "https://images.unsplash.com/photo-1465451295220-eebae3bbe84c?ixlib=rb-0.3.5&s=a64d79a426497edb13207762581df7f2&auto=format&fit=crop&w=1353&q=80",
                     postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
                     postCategory: "? can just use tags ?",
-                    postTags: ["North America", "United States"],
+                    postTags: ["northamerica", "unitedstates"],
                     author: "Emily"
                 },
                 { 
@@ -40,28 +50,28 @@ constructor(){
                     featuredImage: "https://images.unsplash.com/photo-1470219556762-1771e7f9427d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f2cf76f5fe8c1347af38e4b515499e62&auto=format&fit=crop&w=1489&q=80",
                     postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
                     postCategory: "? can just use tags ?",
-                    postTags: ["North America", "United States"],
+                    postTags: ["northamerica", "unitedstates"],
                     author: "Keshaunda"
                 },
                 { 
                     postID: 1,
                     postTitle:"Exploring Mexico's Yucatan: Mayan Ruins, Cenotes and Beautiful Beaches",
-                    datePublished: "February 127, 2016",
+                    datePublished: "February 17, 2016",
                     featuredImage: "https://images.unsplash.com/photo-1501085928709-6e5c3b86ad9c?ixlib=rb-0.3.5&s=18c949d5fac48fd6acd732f6b9befd7d&auto=format&fit=crop&w=1457&q=80",
                     postContent: "Lorem ipsum dolor amet flannel art party swag cardigan narwhal kinfolk vexillologist copper mug post ironic man bun neutra. Narwhal synth af portland ramps. Williamsburg blue bottle taiyaki narwhal seitan wolf, sustainable edison bulb kale chips occupy woke. Flannel seitan slow carb mustache ennui vaporware iceland pop up williamsburg shaman pour over gluten free heirloom. Pour over small batch farm to table, live edge you probably havent heard of them ethical XOXO four dollar toast fanny pack disrupt literally bicycle rights wolf jean shorts taiyaki.",
                     postCategory: "? can just use tags ?",
-                    postTags: ["North America"],
+                    postTags: ["northamerica"],
                     author: "Emily"
-                }
+                }*/
             ],
-            "photos":[
-                { 
+            "photo": [
+                /*{ 
                     photoID: 61,
                     photoURL:"https://images.unsplash.com/photo-1474904200416-6b2b7926f26f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78fae80d812b8bde75bc221a74d865d7&auto=format&fit=crop&w=1350&q=80",
                     location:"Cusco, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 62,
@@ -69,7 +79,7 @@ constructor(){
                     location:"Montana Machu Picchu, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 63,
@@ -77,7 +87,7 @@ constructor(){
                     location:"Urubamba, Sacred Valley, Peru",
                     dateTaken: "June 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["South America"]
+                    photoTags: ["southamerica"]
                 },
                 { 
                     photoID: 51,
@@ -85,7 +95,7 @@ constructor(){
                     location:"Barcelona, Spain",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Europe"]
+                    photoTags: ["europe"]
                 },
                 { 
                     photoID: 52,
@@ -93,7 +103,7 @@ constructor(){
                     location:"Barcelona, Spain",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Europe"]
+                    photoTags: ["europe"]
                 },
                 { 
                     photoID: 53,
@@ -101,7 +111,7 @@ constructor(){
                     location:"Marrakesh, Morocco",
                     dateTaken: "April 2018",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["Africa"]
+                    photoTags: ["africa"]
                 },
                 { 
                     photoID: 41,
@@ -109,7 +119,7 @@ constructor(){
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 42,
@@ -117,7 +127,7 @@ constructor(){
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 43,
@@ -125,7 +135,7 @@ constructor(){
                     location:"Las Vegas, Nevada",
                     dateTaken: "September 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 31,
@@ -133,7 +143,7 @@ constructor(){
                     location:"Denver, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 32,
@@ -141,7 +151,7 @@ constructor(){
                     location:"Rocky Mountain National Park, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 33,
@@ -149,7 +159,7 @@ constructor(){
                     location:"Denver, Colorado",
                     dateTaken: "March 2017",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 21,
@@ -157,7 +167,7 @@ constructor(){
                     location:"Times Square, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 22,
@@ -165,7 +175,7 @@ constructor(){
                     location:"Brooklyn Bridge, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 23,
@@ -173,7 +183,7 @@ constructor(){
                     location:"Times Square, New York",
                     dateTaken: "July 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America", "United States"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 11,
@@ -181,7 +191,7 @@ constructor(){
                     location:"Tulum, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
+                    photoTags: ["northamerica", "unitedstates"]
                 },
                 { 
                     photoID: 12,
@@ -189,7 +199,7 @@ constructor(){
                     location:"Yucatan, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
+                    photoTags: ["northamerica"]
                 },
                 { 
                     photoID: 13,
@@ -197,5 +207,67 @@ constructor(){
                     location:"Chichen Itza, Mexico",
                     dateTaken: "January 2016",
                     caption: "Lorem ipsum dolor amet shaman raclette butcher pabst etsy, umami next level XOXO glossier synth mollit health goth stumptown sunt dreamcatcher.",
-                    photoTags: ["North America"]
-                }
+                    photoTags: ["northamerica"]
+                }*/
+            ],
+            "products": [
+                /*{
+                    productID: 1,
+                    productName: "Classic Backpack",
+                    productPrice: 35,
+                    productImage: "https://target.scene7.com/is/image/Target/47910815?wid=1400",
+                    productDescription: "The World Wide Wonder Classic™ backpack stays true to its timeless design, offering a clean and simple silhouette that is perfectly tailored to fit your style.",
+                    productGallery: ["https://target.scene7.com/is/image/Target/47910815_Alt01?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt02?wid=1400","https://target.scene7.com/is/image/Target/47910815_Alt03?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Travel Essential"
+                },
+                {
+                    productID: 2,
+                    productName: "Neck Pillow",
+                    productPrice: 20,
+                    productImage: "https://target.scene7.com/is/image/Target/50020496?wid=1400",
+                    productDescription: "The perfect neck pillow for a world wide traveler. Snaps easily onto your backpack, carryon, or checked luggage. Ideal for napping on a plane or in the car on a long road trip.",
+                    productGallery: ["https://target.scene7.com/is/image/Target/50020496_Alt01?wid=1400","https://target.scene7.com/is/image/Target/50020496_Alt05?wid=1400","https://target.scene7.com/is/image/Target/50020496_Alt06?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Travel Essential"
+                },
+                {
+                    productID: 3,
+                    productName: "The perfect Beach Towel",
+                    productPrice: 15,
+                    productImage: "https://target.scene7.com/is/image/Target/50451009_Alt02?wid=1400",
+                    productDescription: "Compliment the look of your bathing suit with this super cute beach towel.",
+                    productGallery: ["https://target.scene7.com/is/image/Target/50451009?wid=1400","https://target.scene7.com/is/image/Target/50451009_Alt01?wid=1400","https://target.scene7.com/is/image/Target/50451009_Alt03?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Beach Necessity"
+                },
+                {
+                    productID: 4,
+                    productName: "Polariod Camera",
+                    productPrice: 85,
+                    productImage: "https://target.scene7.com/is/image/Target/52890727?wid=1400",
+                    productDescription: "Everyone now a days has a DSLR that they bring along with them on vacation. Why not make vacationing more nostalogic with a polariod camera. The benefit you get to see the amazing pictures your snapping instantly.",
+                    productGallery: ["https://target.scene7.com/is/image/Target/52890727_Alt01?wid=1400","https://target.scene7.com/is/image/Target/52890727_Alt02?wid=1400","https://target.scene7.com/is/image/Target/52890727_Alt03?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Camera"
+                },
+                {
+                    productID: 5,
+                    productName: "Sunnies",
+                    productPrice: 20,
+                    productImage: "https://target.scene7.com/is/image/Target/16699768?wid=1400",
+                    productDescription: "While your venturing around town on these bright and sunnies days, don't forget the perfect travel accessory. These amazing sunglasses compliment any outfit.",
+                    productGallery: ["https://target.scene7.com/is/image/Target/16699768_Alt01?wid=1400","https://target.scene7.com/is/image/Target/16699768_Alt02?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Beach Necessity"
+                },
+                {
+                    productID: 6,
+                    productName: "Headphones",
+                    productPrice: 40,
+                    productImage: "https://target.scene7.com/is/image/Target/53246709?wid=1400",
+                    productDescription: "When you are stuck at the airport due to a delay or have a long flight oversea's. These headphones will help pass the time by cancelling out all noise.  ",
+                    productGallery: ["https://target.scene7.com/is/image/Target/53246709_Alt01?wid=1400","https://target.scene7.com/is/image/Target/53246709_Alt02?wid=1400"],
+                    productRating: [1,2,3,4,5],
+                    productCategory: "Travel Essential"
+                }*/

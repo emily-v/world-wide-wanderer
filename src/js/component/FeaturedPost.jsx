@@ -21,6 +21,7 @@ function FeaturedPost(props){
                         {props.datePublished}
                     </Moment>
                 </p>
+                {/*<p>tags test {props.postTags}</p>*/}
                 <p className="featuredPostTextBlock">
                     <Link className="text-dark" to={"/blog-post/"+props.postID}>
                         <InnerHTML html={props.postExcerpt} />
@@ -37,7 +38,8 @@ FeaturedPost.propTypes = {
         featuredImage: PropTypes.string,
         alt_text: PropTypes.string,
         datePublished: PropTypes.string,
-        postExcerpt: PropTypes.string
+        postExcerpt: PropTypes.string,
+        postTags: PropTypes.array
     };
 
 export default FeaturedPost;
