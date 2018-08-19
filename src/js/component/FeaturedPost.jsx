@@ -14,14 +14,13 @@ function FeaturedPost(props){
                     </Link>
                 </h1>
                 <div className="text-center postImageContainer">
-                    <img src={props.featuredImage} alt={props.alt_text} className="img-fluid pb-3"/>{/*HOW TO MAKE ALT SHOW IMAGE ALT TEXT? (ALT FIELD NOT SHOWING IN JSON)*/}
+                    <img src={props.featuredImage} alt={props.alt_text} className="img-fluid pb-3"/>
                 </div>
                 <p className="text-secondary datePublished">
                     <Moment format="MMMM D, YYYY">
                         {props.datePublished}
                     </Moment>
                 </p>
-                {/*<p>tags test {props.postTags}</p>*/}
                 <p className="featuredPostTextBlock">
                     <Link className="text-dark" to={"/blog-post/"+props.postID}>
                         <InnerHTML html={props.postExcerpt} />

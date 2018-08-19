@@ -36,11 +36,11 @@ function BlogSidebar(props){
                 <div className="mt-5 mb-3 destinations">
                     <h4 className="mb-3">Destinations</h4>
                     <ul className="list-unstyled text-left">
-                        <li><Link to={"/blog-destinations/"+"northamerica"} className="text-dark">North America</Link></li>
-                        <li><Link to={"/blog-destinations/"+"unitedstates"} className="text-dark">United States</Link></li>
-                        <li><Link to={"/blog-destinations/"+"southamerica"} className="text-dark">South America</Link></li>
+                        <li><Link to={"/blog-destinations/"+18} className="text-dark">North America</Link></li>
+                        <li><Link to={"/blog-destinations/"+19} className="text-dark">United States</Link></li>
+                        <li><Link to={"/blog-destinations/"+2} className="text-dark">South America</Link></li>
                         <li><Link to={"/blog-destinations/"+17} className="text-dark">Europe</Link></li>
-                        <li><Link to={"/blog-destinations/"+"africa"} className="text-dark">Africa</Link></li>
+                        <li><Link to={"/blog-destinations/"+20} className="text-dark">Africa</Link></li>
                         <li><Link to={"/blog-destinations/"+"asia"} className="text-dark">Asia</Link></li>
                     </ul>
                 </div>

@@ -13,15 +13,15 @@ export class BlogDestinations extends React.Component{
     render(){
         
         var tagFormatted = "";
-        if (this.props.match.params.tag == "northamerica"){
+        if (this.props.match.params.tag == 18){
             tagFormatted = "North America";
-        } else if (this.props.match.params.tag == "unitedstates"){
+        } else if (this.props.match.params.tag == 19){
             tagFormatted = "United States";
-        } else if (this.props.match.params.tag == "southamerica"){
+        } else if (this.props.match.params.tag == 2){
             tagFormatted = "South America";
         } else if (this.props.match.params.tag == 17){
             tagFormatted = "Europe";
-        } else if (this.props.match.params.tag == "africa"){
+        } else if (this.props.match.params.tag == 20){
             tagFormatted = "Africa";
         } else if (this.props.match.params.tag == "asia"){
             tagFormatted = "Asia";
@@ -41,7 +41,7 @@ export class BlogDestinations extends React.Component{
                                         :
                                         state.posts.map((item,index)=>{
                                             //var itemTags = {item.tags};
-                                            if (item.tags.includes(this.props.match.params.tag)) {
+                                            if (item.tags.includes(parseInt(this.props.match.params.tag))) {
                                                 return <FeaturedPost 
                                                         key={index}
                                                         postID={item.id}
@@ -72,5 +72,6 @@ export class BlogDestinations extends React.Component{
 }
 
 BlogDestinations.propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
+    tags: PropTypes.array
 };
