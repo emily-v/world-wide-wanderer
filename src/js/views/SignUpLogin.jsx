@@ -12,8 +12,9 @@ export class SignUpLogin extends React.Component{
         super(props);
         
         this.state = {
-            username: "",
-            password: ""
+            //username: "",
+            //password: ""
+            session: this.myJson
         };
     }
     
@@ -25,6 +26,19 @@ export class SignUpLogin extends React.Component{
                 <Consumer>
                     {({ state, actions }) => 
                         {
+                            
+                            /*function handleModal() {
+                                console.log("handle modal on click");
+                                if (state.isLoading == false) {
+                                    if (state.session.message !== 'undefined'){
+                                //if (state.session.data.status == 403){
+                                    $("#loginMessageModal").modal();
+                                    }
+                                }else {
+                                    $("#loginMessageModal").modal('hide');
+                                }
+                            } */
+                        
                             if (typeof(state.session.token) !== 'undefined'){ //&& $("#loginMessageModal").modal('hide')){
                                 return (<Redirect to="/storehome/" />);
                             }else{
@@ -63,6 +77,7 @@ export class SignUpLogin extends React.Component{
                                                         <div className="card-body">
                                                             <form role="form" onSubmit={(e) => {
                                                                                                 e.preventDefault();
+                                                                                                //handleModal(e);
                                                                                                 actions.logIn(this.state.username, this.state.password);
                                                                                                 //$("#loginMessageModal").modal();
                                                             }}>
@@ -77,21 +92,26 @@ export class SignUpLogin extends React.Component{
                                                 </div>
                                             </div>
                                         </div>
-                                        {/*<div className="modal fade" id="loginMessageModal" tabIndex="-1" role="dialog">
+                                        <div className="modal fade" id="loginMessageModal" tabIndex="-1" role="dialog">
                                             <div className="modal-dialog" role="document">
                                                 <div className="modal-content">
                                                     <div className="modal-header">
-                                                        <h5 className="modal-title">Success</h5>
+                                                        <h5 className="modal-title">title</h5>
                                                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div className="modal-body">
-                                                        <p>login message</p>
+                                                        {
+                                                            //(typeof(state.session.token) !== 'undefined') ? <p>success</p>
+                                                            //:
+                                                            <p>try again</p>
+                                                        }
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>*/}
+                                        </div>
                                     </React.Fragment>
                                 );
                             }
