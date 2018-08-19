@@ -40,7 +40,6 @@ export class BlogDestinations extends React.Component{
                                         state.isLoading ? (<p>Loading...</p>)
                                         :
                                         state.posts.map((item,index)=>{
-                                            //var itemTags = {item.tags};
                                             if (item.tags.includes(parseInt(this.props.match.params.tag))) {
                                                 return <FeaturedPost 
                                                         key={index}

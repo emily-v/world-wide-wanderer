@@ -20,8 +20,6 @@ class Navbar extends React.Component{
     
     render(){
         
-        //const session = this.props;
-        
         return (
             <div>
                 <nav className="navbar navbar-expand-sm navbar-dark navbar-toggleable-md">
@@ -55,12 +53,12 @@ class Navbar extends React.Component{
                                   
                                     typeof state.session.token !== 'undefined' ?
                                         <div>    
-                                            <button className="btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
-                                            <button className="btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
-                                            <button className="btn btn-outline-light" onClick={() => actions.logout()}>Log Out</button> {/*redirect to store home on click*/}
+                                            <button className="nav-button btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
+                                            <button className="nav-button btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
+                                            <button className="nav-button btn btn-outline-light text-white" onClick={() => actions.logout()}>Log Out</button> {/*redirect to store home on click*/}
                                         </div>
                                     :
-                                        <button className="btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>
+                                        <button className="nav-button btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>
                                   
                                 )
                             }
