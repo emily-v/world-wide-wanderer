@@ -17,7 +17,7 @@ export class SingleProduct extends React.Component{
             <div>
                 <Navbar />
                 <div className="container pt-20">
-                    <div className="d-flex flex-row">
+                    <div className="row d-flex flex-row">
                         <Consumer>
                             {({ state, actions }) => {
                             
@@ -29,6 +29,14 @@ export class SingleProduct extends React.Component{
                             var products = selected[0];
                                 return  (
                                     <React.Fragment>
+                                        {
+                                            typeof state.session.token === 'undefined' ?
+                                                <div className="alert alert-info center-block" role="alert">
+                                                    <strong>Hello Wanderer!</strong> Thanks for checking out our shop, Please <Link to={"/signup-login"} className="text-dark font-weight-bold">Sign up or Login</Link> if you would like to view the items in your cart.
+                                                </div>
+                                            :
+                                                <div></div>
+                                        }
                                         <div className="col-md-7">
                                             <h2><strong>{products.name}</strong></h2>
                                             {
