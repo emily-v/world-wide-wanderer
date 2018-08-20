@@ -6,26 +6,25 @@ import { Consumer } from "../stores/AppContext.jsx";
 
 
 function OrderSummary(props) {
-    console.log("HERE SHOULD BE THE DATA THAT YOU SENT AS A PROP:", props);
+    {/*console.log("HERE SHOULD BE THE DATA THAT YOU SENT AS A PROP:", props);*/}
     return (
         
         <div className="card text-center">
-            <div className="col-xl-12">
+            <div className="col-xl-12 pt-25">
                 <div className="card-body">
-                    <h3 className="card-title text-center">Thank you for your order!</h3>
-                    <p className="card-text text-center">Your order number is: {props.orderKey}</p>
+                    <h2 className="card-title text-center">Thank you for your order!</h2>
+                    <p className="card-text text-center">Your order number is: {props.orderFinal.number}</p>
                     <hr></hr>
-                    <h2 className="card-title">Order Summary</h2>
+                    <h3 className="card-title">Order Summary</h3>
                     <hr></hr>
-                    <p className="card-text"><strong> Qty: {props.lineItems}</strong></p>
+                    <p className="card-text"><strong> Qty: {props.orderFinal.line_items.length}</strong></p>
                 </div>
                 <ul className="list-group list-group-flush">
-                    {/*<li className="list-group-item"><strong>Subtotal:</strong> ${(actions.flyByNight())}</li>*/}
                     <li className="list-group-item"><strong>Shipping:</strong> Free </li>
                     <li className="list-group-item"><strong>Sales Tax:</strong> $0.00</li>
                 </ul>
                 <div className="card-body">
-                    <h3 className="card-title">Order Total: ${props.total}</h3>
+                    <h3 className="card-title">Order Total: ${props.orderFinal.total}</h3>
                 </div>
                 <div className="card-body">
                     <button type="button" className="btn btn-success"><Link to={"/storehome"} className="text-light">Continue Shopping</Link></button>
@@ -40,8 +39,8 @@ function OrderSummary(props) {
 OrderSummary.propTypes = {
     productImage: PropTypes.string,
     total: PropTypes.number,
-    orderKey: PropTypes.object,
-    lineItems: PropTypes.array,
+    number: PropTypes.number,
+    line_items: PropTypes.array,
     orderFinal: PropTypes.object
 };
 
