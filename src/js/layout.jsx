@@ -229,8 +229,6 @@ export default class Layout extends React.Component {
                 };
                 console.log ("Autho", this.state.session.token);
                 
-                
-                
                 fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wc/v2/orders', {
                         method: "POST", // *GET, POST, PUT, DELETE, etc.
                         headers: new Headers({
@@ -244,7 +242,7 @@ export default class Layout extends React.Component {
                     .then( (myJson) => {
                         console.log ("PAYMENT", myJson);
                         
-                        this.setState({
+                        that.setState({
                             orderData: myJson,
                             cart: [ ]
         

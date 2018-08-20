@@ -16,27 +16,23 @@ export class ConfirmationPage extends React.Component{
         return (
             <div>
                 <Navbar />
-                <Consumer>
-                    {({ state, actions }) => {
-                        
-                            return (
-                                <div className="container d-flex justify-content-center">
-                                    <div className="row">
-                                        {/*<div className="col-sm-6">
-                                            <div className="card">
-                                                <div className="card-body">
-                                                    <h3 className="card-title text-center">Thank you for your order!</h3>
-                                                    <p className="card-text text-center">Your order number is: {actions.order_key}</p>
-                                                </div>
-                                            </div>
-                                        </div>*/}
-                                        <OrderSummary/>
-                                    </div>
-                                </div>
-                            );
-                        }
-                    }
-                </Consumer>
+                <div>
+                    <div className="container d-flex justify-content-center">
+                        <div className="row">
+                            <Consumer>
+                                {({ state, actions }) => {
+                                    
+                                        return (
+                                            <OrderSummary
+                                            orderFinal={state.orderData}
+                                            />
+                                        );
+                                    }
+                                }
+                            </Consumer>
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </div> 
             
@@ -47,34 +43,11 @@ export class ConfirmationPage extends React.Component{
 
 
 ConfirmationPage.propTypes = {
-    orders: PropTypes.object
-        
+    total: PropTypes.number,
+    orderKey: PropTypes.object,
+    lineItems: PropTypes.array
     };
     
     
     
     
-                {/*<Consumer>
-                    {({ state, actions }) => {
-                    (
-                        actions.submitOrder.map((item,index)=>{
-                        return (
-                            <div className="container"key={index}>
-                                <div className="row">
-                                    <div className="col-sm-6">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <h3 className="card-title text-center">Thank you for your order!</h3>
-                                                <p className="card-text text-center">Your order number is: {this.actions.order_key}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <OrderSummary/>
-                                </div>
-                            </div>
-                        );
-                    })
-                    );
-                }
-                    }
-                </Consumer>*/}
