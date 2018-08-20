@@ -16,9 +16,6 @@ export class Profile extends React.Component{
     
     render(){
         
-        //const {session, actions} = this.props;
-        
-                                                
         return (
             <div>
                 <Navbar />

@@ -42,26 +42,6 @@ export class BlogHome extends React.Component{
                                     )
                                 }
                             </Consumer>
-                            {/* -----MAP WITH DUMMY CONTENT
-                            <Consumer>
-                                {({ state, actions }) => 
-                                    (
-                                        state.posts.map((item,index)=>{
-                                            return <FeaturedPost 
-                                                    key={index}
-                                                    postID={item.postID}
-                                                    postTitle={item.postTitle}
-                                                    datePublished={item.datePublished}
-                                                    featuredImage={item.featuredImage}
-                                                    postContent={item.postContent}
-                                                    postCategory={item.postCategory}
-                                                    postTags={item.postTags}
-                                                    author={item.author}
-                                                    />;
-                                        })
-                                    )
-                                }
-                            </Consumer>*/}
                         </div>
                         <div className="col-md-3">
                             <BlogSidebar />

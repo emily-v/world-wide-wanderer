@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import FeaturedPost from '../component/FeaturedPost.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -22,24 +23,19 @@ export class BlogArchive extends React.Component{
                                 {({ state, actions }) => 
                                     (
                                         state.posts.map((item,index)=>{
-                                        //USE FILTER OR IF
-                                            if (item.datePublished.includes(this.props.match.params.year)) {
-                                                return (
-                                                    <div>
-                                                        
-                                                        <FeaturedPost 
-                                                            key={index}
-                                                            postID={item.postID}
-                                                            postTitle={item.postTitle}
-                                                            datePublished={item.datePublished}
-                                                            featuredImage={item.featuredImage}
-                                                            postContent={item.postContent}
-                                                            postCategory={item.postCategory}
-                                                            postTags={item.postTags}
-                                                            author={item.author}
-                                                            />
-                                                    </div>  
-                                                );
+                                            if (item.date.includes(this.props.match.params.year)) {
+                                                return <FeaturedPost 
+                                                        key={index}
+                                                        postID={item.id}
+                                                        postTitle={item.title.rendered}
+                                                        datePublished={item.date}
+                                                        featuredImage={item._embedded['wp:featuredmedia']['0'].source_url}
+                                                        alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
+                                                        postExcerpt={item.excerpt.rendered}
+                                                        postContent={item.content.rendered}
+                                                        postTags={item.tags}
+                                                        author={item.author}
+                                                        />;
                                             }
                                         })
                                     )
@@ -51,6 +47,7 @@ export class BlogArchive extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }

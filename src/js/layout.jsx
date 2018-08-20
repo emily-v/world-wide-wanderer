@@ -139,7 +139,7 @@ export default class Layout extends React.Component {
                     });
 
                 //POST USER TOKEN
-                fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/jwt-auth/v1/token', {
+                /*fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/jwt-auth/v1/token', {
                         method: "POST", // *GET, POST, PUT, DELETE, etc.
                         headers: {
                             "Content-Type": "application/json; charset=utf-8"
@@ -148,18 +148,12 @@ export default class Layout extends React.Component {
                     })
                     .then(response => response.json())
                     .then(function(myJson) {
-                        console.log("LOGIN", myJson);
-                        console.log("TOKEN", myJson.token);
+                        console.log("NEW LOGIN", myJson);
+                        console.log("NEW TOKEN", myJson.token);
                         that.setState({
-                            session: {
-                                id: 1000,
-                                username: receivedEmail,
-                                password: receivedPassword,
-                                token: myJson.token
-                            }
-
+                            session: myJson
                         });
-                    });
+                    });*/
 
 
             },
@@ -355,6 +349,7 @@ export default class Layout extends React.Component {
     componentDidMount() {
         this.actions.loadInitialData();
     }
+    
 
 
 

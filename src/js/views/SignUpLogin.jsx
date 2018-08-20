@@ -38,7 +38,20 @@ export class SignUpLogin extends React.Component{
                                     $("#loginMessageModal").modal('hide');
                                 }
                             } */
-                        
+                            
+                           $("#newUserModal").on("hidden.bs.modal", function () {
+                                location.reload();
+                            });
+                            
+                            /*var incorrectLoginMessage = "";
+                            if (state.session.message !== 'undefined'){
+                                if (state.session.message.includes("ERROR")){
+                                    incorrectLoginMessage = "Invalid login. Please try again.";
+                                }else{
+                                    incorrectLoginMessage = "";
+                                }
+                            }*/
+
                             if (typeof(state.session.token) !== 'undefined'){ //&& $("#loginMessageModal").modal('hide')){
                                 return (<Redirect to="/storehome/" />);
                             }else{
@@ -56,13 +69,12 @@ export class SignUpLogin extends React.Component{
                                                             <form onSubmit={(e) => {
                                                                                     e.preventDefault();
                                                                                     actions.createUser(this.state.first_name, this.state.last_name, this.state.newEmail, this.state.newPassword);
-                                                                                    actions.logIn(this.state.newEmail, this.state.newPassword);
-                                                                                    //--Create modal with success message--
+                                                                                    $("#newUserModal").modal();
                                                             }}>
-                                                                <input className="form-control mb-2" value={this.state.first_name} placeholder="First name" onChange={(e) => this.setState({first_name: e.target.value})}/>
+                                                                <input className="form-control mb-2" value={this.state.first_name} placeholder="First name" onChange={(e) => this.setState({first_name: e.target.value})} onSubmit={(e) => this.setState(this.value="")}/>
                                                                 <input className="form-control mb-2" value={this.state.last_name} placeholder="Last name" onChange={(e) => this.setState({last_name: e.target.value})}/>
                                                                 <input type="email" className="form-control mb-2" value={this.state.newEmail} placeholder="Email address" onChange={(e) => this.setState({newEmail: e.target.value})}/>
-                                                                <input type="password" className="form-control mb-2" value={this.state.newPassword} placeholder="Create password" onChange={(e) => this.setState({newPassword: e.target.value})}/> {/*--HOW TO MAKE THIS NOT POPULATE 'LOG IN' INPUT?--*/}
+                                                                <input type="password" className="form-control mb-2" value={this.state.newPassword} placeholder="Create password" onChange={(e) => this.setState({newPassword: e.target.value})}/>
                                                                 {/*<input type="password" className="form-control mb-2" value={""} placeholder="Re-type password"/> --HOW TO VALIDATE SAME PASSWORD TYPED?--*/}
                                                                 <button type="submit" className="btn btn-primary btn-block">Sign up</button>
                                                             </form>
@@ -75,6 +87,7 @@ export class SignUpLogin extends React.Component{
                                                             <h4>Log In</h4>
                                                         </div>
                                                         <div className="card-body">
+                                                            <p>{/*incorrectLoginMessage*/}</p>
                                                             <form role="form" onSubmit={(e) => {
                                                                                                 e.preventDefault();
                                                                                                 //handleModal(e);
@@ -92,7 +105,7 @@ export class SignUpLogin extends React.Component{
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="modal fade" id="loginMessageModal" tabIndex="-1" role="dialog">
+                                        <div className="modal fade" id="newUserModal" tabIndex="-1" role="dialog">
                                             <div className="modal-dialog" role="document">
                                                 <div className="modal-content">
                                                     <div className="modal-header">
@@ -105,7 +118,7 @@ export class SignUpLogin extends React.Component{
                                                         {
                                                             //(typeof(state.session.token) !== 'undefined') ? <p>success</p>
                                                             //:
-                                                            <p>try again</p>
+                                                            <p>User account created. Please sign in to continue.</p>
                                                         }
                                                         
                                                     </div>

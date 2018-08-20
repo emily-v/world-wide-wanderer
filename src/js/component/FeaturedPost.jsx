@@ -14,7 +14,9 @@ function FeaturedPost(props){
                     </Link>
                 </h1>
                 <div className="text-center postImageContainer">
-                    <img src={props.featuredImage} alt={props.alt_text} className="img-fluid pb-3"/>
+                    <Link className="text-dark" to={"/blog-post/"+props.postID}>
+                        <img src={props.featuredImage} alt={props.alt_text} className="img-fluid pb-3"/>
+                    </Link>
                 </div>
                 <p className="text-secondary datePublished">
                     <Moment format="MMMM D, YYYY">

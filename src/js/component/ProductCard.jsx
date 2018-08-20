@@ -10,7 +10,7 @@ function ProductCard(props){
   
         
         <div className="card h-100">
-            <a href="#"><img className="card-img-top img-fluid" src={props.productImage} alt=""></img></a>
+            <Link className="text-primary" to= {"/singleproduct/"+props.productID}><img className="card-img-top img-fluid" src={props.productImage} alt=""></img></Link>
             <div className="card-body">
                 <h4 className="card-title">
                     <Link className="text-primary" to= {"/singleproduct/"+props.productID}>{props.productName}</Link>

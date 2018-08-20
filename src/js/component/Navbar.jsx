@@ -49,18 +49,24 @@ class Navbar extends React.Component{
                         </ul>
                         <Consumer>
                             {({ state, actions }) => 
-                                (
-                                  
-                                    typeof state.session.token !== 'undefined' ?
-                                        <div>    
-                                            <button className="nav-button btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
-                                            <button className="nav-button btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> Profile</Link></button> {/*change 'Profile' to user's first name*/}
-                                            <button className="nav-button btn btn-outline-light text-white" onClick={() => actions.logout()}>Log Out</button> {/*redirect to store home on click*/}
-                                        </div>
-                                    :
-                                        <button className="nav-button btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>
-                                  
-                                )
+                                {
+                                    {/*if (state.isLoading == true){
+                                        return <div>Loading</div>;
+                                    }else */}if (typeof (state.session.token) !== 'undefined'){
+                                        var displayName = state.session.user_display_name;
+                                        var firstName = displayName.charAt(0).toUpperCase()+displayName.substring(1).split(" ")[0];
+                                        
+                                        return(
+                                            <div>    
+                                                <button className="nav-button btn btn-outline-light mr-1" ><Link to={"/shoppingcart/"} className="text-white"><FontAwesomeIcon icon={faShoppingBag}/> {state.cart.length}</Link></button>
+                                                <button className="nav-button btn btn-outline-light" ><Link to={"/profile"} className="text-white"><FontAwesomeIcon icon={faUser}/> {firstName}</Link></button>
+                                                <button className="nav-button btn btn-outline-light text-white" onClick={() => actions.logout()}>Log Out</button>
+                                            </div>
+                                        );
+                                    }else{
+                                        return(<button className="nav-button btn btn-outline-light" ><Link to={"/signup-login"} className="text-white"><FontAwesomeIcon icon={faUser}/> Log In</Link></button>);
+                                    }
+                                }
                             }
                         </Consumer>
                     </div>
@@ -76,20 +82,6 @@ class Navbar extends React.Component{
 
 export default Navbar;
 
-        
-        /*<div className="modal fade" id="loginSignUpModal" tabIndex="-1" role="dialog">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5>Login or Sign Up</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>*/
-        
 Navbar.propTypes = {
     session: PropTypes.object,
     username: PropTypes.string

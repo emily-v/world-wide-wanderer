@@ -8,6 +8,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function BlogSidebar(props){
     
@@ -25,7 +26,7 @@ function BlogSidebar(props){
                 {/*-----BEGIN ARCHIVES-----*/}
                 <div className="mt-5 mb-3 archives">
                     <h4 className="mb-3">Archives</h4>
-                    <ul className="list-unstyled text-left">
+                    <ul className="list-unstyled text-left pl-4">
                         <li><Link to={"/blog-archive/"+2018} className="text-dark">2018</Link></li>
                         <li><Link to={"/blog-archive/"+2017} className="text-dark">2017</Link></li>
                         <li><Link to={"/blog-archive/"+2016} className="text-dark">2016</Link></li>
@@ -35,7 +36,7 @@ function BlogSidebar(props){
                 {/*-----BEGIN DESTINATIONS-----*/}
                 <div className="mt-5 mb-3 destinations">
                     <h4 className="mb-3">Destinations</h4>
-                    <ul className="list-unstyled text-left">
+                    <ul className="list-unstyled text-left pl-4">
                         <li><Link to={"/blog-destinations/"+18} className="text-dark">North America</Link></li>
                         <li><Link to={"/blog-destinations/"+19} className="text-dark">United States</Link></li>
                         <li><Link to={"/blog-destinations/"+2} className="text-dark">South America</Link></li>
@@ -51,6 +52,7 @@ function BlogSidebar(props){
                         <li className="list-inline-item h2"><a href="https://www.facebook.com/" className="text-dark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook}/></a></li>
                         <li className="list-inline-item h2"><a href="https://twitter.com/" className="text-dark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter}/></a></li>
                         <li className="list-inline-item h2"><a href="https://www.linkedin.com/" className="text-dark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin}/></a></li>
+                        <li className="list-inline-item h2"><a href="https://github.com/emily-v/final-project-emily-keshaunda" className="text-dark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}/></a></li>
                     </ul>
                 </div>
             </div>

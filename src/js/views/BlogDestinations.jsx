@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../component/Navbar.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import FeaturedPost from '../component/FeaturedPost.jsx';
+import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
@@ -50,7 +51,6 @@ export class BlogDestinations extends React.Component{
                                                         alt_text={item._embedded['wp:featuredmedia']['0'].alt_text}
                                                         postExcerpt={item.excerpt.rendered}
                                                         postContent={item.content.rendered}
-                                                        postCategory={item.categories}
                                                         postTags={item.tags}
                                                         author={item.author}
                                                         />;
@@ -65,6 +65,7 @@ export class BlogDestinations extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
