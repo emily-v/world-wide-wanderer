@@ -49,19 +49,19 @@ export class Profile extends React.Component{
                                                                 </div>
                                                             </div>
                                                             <div className="form-group row">
-                                                                <label htmlFor="userLastName" className="col-sm-4 col-form-label">Last name</label>
+                                                                <label htmlFor="userLastName" className="col-sm-4 col-form-label font-weight-bold">Last name</label>
                                                                 <div className="col-sm-8">
                                                                     <input type="text" readOnly className="form-control-plaintext" id="userLastName" value={lastName}/>
                                                                 </div>
                                                             </div>
                                                             <div className="form-group row">
-                                                                <label htmlFor="userEmail" className="col-sm-4 col-form-label">Email address</label>
+                                                                <label htmlFor="userEmail" className="col-sm-4 col-form-label font-weight-bold">Email address</label>
                                                                 <div className="col-sm-8">
                                                                     <input type="text" readOnly className="form-control-plaintext" id="userEmail" value={state.session.user_email}/>
                                                                 </div>
                                                             </div>
                                                             <div className="form-group row">
-                                                                <label htmlFor="userPassword" className="col-sm-4 col-form-label">Password</label>
+                                                                <label htmlFor="userPassword" className="col-sm-4 col-form-label font-weight-bold">Password</label>
                                                                 <div className="col-sm-8">
                                                                     <button type="button" className="btn btn-outline-secondary" id="userPassword" data-toggle="modal" data-target="#changePassword">Change password</button>
                                                                 </div>
@@ -74,9 +74,9 @@ export class Profile extends React.Component{
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="row justify-content-center pt-4">
+                                        {/*<div className="row justify-content-center pt-4">
                                             <button type="button" className="btn btn-outline-primary">Return to previous page</button>
-                                        </div>
+                                        </div>*/}
                                         <div className="modal fade" id="changePassword" tabIndex="-1" role="dialog">
                                             <div className="modal-dialog" role="document">
                                                 <div className="modal-content">
