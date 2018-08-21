@@ -164,6 +164,7 @@ export default class Layout extends React.Component {
 
                     }
                 });
+                location.reload();
             },
 
                         //POST SUBMIT ORDER

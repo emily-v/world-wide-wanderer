@@ -27,38 +27,18 @@ export class SignUpLogin extends React.Component{
                     {({ state, actions }) => 
                         {
                             
-                            /*function handleModal() {
-                                console.log("handle modal on click");
-                                if (state.isLoading == false) {
-                                    if (state.session.message !== 'undefined'){
-                                //if (state.session.data.status == 403){
-                                    $("#loginMessageModal").modal();
-                                    }
-                                }else {
-                                    $("#loginMessageModal").modal('hide');
-                                }
-                            } */
-                            
                            $("#newUserModal").on("hidden.bs.modal", function () {
                                 location.reload();
                             });
                             
-                            /*var incorrectLoginMessage = "";
-                            if (state.session.message !== 'undefined'){
-                                if (state.session.message.includes("ERROR")){
-                                    incorrectLoginMessage = "Invalid login. Please try again.";
-                                }else{
-                                    incorrectLoginMessage = "";
-                                }
-                            }*/
-
-                            if (typeof(state.session.token) !== 'undefined'){ //&& $("#loginMessageModal").modal('hide')){
+                            if (typeof(state.session.token) !== 'undefined'){
                                 return (<Redirect to="/storehome/" />);
                             }else{
                                 return(
                                     <React.Fragment>
                                         <div className="container-fluid">
                                             <div className="row justify-content-center pt-4">
+                                                {/*----CREATE NEW USER CARD----*/}
                                                 <div className="col-md-4">
                                                     <div className="card my-3 mx-auto">
                                                         <div className="card-header">
@@ -81,18 +61,16 @@ export class SignUpLogin extends React.Component{
                                                         </div>
                                                     </div>
                                                 </div>
+                                                {/*----LOG IN CARD----*/}
                                                 <div className="col-md-4">
                                                     <div className="card my-3 mx-auto">
                                                         <div className="card-header">
                                                             <h4>Log In</h4>
                                                         </div>
                                                         <div className="card-body">
-                                                            <p>{/*incorrectLoginMessage*/}</p>
                                                             <form role="form" onSubmit={(e) => {
                                                                                                 e.preventDefault();
-                                                                                                //handleModal(e);
                                                                                                 actions.logIn(this.state.username, this.state.password);
-                                                                                                //$("#loginMessageModal").modal();
                                                             }}>
                                                                 <input type="email" className="form-control mb-2" value={this.state.username} placeholder="Email address" onChange={(e) => this.setState({username: e.target.value})}/>
                                                                 <input type="password" className="form-control mb-2" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
@@ -105,22 +83,17 @@ export class SignUpLogin extends React.Component{
                                                 </div>
                                             </div>
                                         </div>
+                                        {/*----USER CREATION MESSAGE MODAL----*/}
                                         <div className="modal fade" id="newUserModal" tabIndex="-1" role="dialog">
                                             <div className="modal-dialog" role="document">
                                                 <div className="modal-content">
                                                     <div className="modal-header">
-                                                        <h5 className="modal-title">title</h5>
                                                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div className="modal-body">
-                                                        {
-                                                            //(typeof(state.session.token) !== 'undefined') ? <p>success</p>
-                                                            //:
-                                                            <p>User account created. Please sign in to continue.</p>
-                                                        }
-                                                        
+                                                        <p>User account created. Please sign in to continue.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -130,14 +103,12 @@ export class SignUpLogin extends React.Component{
                             }
                         }
                     }
+                     
                 </Consumer>
             </div>
         );
     }
 }
-
-
-
 
 SignUpLogin.propTypes = {
     session: PropTypes.object,
@@ -163,3 +134,4 @@ SignUpLogin.propTypes = {
         </div>
     </div>
 </div>*/}
+

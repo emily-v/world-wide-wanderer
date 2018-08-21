@@ -50,9 +50,7 @@ class Navbar extends React.Component{
                         <Consumer>
                             {({ state, actions }) => 
                                 {
-                                    {/*if (state.isLoading == true){
-                                        return <div>Loading</div>;
-                                    }else */}if (typeof (state.session.token) !== 'undefined'){
+                                    if (typeof (state.session.token) !== 'undefined'){
                                         var displayName = state.session.user_display_name;
                                         var firstName = displayName.charAt(0).toUpperCase()+displayName.substring(1).split(" ")[0];
                                         

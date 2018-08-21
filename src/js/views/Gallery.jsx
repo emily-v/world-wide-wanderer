@@ -9,11 +9,9 @@ import Footer from '../component/Footer.jsx';
 
 import {Consumer} from "../stores/AppContext.jsx";
 
-export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP CODE--
+export class Gallery extends React.Component{
     render(){
-        
-        
-        
+
         return (
             <div>
                 <Navbar />
@@ -61,7 +59,7 @@ export class Gallery extends React.Component{ //--NEED TO FIX TAGS AND CLEAN UP 
                                                                             </li>
                                                                         </ul>
                                                                         <p>{item.meta_keys.caption}</p>
-                                                                        {/*----COMMENTING OUT TAGS IN IMAGE MODAL BECAUSE TAGS NOT WORKING----
+                                                                        {/*----COMMENTING OUT TAGS IN IMAGE MODAL BECAUSE TAG LINKS NOT WORKING----
                                                                         <ul className="list-inline mb-0">
                                                                             <li className="list-inline-item pr-sm-3 mr-0">Related destination blog posts:</li>
                                                                             {
