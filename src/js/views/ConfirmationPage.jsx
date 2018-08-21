@@ -22,6 +22,8 @@ export class ConfirmationPage extends React.Component{
                             <Consumer>
                                 {({ state, actions }) => {
                                     
+                                
+                                    
                                         return (
                                             <OrderSummary
                                             orderFinal={state.orderData}
