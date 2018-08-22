@@ -1,6 +1,6 @@
 # Hello World with React and Cloud 9
 
-## Front-End Code Repository available here:
+## Back-End Code Repository available here:
 https://github.com/emily-v/wordpress-final-project
 
 
