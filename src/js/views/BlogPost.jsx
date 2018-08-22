@@ -47,7 +47,7 @@ export class BlogPost extends React.Component{
                                                 <div className="postTextBlock">
                                                     <InnerHTML html={post.content.rendered} />
                                                 </div>
-                                                
+                                                {/*--ADDING PRODUCT CARD TO BLOG POST (NOT CONFIGURED IN WP)--
                                                 {
                                                     state.products.map((item,index)=>{
                                                         if (index==0){
@@ -65,7 +65,7 @@ export class BlogPost extends React.Component{
                                                             );
                                                         }
                                                     })
-                                                }
+                                                }*/}
                                                 
                                                 <p className="text-center mt-5">
                                                     <Link className="text-dark" to={"/blog-home"}>Return to All Posts</Link>
