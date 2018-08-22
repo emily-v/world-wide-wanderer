@@ -22,8 +22,6 @@ export class ConfirmationPage extends React.Component{
                             <Consumer>
                                 {({ state, actions }) => {
                                     
-                                
-                                    
                                         return (
                                             <OrderSummary
                                             orderFinal={state.orderData}
@@ -35,7 +33,6 @@ export class ConfirmationPage extends React.Component{
                         </div>
                     </div>
                 </div>
-                {/*<Footer />*/}
             </div> 
             
         );

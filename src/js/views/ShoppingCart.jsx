@@ -32,7 +32,6 @@ export class ShoppingCart extends React.Component{
                                             </div>
                                             <div className ="col-xs-6">
                                                 <button type="button" className ="btn btn-sm" ><Link to={"/storehome"} className="text-dark">Continue Shopping</Link></button>
-                                                {/*<button type="button" className ="btn btn-primary">Continue shopping</button>*/}
                                             </div>
                                         </div>
                                     </div>
@@ -57,16 +56,6 @@ export class ShoppingCart extends React.Component{
                                     }
                                 </Consumer>
                             </div>
-                            {/*<div className="text-center">
-                                <div className="col-xs-9">
-                                    <h6 className="text-right">Added items?</h6>
-                                </div>
-                                <div className="col-xs-12">
-                                    <button type="button" className="btn btn-default btn-sm">
-                                    Update cart
-                                    </button>
-                                </div>
-                            </div>*/}
                             
                             <Consumer>
                                 {({ actions }) => 
