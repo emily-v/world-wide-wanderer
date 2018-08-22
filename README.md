@@ -1,5 +1,12 @@
 # Hello World with React and Cloud 9
 
+## Front-End Code Repository available here:
+https://github.com/emily-v/wordpress-final-project
+
+
+Project main homepage:</br>
+<img src="https://image.ibb.co/dwhNkz/final_project_screenshot_home.png" width="400" />
+
 #### Make sure you have node version 8
 ```sh
 $ nvm install 8
