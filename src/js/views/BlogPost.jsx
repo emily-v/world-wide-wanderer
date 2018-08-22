@@ -5,7 +5,7 @@ import InnerHTML from 'dangerously-set-inner-html';
 import Moment from 'react-moment';
 
 import Navbar from '../component/Navbar.jsx';
-//import ProductCard from '../component/ProductCard.jsx';
+import ProductCard from '../component/ProductCard.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import Footer from '../component/Footer.jsx';
 
@@ -47,6 +47,26 @@ export class BlogPost extends React.Component{
                                                 <div className="postTextBlock">
                                                     <InnerHTML html={post.content.rendered} />
                                                 </div>
+                                                
+                                                {
+                                                    state.products.map((item,index)=>{
+                                                        if (index==0){
+                                                            return (
+                                                                <div className="col-lg-4 col-md-6 mb-4 pt-4" key={index}>
+                                                                    <ProductCard
+                                                                            //key={index}
+                                                                            productID={item.id}
+                                                                            productName={item.name}
+                                                                            productPrice={item.price}
+                                                                            productImage={item.img_src}
+                                                                            productDescription= {item.description}
+                                                                    />
+                                                                </div>
+                                                            );
+                                                        }
+                                                    })
+                                                }
+                                                
                                                 <p className="text-center mt-5">
                                                     <Link className="text-dark" to={"/blog-home"}>Return to All Posts</Link>
                                                 </p>

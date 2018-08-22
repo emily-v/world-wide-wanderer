@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link, Redirect } from "react-router-dom";
 
 import Navbar from '../component/Navbar.jsx';
 import OrderSummary from '../component/OrderSummary.jsx';
@@ -20,15 +21,19 @@ export class ConfirmationPage extends React.Component{
                     <div className="container d-flex justify-content-center">
                         <div className="row">
                             <Consumer>
-                                {({ state, actions }) => {
+                                {({ state, actions }) => 
+                                    {
+                                        if (typeof(state.session.token) === 'undefined'){
+                                            return (<Redirect to="/" />);
+                                        }else{
                                     
-                                
-                                    
-                                        return (
-                                            <OrderSummary
-                                            orderFinal={state.orderData}
-                                            />
-                                        );
+                                        
+                                            return (
+                                                <OrderSummary
+                                                orderFinal={state.orderData}
+                                                />
+                                            );
+                                        }
                                     }
                                 }
                             </Consumer>
