@@ -12,8 +12,8 @@ function OrderSummary(props) {
         <div className="card text-center">
             <div className="col-xl-12 pt-25">
                 <div className="card-body">
-                    <h2 className="card-title text-center">Thank you for your order!</h2>
-                    <p className="card-text text-center">Your order number is: {props.orderFinal.number}</p>
+                    <img src="https://my-first-wordpress-emilyv.c9users.io/wp-content/uploads/2018/08/Thank-You-1.png" alt="logo" className="mx-auto d-block"/>
+                    <h1 className="card-text text-center">Your order number is: {props.orderFinal.number}</h1>
                     <hr></hr>
                     <h3 className="card-title">Order Summary</h3>
                     <hr></hr>

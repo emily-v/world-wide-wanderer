@@ -26,8 +26,6 @@ export class ConfirmationPage extends React.Component{
                                         if (typeof(state.session.token) === 'undefined'){
                                             return (<Redirect to="/" />);
                                         }else{
-                                    
-                                        
                                             return (
                                                 <OrderSummary
                                                 orderFinal={state.orderData}
@@ -40,7 +38,6 @@ export class ConfirmationPage extends React.Component{
                         </div>
                     </div>
                 </div>
-                {/*<Footer />*/}
             </div> 
             
         );
